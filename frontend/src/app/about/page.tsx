@@ -25,7 +25,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50/40">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-primary-100/60 via-accent-50/40 to-white">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gradient-radial from-primary-200/60 to-transparent blur-3xl"></div>
           <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-gradient-radial from-accent-200/50 to-transparent blur-3xl"></div>

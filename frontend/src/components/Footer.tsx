@@ -10,12 +10,12 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-primary-900/98 via-accent-900/95 to-primary-800/98 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white overflow-hidden">
       {/* Elegant background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-accent-400/15 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-400/10 to-transparent blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent-500/10 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-primary-500/8 to-transparent blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))]" />
       </div>
 
       {/* Main Footer Content */}
@@ -39,13 +39,11 @@ export default function Footer() {
                   {/* Simple V icon */}
                   <path
                     d="M0 0 L20 0 L30 50 Z"
-                    fill="white"
-                    className="opacity-90 group-hover:opacity-100 transition-opacity"
+                    className="fill-white opacity-90 group-hover:opacity-100 transition-opacity"
                   />
                   <path
                     d="M40 0 L60 0 L30 50 Z"
-                    fill="white"
-                    className="opacity-90 group-hover:opacity-100 transition-opacity"
+                    className="fill-white opacity-90 group-hover:opacity-100 transition-opacity"
                   />
                 </svg>
                 <div className="flex flex-col">
@@ -57,7 +55,7 @@ export default function Footer() {
                   </span>
                 </div>
               </Link>
-              <p className="text-gray-400/90 text-sm leading-relaxed mb-6 max-w-sm">
+              <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
                 Professional virtual assistant services designed to elevate your
                 business operations with precision and care.
               </p>
@@ -65,32 +63,32 @@ export default function Footer() {
               <div className="flex gap-3">
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-accent-400/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                   aria-label="LinkedIn"
                 >
                   <Linkedin
                     size={18}
-                    className="text-gray-400/80 group-hover:text-white transition-colors"
+                    className="text-gray-400 group-hover:text-accent-400 transition-colors"
                   />
                 </a>
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-accent-400/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                   aria-label="Twitter"
                 >
                   <Twitter
                     size={18}
-                    className="text-gray-400/80 group-hover:text-white transition-colors"
+                    className="text-gray-400 group-hover:text-accent-400 transition-colors"
                   />
                 </a>
                 <a
                   href="#"
-                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+                  className="group w-10 h-10 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-accent-400/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                   aria-label="Instagram"
                 >
                   <Instagram
                     size={18}
-                    className="text-gray-400/80 group-hover:text-white transition-colors"
+                    className="text-gray-400 group-hover:text-accent-400 transition-colors"
                   />
                 </a>
               </div>
@@ -98,7 +96,7 @@ export default function Footer() {
 
             {/* Navigation Columns */}
             <div className="lg:col-span-2">
-              <h4 className="text-xs font-medium text-white/90 mb-4 tracking-wider uppercase">
+              <h4 className="text-xs font-semibold text-white mb-4 tracking-wider uppercase">
                 Quick Links
               </h4>
               <ul className="space-y-3">
@@ -125,7 +123,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:col-span-2">
-              <h4 className="text-xs font-medium text-white/90 mb-4 tracking-wider uppercase">
+              <h4 className="text-xs font-semibold text-white mb-4 tracking-wider uppercase">
                 Resources
               </h4>
               <ul className="space-y-3">
@@ -152,7 +150,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:col-span-3">
-              <h4 className="text-xs font-medium text-white/90 mb-4 tracking-wider uppercase">
+              <h4 className="text-xs font-semibold text-white mb-4 tracking-wider uppercase">
                 Get In Touch
               </h4>
               <div className="space-y-3">

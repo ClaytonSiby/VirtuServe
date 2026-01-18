@@ -70,7 +70,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50/50 via-white to-gray-50/30">
+    <main className="min-h-screen bg-gradient-to-br from-primary-50/20 via-white to-accent-50/15">
       <section className="pt-32 pb-24 md:pt-40 md:pb-36">
         <PageContainer>
           <div className="mb-20 md:mb-24 text-center">

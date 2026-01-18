@@ -110,7 +110,7 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Minimal & Clean */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-transparent">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-accent-100/50 via-primary-50/30 to-white">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-accent-200/40 to-transparent blur-3xl"></div>
           <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary-200/30 to-transparent blur-3xl"></div>
