@@ -1,0 +1,49 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract infinity/continuous service symbol -->
+  <g transform="translate(7, 18)">
+    <!-- Infinity loop -->
+    <path
+      d="M12 28 Q12 20 18 20 Q24 20 28 26 Q32 20 38 20 Q44 20 44 28 Q44 36 38 36 Q32 36 28 30 Q24 36 18 36 Q12 36 12 28 Z"
+      fill="none"
+      stroke="url(#infinityGrad)"
+      strokeWidth="2.5"
+    />
+    <!-- Accent dots -->
+    <circle cx="18" cy="28" r="2" fill="#413F3D"/>
+    <circle cx="38" cy="28" r="2" fill="#413F3D"/>
+    
+    <defs>
+      <linearGradient id="infinityGrad" x1="12" y1="28" x2="44" y2="28">
+        <stop offset="0%" stopColor="#697184"/>
+        <stop offset="50%" stopColor="#B1A6A4"/>
+        <stop offset="100%" stopColor="#697184"/>
+      </linearGradient>
+    </defs>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="28"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="0.5"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

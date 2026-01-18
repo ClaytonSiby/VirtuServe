@@ -1,0 +1,46 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minimalist V lettermark -->
+  <g transform="translate(7, 10)">
+    <path
+      d="M10 15L28 50L46 15"
+      stroke="#413F3D"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17 24L28 43L39 24"
+      stroke="#B1A6A4"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      opacity="0.5"
+    />
+  </g>
+
+  <!-- Clean Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="30"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="0"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#B1A6A4"
+      letterSpacing="3"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

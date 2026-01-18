@@ -1,0 +1,66 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant ornamental design -->
+  <g transform="translate(7, 7)">
+    <!-- Decorative border -->
+    <rect x="6" y="6" width="44" height="44" rx="4" stroke="#D8CFD0" strokeWidth="1" fill="none" opacity="0.4"/>
+    
+    <!-- Stylized VS monogram -->
+    <path
+      d="M15 18L28 40L41 18"
+      stroke="url(#elegantGrad1)"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M23 26C25 28 28 28 28 28C28 28 31 28 33 30"
+      stroke="url(#elegantGrad2)"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      opacity="0.7"
+    />
+    
+    <!-- Decorative dots -->
+    <circle cx="18" cy="18" r="1.5" fill="#B1A6A4" opacity="0.5"/>
+    <circle cx="38" cy="18" r="1.5" fill="#B1A6A4" opacity="0.5"/>
+    
+    <defs>
+      <linearGradient id="elegantGrad1" x1="15" y1="18" x2="41" y2="40">
+        <stop offset="0%" stopColor="#413F3D"/>
+        <stop offset="50%" stopColor="#697184"/>
+        <stop offset="100%" stopColor="#413F3D"/>
+      </linearGradient>
+      <linearGradient id="elegantGrad2" x1="23" y1="26" x2="33" y2="30">
+        <stop offset="0%" stopColor="#B1A6A4"/>
+        <stop offset="100%" stopColor="#697184"/>
+      </linearGradient>
+    </defs>
+  </g>
+
+  <!-- Elegant Serif Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="Georgia, serif"
+      fontSize="32"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="-0.5"
+      fontStyle="italic"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="serif"
+      fontSize="9"
+      fontWeight="300"
+      fill="#B1A6A4"
+      letterSpacing="2"
+    >
+      Excellence Delivered
+    </text>
+  </g>
+</svg>

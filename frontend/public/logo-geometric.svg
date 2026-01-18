@@ -1,0 +1,51 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Geometric hexagon design -->
+  <g transform="translate(7, 7)">
+    <polygon
+      points="28,8 44,18 44,38 28,48 12,38 12,18"
+      fill="none"
+      stroke="#697184"
+      strokeWidth="1.5"
+    />
+    <polygon
+      points="28,15 38,21 38,35 28,41 18,35 18,21"
+      fill="none"
+      stroke="#B1A6A4"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M20 23L28 35L36 23"
+      stroke="#413F3D"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle cx="28" cy="28" r="2" fill="#697184"/>
+  </g>
+
+  <!-- Modern Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="28"
+      fontWeight="400"
+      fill="#413F3D"
+      letterSpacing="1"
+    >
+      VIRTUSERVE
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

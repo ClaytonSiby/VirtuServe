@@ -1,0 +1,41 @@
+<svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple V icon -->
+  <g transform="translate(10, 15)">
+    <!-- Left triangle -->
+    <path
+      d="M0 0 L20 0 L30 50 Z"
+      fill="#1a1a1a"
+    />
+    <!-- Right triangle -->
+    <path
+      d="M40 0 L60 0 L30 50 Z"
+      fill="#1a1a1a"
+    />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(85, 25)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="34"
+      fontWeight="400"
+      fill="#1a1a1a"
+      letterSpacing="0"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="38"
+      fontFamily="sans-serif"
+      fontSize="14"
+      fontWeight="300"
+      fill="#6b7280"
+      letterSpacing="4"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Classic monogram style -->
+  <g transform="translate(7, 10)">
+    <!-- Intertwined VS letters -->
+    <path
+      d="M12 15L28 45L44 15"
+      stroke="#413F3D"
+      strokeWidth="3"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+    />
+    <path
+      d="M20 22C22 26 26 30 28 30M28 30C30 30 34 26 36 22M28 30C28 32 28 36 28 38"
+      stroke="#697184"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+    />
+    <circle cx="28" cy="40" r="1.5" fill="#B1A6A4"/>
+  </g>
+
+  <!-- Refined Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="Georgia, serif"
+      fontSize="30"
+      fontWeight="400"
+      fill="#413F3D"
+      letterSpacing="0"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

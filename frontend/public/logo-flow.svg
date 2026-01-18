@@ -1,0 +1,55 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract flowing lines representing service flow -->
+  <g transform="translate(7, 10)">
+    <!-- Flowing curves -->
+    <path
+      d="M10 20 Q20 15, 28 25 T46 20"
+      stroke="#697184"
+      strokeWidth="2"
+      fill="none"
+      opacity="0.6"
+    />
+    <path
+      d="M10 28 Q20 23, 28 33 T46 28"
+      stroke="#B1A6A4"
+      strokeWidth="2.5"
+      fill="none"
+      opacity="0.8"
+    />
+    <path
+      d="M10 36 Q20 31, 28 41 T46 36"
+      stroke="#413F3D"
+      strokeWidth="2"
+      fill="none"
+    />
+    <!-- Accent dots -->
+    <circle cx="10" cy="28" r="2" fill="#697184"/>
+    <circle cx="46" cy="28" r="2" fill="#697184"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="28"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="0.5"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

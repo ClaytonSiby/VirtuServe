@@ -1,0 +1,51 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern abstract V shape -->
+  <g transform="translate(7, 10)">
+    <!-- Bold geometric V -->
+    <path
+      d="M8 15L28 48L48 15"
+      stroke="none"
+      fill="url(#modernGrad)"
+    />
+    <path
+      d="M14 15L28 40L42 15L38 15L28 32L18 15Z"
+      fill="#413F3D"
+    />
+    
+    <!-- Accent line -->
+    <line x1="8" y1="50" x2="48" y2="50" stroke="#B1A6A4" strokeWidth="2" strokeLinecap="round"/>
+    
+    <defs>
+      <linearGradient id="modernGrad" x1="8" y1="15" x2="48" y2="48">
+        <stop offset="0%" stopColor="#697184"/>
+        <stop offset="100%" stopColor="#D8CFD0"/>
+      </linearGradient>
+    </defs>
+  </g>
+
+  <!-- Bold Typography -->
+  <g transform="translate(70, 22)">
+    <text
+      x="0"
+      y="18"
+      fontFamily="sans-serif"
+      fontSize="30"
+      fontWeight="600"
+      fill="#413F3D"
+      letterSpacing="1"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="33"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="400"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

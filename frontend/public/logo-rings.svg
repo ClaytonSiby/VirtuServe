@@ -1,0 +1,44 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concentric circles representing growth and expansion -->
+  <g transform="translate(7, 10)">
+    <circle cx="28" cy="28" r="22" stroke="#D8CFD0" strokeWidth="1" fill="none" opacity="0.3"/>
+    <circle cx="28" cy="28" r="17" stroke="#B1A6A4" strokeWidth="1.5" fill="none" opacity="0.5"/>
+    <circle cx="28" cy="28" r="12" stroke="#697184" strokeWidth="2" fill="none" opacity="0.7"/>
+    <circle cx="28" cy="28" r="7" stroke="#413F3D" strokeWidth="2.5" fill="none"/>
+    
+    <!-- V accent in center -->
+    <path
+      d="M24 23 L28 30 L32 23"
+      stroke="#413F3D"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="28"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="0.5"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract helping hands design -->
+  <g transform="translate(7, 12)">
+    <!-- Abstract hand/support symbol -->
+    <path
+      d="M18 35 L18 22 Q18 18 22 18 Q24 18 24 20 L24 15 Q24 12 27 12 Q29 12 29 14 L29 12 Q29 10 31 10 Q33 10 33 12 L33 15 Q33 13 35 13 Q38 13 38 16 L38 30 Q38 38 32 42 L26 42 Q22 40 20 38"
+      stroke="#413F3D"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M20 38 Q18 36 16 34"
+      stroke="#B1A6A4"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <!-- Supporting element -->
+    <circle cx="28" cy="28" r="1.5" fill="#697184" opacity="0.5"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(70, 20)">
+    <text
+      x="0"
+      y="20"
+      fontFamily="sans-serif"
+      fontSize="28"
+      fontWeight="300"
+      fill="#413F3D"
+      letterSpacing="0.5"
+    >
+      VirtuServe
+    </text>
+    <text
+      x="0"
+      y="35"
+      fontFamily="sans-serif"
+      fontSize="8"
+      fontWeight="300"
+      fill="#697184"
+      letterSpacing="2.5"
+    >
+      EXCELLENCE DELIVERED
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer elegant frame -->
+  <circle
+    cx="28"
+    cy="28"
+    r="26"
+    stroke="url(#gradient1)"
+    strokeWidth="1.5"
+    opacity="0.4"
+  />
+
+  <!-- Inner artistic V shape -->
+  <path
+    d="M16 18L28 38L40 18"
+    stroke="url(#gradient2)"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
+  <!-- Elegant S curve -->
+  <path
+    d="M22 24C22 24 24 28 28 28C32 28 34 32 34 32"
+    stroke="url(#gradient3)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    opacity="0.6"
+  />
+
+  <!-- Center accent dot -->
+  <circle
+    cx="28"
+    cy="28"
+    r="2.5"
+    fill="url(#gradient4)"
+  />
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient
+      id="gradient1"
+      x1="0"
+      y1="0"
+      x2="56"
+      y2="56"
+    >
+      <stop offset="0%" stopColor="#B1A6A4" />
+      <stop offset="100%" stopColor="#697184" />
+    </linearGradient>
+    <linearGradient
+      id="gradient2"
+      x1="16"
+      y1="18"
+      x2="40"
+      y2="38"
+    >
+      <stop offset="0%" stopColor="#413F3D" />
+      <stop offset="50%" stopColor="#B1A6A4" />
+      <stop offset="100%" stopColor="#413F3D" />
+    </linearGradient>
+    <linearGradient
+      id="gradient3"
+      x1="22"
+      y1="24"
+      x2="34"
+      y2="32"
+    >
+      <stop offset="0%" stopColor="#697184" />
+      <stop offset="100%" stopColor="#D8CFD0" />
+    </linearGradient>
+    <linearGradient
+      id="gradient4"
+      x1="25.5"
+      y1="25.5"
+      x2="30.5"
+      y2="30.5"
+    >
+      <stop offset="0%" stopColor="#F2F1EF" />
+      <stop offset="100%" stopColor="#697184" />
+    </linearGradient>
+  </defs>
+</svg>
