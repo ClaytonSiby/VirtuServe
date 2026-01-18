@@ -25,60 +25,81 @@ export default function About() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden bg-gradient-to-br from-primary-50/50 via-white to-accent-50/30">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-radial from-primary-300/40 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-gradient-radial from-accent-300/30 to-transparent blur-3xl"></div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50/40">
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gradient-radial from-primary-200/60 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-gradient-radial from-accent-200/50 to-transparent blur-3xl"></div>
         </div>
 
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 border border-primary-100 rounded-full opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 border border-accent-100 rounded-full opacity-20"></div>
+
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left: Content */}
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-primary-200 rounded-full px-4 py-2 shadow-sm">
-                  <Heart className="w-3.5 h-3.5 text-accent-600" />
-                  <span className="text-xs font-medium text-primary-700 uppercase tracking-wider">
+              <div className="space-y-8">
+                <div className="inline-flex items-center gap-2.5 bg-white/90 backdrop-blur-md border border-primary-200/50 rounded-full px-5 py-2.5 shadow-lg shadow-primary-100/50">
+                  <Heart className="w-4 h-4 text-accent-600" />
+                  <span className="text-xs font-semibold text-primary-700 uppercase tracking-[0.2em]">
                     Our Story
                   </span>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-gray-900 leading-tight tracking-tight">
-                  About VirtuServe
-                </h1>
+                <div className="space-y-6">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-gray-900 leading-[0.95] tracking-tighter">
+                    About
+                    <span className="block mt-2 bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent font-light">
+                      VirtuServe
+                    </span>
+                  </h1>
 
-                <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed">
+                  <div className="h-1 w-24 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full"></div>
+                </div>
+
+                <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-xl">
                   Building lasting partnerships with international clients
                   through professional excellence and genuine care
                 </p>
               </div>
 
               {/* Right: Visual Element */}
-              <div className="relative h-64 lg:h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 via-accent-100 to-primary-200 rounded-3xl opacity-50"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="flex items-center justify-center gap-8">
-                      <div className="text-center">
-                        <div className="text-5xl font-bold text-primary-700">
-                          10+
+              <div className="relative h-80 lg:h-96">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-accent-50 to-white rounded-[2.5rem] shadow-2xl border border-primary-100/50 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center p-10">
+                    <div className="text-center space-y-8">
+                      <div className="flex items-center justify-center gap-12">
+                        <div className="text-center group">
+                          <div className="text-6xl md:text-7xl font-light text-primary-700 mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
+                            10<span className="text-accent-500">+</span>
+                          </div>
+                          <div className="text-sm text-gray-600 font-medium uppercase tracking-widest">
+                            Years
+                          </div>
                         </div>
-                        <div className="text-sm text-gray-700 font-medium mt-1">
-                          Years
+                        <div className="w-px h-20 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                        <div className="text-center group">
+                          <div className="text-6xl md:text-7xl font-light text-accent-600 mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
+                            500<span className="text-primary-500">+</span>
+                          </div>
+                          <div className="text-sm text-gray-600 font-medium uppercase tracking-widest">
+                            Clients
+                          </div>
                         </div>
                       </div>
-                      <div className="w-px h-16 bg-gray-300"></div>
-                      <div className="text-center">
-                        <div className="text-5xl font-bold text-accent-600">
-                          500+
-                        </div>
-                        <div className="text-sm text-gray-700 font-medium mt-1">
-                          Clients
+                      <div className="pt-6 space-y-2">
+                        <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+                          <Globe className="w-4 h-4 text-primary-600" />
+                          <span className="font-light">Trusted Worldwide</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                {/* Floating accent elements */}
+                <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent-200 rounded-full blur-2xl opacity-40"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-200 rounded-full blur-2xl opacity-40"></div>
               </div>
             </div>
           </div>
@@ -86,36 +107,47 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-28 md:py-40 bg-gradient-to-b from-white via-gray-50/30 to-white">
         <PageContainer>
-          <div className="text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-50 to-primary-50 border border-accent-200/50 rounded-full px-4 py-2 mb-6">
-              <span className="text-xs font-medium text-accent-700 uppercase tracking-widest">
+          <div className="text-center mb-20 md:mb-28">
+            <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-accent-50 to-primary-50 border border-accent-200/60 rounded-full px-5 py-3 mb-8 shadow-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
+              <span className="text-xs font-semibold text-accent-700 uppercase tracking-[0.25em]">
                 Our Story
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-6 text-gray-900 tracking-tight">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-8 text-gray-900 tracking-tight leading-tight">
               From desk to{" "}
-              <span className="bg-gradient-to-r from-accent-600 to-primary-600 bg-clip-text text-transparent font-light">
+              <span className="block md:inline bg-gradient-to-r from-accent-600 via-primary-600 to-accent-600 bg-clip-text text-transparent font-light">
                 global impact
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-500 font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
               Empowering businesses worldwide through professional excellence
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="relative bg-gradient-to-br from-white via-primary-50/30 to-accent-50/20 border border-gray-200/60 rounded-[2rem] p-10 md:p-16 shadow-lg hover:shadow-2xl transition-all duration-700 overflow-hidden group">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-radial from-accent-100/40 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-radial from-primary-100/40 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative z-10 space-y-8">
-                <p className="text-xl md:text-2xl text-gray-800 font-light leading-relaxed">
+            <div className="relative bg-gradient-to-br from-white via-primary-50/40 to-accent-50/30 border border-gray-200/80 rounded-[2.5rem] p-12 md:p-20 shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden group">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-accent-100/50 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary-100/50 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+              {/* Decorative quote mark */}
+              <div className="absolute top-8 left-8 text-8xl font-serif text-accent-200/30 leading-none">
+                &ldquo;
+              </div>
+
+              <div className="relative z-10 space-y-10">
+                <p className="text-2xl md:text-3xl text-gray-800 font-light leading-relaxed tracking-tight">
                   We help businesses reclaim their time to focus on growth—not
                   administrative tasks. Serving international clients across
                   time zones and industries.
                 </p>
-                <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
-                <p className="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                <div className="flex items-center gap-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+                  <div className="w-2 h-2 rounded-full bg-accent-400"></div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+                </div>
+                <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
                   From startups to established enterprises, we deliver tailored
                   support that treats your business with the care it deserves.
                   Building lasting partnerships, not transactions.

@@ -195,7 +195,7 @@ export default function Home() {
                     </motion.p>
 
                     {/* Redesigned Services Network */}
-                    <div className="relative h-[400px] md:h-[480px]">
+                    <div className="relative h-[500px] sm:h-[520px] md:h-[480px]">
                       {/* Connection Lines using CSS */}
                       <div className="absolute inset-0">
                         {/* Line to Admin (Top) */}
@@ -203,72 +203,78 @@ export default function Home() {
                           initial={{ scaleY: 0, opacity: 0 }}
                           animate={{ scaleY: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.4 }}
-                          className="absolute left-1/2 top-[12%] w-0.5 h-[38%] -translate-x-1/2 origin-bottom"
+                          className="absolute left-1/2 top-[10%] sm:top-[12%] w-0.5 h-[35%] sm:h-[38%] -translate-x-1/2 origin-bottom"
                           style={{
-                            background: 'linear-gradient(to bottom, #697184, transparent)',
+                            background:
+                              "linear-gradient(to bottom, #697184, transparent)",
                           }}
                         />
-                        
+
                         {/* Line to Support (Bottom) */}
                         <motion.div
                           initial={{ scaleY: 0, opacity: 0 }}
                           animate={{ scaleY: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.5 }}
-                          className="absolute left-1/2 bottom-[12%] w-0.5 h-[38%] -translate-x-1/2 origin-top"
+                          className="absolute left-1/2 bottom-[10%] sm:bottom-[12%] w-0.5 h-[35%] sm:h-[38%] -translate-x-1/2 origin-top"
                           style={{
-                            background: 'linear-gradient(to top, #697184, transparent)',
+                            background:
+                              "linear-gradient(to top, #697184, transparent)",
                           }}
                         />
-                        
+
                         {/* Line to Marketing (Top Right) */}
                         <motion.div
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.6 }}
-                          className="absolute top-[28%] right-[8%] w-[35%] h-0.5 origin-right"
+                          className="absolute top-[25%] sm:top-[28%] right-[5%] sm:right-[8%] w-[38%] sm:w-[35%] h-0.5 origin-right"
                           style={{
-                            background: 'linear-gradient(to left, #697184, transparent)',
-                            transform: 'rotate(-25deg)',
-                            transformOrigin: 'right center',
+                            background:
+                              "linear-gradient(to left, #697184, transparent)",
+                            transform: "rotate(-25deg)",
+                            transformOrigin: "right center",
                           }}
                         />
-                        
+
                         {/* Line to Analytics (Bottom Right) */}
                         <motion.div
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.7 }}
-                          className="absolute bottom-[28%] right-[8%] w-[35%] h-0.5 origin-right"
+                          className="absolute bottom-[25%] sm:bottom-[28%] right-[5%] sm:right-[8%] w-[38%] sm:w-[35%] h-0.5 origin-right"
                           style={{
-                            background: 'linear-gradient(to left, #697184, transparent)',
-                            transform: 'rotate(25deg)',
-                            transformOrigin: 'right center',
+                            background:
+                              "linear-gradient(to left, #697184, transparent)",
+                            transform: "rotate(25deg)",
+                            transformOrigin: "right center",
                           }}
                         />
-                        
+
                         {/* Line to Scheduling (Top Left) */}
                         <motion.div
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.8 }}
-                          className="absolute top-[28%] left-[8%] w-[35%] h-0.5 origin-left"
+                          className="absolute top-[25%] sm:top-[28%] left-[5%] sm:left-[8%] w-[38%] sm:w-[35%] h-0.5 origin-left"
                           style={{
-                            background: 'linear-gradient(to right, #697184, transparent)',
-                            transform: 'rotate(25deg)',
-                            transformOrigin: 'left center',
+                            background:
+                              "linear-gradient(to right, #697184, transparent)",
+                            transform: "rotate(25deg)",
+                            transformOrigin: "left center",
                           }}
                         />
-                        
+
                         {/* Line to Operations (Bottom Left) */}
                         <motion.div
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.9 }}
-                          className="absolute bottom-[28%] left-[8%] w-[35%] h-0.5 origin-left"
+                          className="absolute bottom-[25%] sm:bottom-[28%] left-[5%] sm:left-[8%] w-[38%] sm:w-[35%] h-0.5 origin-left"
                           style={{
-                            background: 'linear-gradient(to right, #697184, transparent)',
-                            transform: 'rotate(-25deg)',
-                            transformOrigin: 'left center',
+                            background:
+                              "linear-gradient(to right, #697184, transparent)",
+                            transform: "rotate(-25deg)",
+                            transformOrigin: "left center",
                           }}
                         />
                       </div>
@@ -311,7 +317,7 @@ export default function Home() {
                               duration: 2,
                               repeat: Infinity,
                             }}
-                            className="w-24 h-24 bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-3xl flex items-center justify-center shadow-2xl border-2 border-primary-200"
+                            className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl border-2 border-primary-200"
                           >
                             <motion.div
                               animate={{ rotate: 360 }}
@@ -321,7 +327,7 @@ export default function Home() {
                                 ease: "linear",
                               }}
                             >
-                              <Target className="w-12 h-12 text-accent-600" />
+                              <Target className="w-10 h-10 sm:w-12 sm:h-12 text-accent-600" />
                             </motion.div>
                           </motion.div>
                           <motion.div
@@ -333,7 +339,7 @@ export default function Home() {
                               duration: 2,
                               repeat: Infinity,
                             }}
-                            className="absolute inset-0 border-2 border-accent-400/60 rounded-3xl"
+                            className="absolute inset-0 border-2 border-accent-400/60 rounded-2xl sm:rounded-3xl"
                           />
                         </div>
                       </motion.div>
@@ -348,13 +354,15 @@ export default function Home() {
                         className="absolute top-0 left-1/2 -translate-x-1/2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center">
-                              <Mail className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Admin</p>
+                          <p className="text-primary-900 text-[10px] sm:text-xs font-bold mt-1.5 sm:mt-2 text-center">
+                            Admin
+                          </p>
                         </div>
                       </motion.div>
 
@@ -364,16 +372,18 @@ export default function Home() {
                         animate={{ scale: 1, x: 0 }}
                         transition={{ delay: 1.1, type: "spring" }}
                         whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute top-[18%] right-0 z-10"
+                        className="absolute top-[16%] sm:top-[18%] right-0 sm:right-2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-beige-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-primary-200 group-hover:border-primary-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
-                              <TrendingUp className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-beige-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-primary-200 group-hover:border-primary-400 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Marketing</p>
+                          <p className="text-primary-900 text-[10px] sm:text-xs font-bold mt-1.5 sm:mt-2 text-center">
+                            Marketing
+                          </p>
                         </div>
                       </motion.div>
 
@@ -383,16 +393,18 @@ export default function Home() {
                         animate={{ scale: 1, x: 0 }}
                         transition={{ delay: 1.2, type: "spring" }}
                         whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute bottom-[18%] right-0 z-10"
+                        className="absolute bottom-[16%] sm:bottom-[18%] right-0 sm:right-2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-beige-400/40 to-primary-300/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-beige-300 group-hover:border-beige-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-beige-400 to-beige-500 rounded-xl flex items-center justify-center">
-                              <BarChart3 className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-beige-400/40 to-primary-300/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-beige-300 group-hover:border-beige-400 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-beige-400 to-beige-500 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Analytics</p>
+                          <p className="text-primary-900 text-[10px] sm:text-xs font-bold mt-1.5 sm:mt-2 text-center">
+                            Analytics
+                          </p>
                         </div>
                       </motion.div>
 
@@ -405,13 +417,15 @@ export default function Home() {
                         className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-300 group-hover:border-accent-500 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-500 to-primary-500 rounded-xl flex items-center justify-center">
-                              <Headphones className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-accent-300 group-hover:border-accent-500 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-accent-500 to-primary-500 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Support</p>
+                          <p className="text-primary-900 text-[10px] sm:text-xs font-bold mt-1.5 sm:mt-2 text-center">
+                            Support
+                          </p>
                         </div>
                       </motion.div>
 
@@ -421,16 +435,18 @@ export default function Home() {
                         animate={{ scale: 1, x: 0 }}
                         transition={{ delay: 1.4, type: "spring" }}
                         whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute bottom-[18%] left-0 z-10"
+                        className="absolute bottom-[16%] sm:bottom-[18%] left-0 sm:left-2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-accent-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-primary-300 group-hover:border-primary-500 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                              <Zap className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-accent-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-primary-300 group-hover:border-primary-500 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Operations</p>
+                          <p className="text-primary-900 text-[10px] sm:text-xs font-bold mt-1.5 sm:mt-2 text-center">
+                            Operations
+                          </p>
                         </div>
                       </motion.div>
 
@@ -440,16 +456,18 @@ export default function Home() {
                         animate={{ scale: 1, x: 0 }}
                         transition={{ delay: 1.5, type: "spring" }}
                         whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute top-[18%] left-0 z-10"
+                        className="absolute top-[16%] sm:top-[18%] left-0 sm:left-2 z-10"
                       >
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-300/40 to-primary-300/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-400 to-primary-400 rounded-xl flex items-center justify-center">
-                              <Calendar className="w-7 h-7 text-white" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-300/40 to-primary-300/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-accent-400 to-primary-400 rounded-lg sm:rounded-xl flex items-center justify-center">
+                              <Calendar className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Scheduling</p>
+                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">
+                            Scheduling
+                          </p>
                         </div>
                       </motion.div>
                     </div>
@@ -709,8 +727,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                &quot;VirtuServe transformed our workflow. Their attention to detail
-                and professionalism is unmatched. Highly recommend!&quot;
+                &quot;VirtuServe transformed our workflow. Their attention to
+                detail and professionalism is unmatched. Highly recommend!&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center text-white font-semibold">
@@ -738,8 +756,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                &quot;Exceptional service! They handled everything seamlessly, giving
-                us more time to focus on growth. A game changer.&quot;
+                &quot;Exceptional service! They handled everything seamlessly,
+                giving us more time to focus on growth. A game changer.&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center text-white font-semibold">
@@ -765,8 +783,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                &quot;Professional, reliable, and efficient. VirtuServe exceeded our
-                expectations in every way. Five stars!&quot;
+                &quot;Professional, reliable, and efficient. VirtuServe exceeded
+                our expectations in every way. Five stars!&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center text-white font-semibold">

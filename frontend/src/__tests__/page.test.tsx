@@ -21,7 +21,7 @@ jest.mock("framer-motion", () => ({
 
 describe("Home Page", () => {
   it("renders without crashing", () => {
-    render(<Home />);
-    expect(document.body).toBeInTheDocument();
+    const { container } = render(<Home />);
+    expect(container).toBeTruthy();
   });
 });
