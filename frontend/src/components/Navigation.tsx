@@ -139,7 +139,7 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-primary-50/30 via-white to-accent-50/20 shadow-2xl z-[70] overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-primary-100/80 via-white to-accent-100/70 backdrop-blur-md shadow-2xl z-[70] overflow-y-auto"
             >
               {/* Drawer Header */}
               <div className="p-6 border-b border-gray-200">

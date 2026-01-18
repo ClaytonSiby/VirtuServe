@@ -284,7 +284,7 @@ export default function Home() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="absolute bottom-2 right-2 z-30 inline-flex items-center gap-2 bg-gradient-to-r from-accent-100 to-primary-100 border border-accent-200/60 rounded-full px-3 py-1.5 shadow-lg backdrop-blur-sm"
+                        className="absolute bottom-2 left-0 sm:bottom-2 sm:right-2 sm:left-auto z-30 inline-flex items-center gap-2 bg-gradient-to-r from-accent-100 to-primary-100 border border-accent-200/60 rounded-full px-3 py-1.5 shadow-lg backdrop-blur-sm"
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse" />
                         <span className="text-[10px] font-semibold text-primary-900 uppercase tracking-wider">
