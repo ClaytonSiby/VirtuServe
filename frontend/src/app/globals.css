@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Elegant default theme */
+  --background: #f2f1ef; /* off-white */
+  --foreground: #413f3d; /* charcoal */
+  --beige-bg: #f2f1ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #413f3d; /* charcoal */
+    --foreground: #f2f1ef; /* off-white */
+    --beige-bg: #252832; /* deep accent background */
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Standardized Typography System */
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-gray-900;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-gray-900;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-light text-gray-900;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-normal text-gray-900;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl font-normal text-gray-900;
+  }
+
+  h6 {
+    @apply text-base md:text-lg font-medium text-gray-900;
+  }
+
+  p {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+
+  .lead {
+    @apply text-lg md:text-xl text-gray-600 leading-relaxed font-light;
+  }
+
+  .small-text {
+    @apply text-sm text-gray-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-dark {
+    background: rgba(60, 38, 21, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .warm-gradient {
+    background: linear-gradient(135deg, #fdfcfa 0%, #f5ede0 100%);
+  }
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #94a3b8, #64748b);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #64748b, #475569);
+}
