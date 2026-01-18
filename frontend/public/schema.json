@@ -1,0 +1,47 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VirtuServe",
+    "description": "Professional Virtual Assistant Services for International Clients and Companies",
+    "url": "https://virtuserve.com",
+    "logo": "https://virtuserve.com/logo.png",
+    "image": "https://virtuserve.com/og-image.jpg",
+    "telephone": "+1-555-123-4567",
+    "email": "hello@virtuserve.com",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+    },
+    "sameAs": [
+        "https://linkedin.com/company/virtuserve",
+        "https://twitter.com/virtuserve",
+        "https://instagram.com/virtuserve"
+    ],
+    "serviceType": [
+        "Virtual Assistant Services",
+        "Administrative Support",
+        "Customer Service",
+        "Digital Marketing",
+        "Project Coordination"
+    ],
+    "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+    },
+    "availableLanguage": [
+        "English"
+    ],
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+    }
+}
