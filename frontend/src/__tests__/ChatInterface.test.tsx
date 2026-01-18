@@ -4,6 +4,15 @@ import * as api from "@/lib/api";
 
 jest.mock("@/lib/api");
 
+// Mock framer-motion to avoid test failures
+jest.mock("framer-motion", () => ({
+  motion: {
+    div: "div",
+    button: "button",
+  },
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
+}));
+
 describe("ChatInterface", () => {
   beforeEach(() => {
     jest.clearAllMocks();
