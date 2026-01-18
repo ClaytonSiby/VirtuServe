@@ -1,8 +1,7 @@
 "use client";
 
-import { HelpCircle, ArrowRight, ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
 import PageContainer from "@/components/ui/PageContainer";
-import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -231,7 +230,7 @@ export default function FAQPage() {
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 shadow-sm">
                   <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">
-                    We're Here to Help
+                    We&apos;re Here to Help
                   </span>
                 </div>
 
@@ -240,8 +239,9 @@ export default function FAQPage() {
                 </h2>
 
                 <p className="text-xl text-gray-600 font-light leading-relaxed">
-                  Can't find what you're looking for? Book a free discovery call
-                  and we'll answer all your questions personally.
+                  Can&apos;t find what you&apos;re looking for? Book a free
+                  discovery call and we&apos;ll answer all your questions
+                  personally.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">

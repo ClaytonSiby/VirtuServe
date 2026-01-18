@@ -5,7 +5,6 @@ import {
   Calendar,
   Mail,
   Globe,
-  Shield,
   Zap,
   Search,
   CheckCircle,
@@ -13,10 +12,8 @@ import {
   ArrowRight,
   TrendingUp,
   Users,
-  Clock,
   Star,
   Target,
-  Award,
   BarChart3,
   Headphones,
 } from "lucide-react";
@@ -695,7 +692,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg md:text-xl text-primary-700 max-w-2xl mx-auto leading-relaxed">
-              See how we've helped businesses achieve their goals
+              See how we&apos;ve helped businesses achieve their goals
             </p>
           </div>
 
@@ -712,8 +709,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "VirtuServe transformed our workflow. Their attention to detail
-                and professionalism is unmatched. Highly recommend!"
+                &quot;VirtuServe transformed our workflow. Their attention to detail
+                and professionalism is unmatched. Highly recommend!&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center text-white font-semibold">
@@ -741,8 +738,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "Exceptional service! They handled everything seamlessly, giving
-                us more time to focus on growth. A game changer."
+                &quot;Exceptional service! They handled everything seamlessly, giving
+                us more time to focus on growth. A game changer.&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center text-white font-semibold">
@@ -768,8 +765,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "Professional, reliable, and efficient. VirtuServe exceeded our
-                expectations in every way. Five stars!"
+                &quot;Professional, reliable, and efficient. VirtuServe exceeded our
+                expectations in every way. Five stars!&quot;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center text-white font-semibold">

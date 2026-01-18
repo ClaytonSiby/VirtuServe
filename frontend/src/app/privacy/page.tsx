@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Shield, Lock, Eye, Database, Mail, Calendar } from "lucide-react";
+import { Shield, Lock, Eye, Mail, Database } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
 

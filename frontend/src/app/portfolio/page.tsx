@@ -145,7 +145,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic leading-relaxed">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div>
                   <p className="font-bold text-gray-900">{testimonial.name}</p>

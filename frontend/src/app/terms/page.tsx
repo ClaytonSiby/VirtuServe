@@ -55,7 +55,7 @@ export default function Terms() {
                     Agreement to Terms
                   </h2>
                   <p className="text-gray-700 leading-relaxed">
-                    By accessing or using VirtuServe's virtual assistant
+                    By accessing or using VirtuServe&apos;s virtual assistant
                     services, you agree to be bound by these Terms of Service.
                     If you disagree with any part of these terms, you may not
                     access our services. These terms apply to all visitors,

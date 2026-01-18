@@ -273,7 +273,7 @@ export default function Services() {
                 Custom Plan Creation
               </h3>
               <p className="text-gray-600 leading-relaxed font-light">
-                We'll create a tailored service plan based on your specific
+                We&apos;ll create a tailored service plan based on your specific
                 requirements
               </p>
             </div>

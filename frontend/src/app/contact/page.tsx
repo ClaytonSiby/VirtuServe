@@ -10,7 +10,6 @@ import {
   MessageSquare,
   Send,
 } from "lucide-react";
-import SectionHeader from "@/components/ui/SectionHeader";
 import PageContainer from "@/components/ui/PageContainer";
 import BookingCalendar from "@/components/BookingCalendar";
 
@@ -52,7 +51,7 @@ export default function Contact() {
       } else {
         setSubmitStatus("error");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -85,7 +84,7 @@ export default function Contact() {
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 shadow-sm">
               <div className="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
               <span className="text-xs font-light text-gray-700 uppercase tracking-wider">
-                Let's Connect
+                Let&apos;s Connect
               </span>
             </div>
 
@@ -94,7 +93,8 @@ export default function Contact() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed">
-              Ready to transform your workflow? Let's start the conversation.
+              Ready to transform your workflow? Let&apos;s start the
+              conversation.
             </p>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Contact() {
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-gradient-to-br from-gray-50/50 to-white rounded-2xl p-6 border border-gray-100">
                 <p className="text-base text-gray-700 font-light leading-relaxed">
-                  We'll respond within 24 hours or schedule a call at your
+                  We&apos;ll respond within 24 hours or schedule a call at your
                   convenience.
                 </p>
               </div>
@@ -399,7 +399,7 @@ export default function Contact() {
                           ✓ Message sent successfully!
                         </p>
                         <p className="text-sm mt-1 text-accent-700">
-                          We'll get back to you within 24 hours.
+                          We&apos;ll get back to you within 24 hours.
                         </p>
                       </div>
                     )}

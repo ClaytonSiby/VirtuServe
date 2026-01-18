@@ -347,7 +347,7 @@ export default function About() {
                     Proactive Communication
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    We don't wait for you to check in. We provide regular
+                    We don&apos;t wait for you to check in. We provide regular
                     updates, flag potential issues early, and keep you informed
                     every step of the way.
                   </p>
@@ -424,7 +424,7 @@ export default function About() {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight">
-                  Let's work together
+                  Let&apos;s work together
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
