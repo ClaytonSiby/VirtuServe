@@ -11,7 +11,7 @@ import {
   Send,
 } from "lucide-react";
 import PageContainer from "@/components/ui/PageContainer";
-import BookingCalendar from "@/components/BookingCalendar";
+import CalendlyWidget from "@/components/CalendlyWidget";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -453,7 +453,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <BookingCalendar />
+          <CalendlyWidget />
         </PageContainer>
       </section>
     </main>
