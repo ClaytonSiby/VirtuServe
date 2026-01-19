@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import founderImage from "@/assets/founder_image.jpeg";
+import founderImage from "@/assets/sheridan.JPG";
 import Link from "next/link";
 import SectionHeader from "@/components/ui/SectionHeader";
 import PageContainer from "@/components/ui/PageContainer";
