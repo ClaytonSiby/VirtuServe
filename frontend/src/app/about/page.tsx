@@ -25,40 +25,40 @@ export default function About() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-primary-100/60 via-accent-50/40 to-white">
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gradient-radial from-primary-200/60 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-gradient-radial from-accent-200/50 to-transparent blur-3xl"></div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-gray-800/95 via-gray-900/98 to-gray-950">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gradient-radial from-primary-500/20 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-gradient-radial from-accent-500/15 to-transparent blur-3xl"></div>
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 border border-primary-100 rounded-full opacity-20"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 border border-accent-100 rounded-full opacity-20"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 border border-white/10 rounded-full opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 border border-white/10 rounded-full opacity-20"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left: Content */}
               <div className="space-y-8">
-                <div className="inline-flex items-center gap-2.5 bg-white/90 backdrop-blur-md border border-primary-200/50 rounded-full px-5 py-2.5 shadow-lg shadow-primary-100/50">
-                  <Heart className="w-4 h-4 text-accent-600" />
-                  <span className="text-xs font-semibold text-primary-700 uppercase tracking-[0.2em]">
+                <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 shadow-lg shadow-black/20">
+                  <Heart className="w-4 h-4 text-accent-400" />
+                  <span className="text-xs font-semibold text-white/90 uppercase tracking-[0.2em]">
                     Our Story
                   </span>
                 </div>
 
                 <div className="space-y-6">
-                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-gray-900 leading-[0.95] tracking-tighter">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white leading-[0.95] tracking-tighter">
                     About
-                    <span className="block mt-2 bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent font-light">
+                    <span className="block mt-2 bg-gradient-to-r from-accent-400 via-primary-400 to-accent-500 bg-clip-text text-transparent font-light">
                       VirtuServe
                     </span>
                   </h1>
 
-                  <div className="h-1 w-24 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full"></div>
+                  <div className="h-1 w-24 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full"></div>
                 </div>
 
-                <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-xl">
+                <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-xl">
                   Building lasting partnerships with international clients
                   through professional excellence and genuine care
                 </p>
@@ -66,31 +66,31 @@ export default function About() {
 
               {/* Right: Visual Element */}
               <div className="relative h-80 lg:h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-accent-50 to-white rounded-[2.5rem] shadow-2xl border border-primary-100/50 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-700/50 via-gray-800/60 to-gray-900/70 backdrop-blur-xl rounded-[2.5rem] shadow-2xl border border-white/10 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center p-10">
                     <div className="text-center space-y-8">
                       <div className="flex items-center justify-center gap-12">
                         <div className="text-center group">
-                          <div className="text-6xl md:text-7xl font-light text-primary-700 mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
-                            10<span className="text-accent-500">+</span>
+                          <div className="text-6xl md:text-7xl font-light text-white mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
+                            10<span className="text-accent-400">+</span>
                           </div>
-                          <div className="text-sm text-gray-600 font-medium uppercase tracking-widest">
+                          <div className="text-sm text-gray-300 font-medium uppercase tracking-widest">
                             Years
                           </div>
                         </div>
-                        <div className="w-px h-20 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                        <div className="w-px h-20 bg-gradient-to-b from-transparent via-gray-500 to-transparent"></div>
                         <div className="text-center group">
-                          <div className="text-6xl md:text-7xl font-light text-accent-600 mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
-                            500<span className="text-primary-500">+</span>
+                          <div className="text-6xl md:text-7xl font-light text-accent-400 mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
+                            500<span className="text-primary-400">+</span>
                           </div>
-                          <div className="text-sm text-gray-600 font-medium uppercase tracking-widest">
+                          <div className="text-sm text-gray-300 font-medium uppercase tracking-widest">
                             Clients
                           </div>
                         </div>
                       </div>
                       <div className="pt-6 space-y-2">
-                        <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-                          <Globe className="w-4 h-4 text-primary-600" />
+                        <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
+                          <Globe className="w-4 h-4 text-primary-400" />
                           <span className="font-light">Trusted Worldwide</span>
                         </div>
                       </div>
@@ -98,8 +98,8 @@ export default function About() {
                   </div>
                 </div>
                 {/* Floating accent elements */}
-                <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent-200 rounded-full blur-2xl opacity-40"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-200 rounded-full blur-2xl opacity-40"></div>
+                <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent-500/30 rounded-full blur-2xl opacity-40"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-500/30 rounded-full blur-2xl opacity-40"></div>
               </div>
             </div>
           </div>

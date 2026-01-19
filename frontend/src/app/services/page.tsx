@@ -110,25 +110,25 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Minimal & Clean */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-accent-100/50 via-primary-50/30 to-white">
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-accent-200/40 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary-200/30 to-transparent blur-3xl"></div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-gray-800/95 via-gray-900/98 to-gray-950">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-accent-500/20 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary-500/15 to-transparent blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 shadow-sm">
-              <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 shadow-sm">
+              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">
                 What We Offer
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-gray-900 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-white leading-tight tracking-tight">
               Our Services
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
               Comprehensive virtual assistant solutions designed to transform
               your business operations
             </p>
