@@ -99,11 +99,6 @@ export default function BookingCalendar() {
     );
   };
 
-  const monthYear = currentDate.toLocaleString("default", {
-    month: "long",
-    year: "numeric",
-  });
-
   const formatSelectedDate = () => {
     if (!selectedDate) return "";
     return selectedDate.toLocaleDateString("default", {
@@ -141,7 +136,7 @@ export default function BookingCalendar() {
               Schedule Your <span className="font-light">Discovery Call</span>
             </h3>
             <p className="text-lg text-white/70 font-light leading-relaxed max-w-2xl">
-              Let's discuss how we can elevate your business. Choose a
+              Let&apos;s discuss how we can elevate your business. Choose a
               convenient time for a personalized 30-minute consultation.
             </p>
           </div>

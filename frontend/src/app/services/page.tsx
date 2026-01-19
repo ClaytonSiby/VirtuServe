@@ -9,9 +9,12 @@ import {
   Calendar as CalendarIcon,
   Mail as MailIcon,
   ArrowRight,
+  Lightbulb,
+  Award,
+  Users,
+  Shield,
 } from "lucide-react";
 import Link from "next/link";
-import SectionHeader from "@/components/ui/SectionHeader";
 import PageContainer from "@/components/ui/PageContainer";
 
 export const metadata: Metadata = {
@@ -136,43 +139,172 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Highlights */}
-      <section className="py-12 bg-white border-y border-gray-100">
+      {/* Premium Trust Indicators */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        {/* Subtle background elements */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/30 to-white"></div>
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-gradient-radial from-primary-200/20 via-slate-200/10 to-transparent blur-3xl opacity-60"></div>
+        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-gradient-radial from-slate-300/15 via-primary-200/10 to-transparent blur-3xl opacity-50"></div>
+
         <PageContainer>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "Innovative Working Activities",
-              "100% Client Satisfaction",
-              "Dedicated Team Member",
-              "Safe & Secure Environment",
-            ].map((label) => (
-              <div
-                key={label}
-                className="px-5 py-3.5 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-primary-200/50 text-primary-800 text-sm font-light text-center hover:shadow-md transition-shadow duration-300"
-              >
-                {label}
+          <div className="relative z-10">
+            {/* Refined section intro */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gradient-to-r from-white/80 via-slate-50/90 to-white/80 backdrop-blur-sm border border-slate-900/10 mb-6 shadow-md">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 animate-pulse"></div>
+                <span className="text-xs font-bold bg-gradient-to-r from-slate-900 to-primary-950 bg-clip-text text-transparent tracking-[0.2em] uppercase">
+                  Why Choose Us
+                </span>
               </div>
-            ))}
+              <p className="text-base md:text-lg text-slate-600 font-light max-w-2xl mx-auto">
+                Excellence in every interaction, security in every process
+              </p>
+            </div>
+
+            {/* Premium trust badges grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Badge 1 - Innovative Working */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/5 via-primary-950/5 to-slate-950/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+                  {/* Icon */}
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-slate-800/50">
+                      <Lightbulb className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-base font-semibold text-slate-900 text-center leading-tight group-hover:text-primary-900 transition-colors duration-300">
+                    Innovative Working Activities
+                  </h3>
+                </div>
+              </div>
+
+              {/* Badge 2 - Client Satisfaction */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/5 via-primary-950/5 to-slate-950/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-slate-800/50">
+                      <Award className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-base font-semibold text-slate-900 text-center leading-tight group-hover:text-primary-900 transition-colors duration-300">
+                    100% Client Satisfaction
+                  </h3>
+                </div>
+              </div>
+
+              {/* Badge 3 - Dedicated Team */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/5 via-primary-950/5 to-slate-950/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-slate-800/50">
+                      <Users className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-base font-semibold text-slate-900 text-center leading-tight group-hover:text-primary-900 transition-colors duration-300">
+                    Dedicated Team Member
+                  </h3>
+                </div>
+              </div>
+
+              {/* Badge 4 - Safe & Secure */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/5 via-primary-950/5 to-slate-950/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-slate-800/50">
+                      <Shield className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-base font-semibold text-slate-900 text-center leading-tight group-hover:text-primary-900 transition-colors duration-300">
+                    Safe &amp; Secure Environment
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
         </PageContainer>
+      </section>
+
+      {/* Elegant Divider */}
+      <section className="py-12 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-8">
+              {/* Left decoration */}
+              <div className="flex items-center gap-3">
+                <div className="flex gap-1.5">
+                  <div className="w-1 h-1 rounded-full bg-slate-900/20"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-900/30"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-900/40"></div>
+                </div>
+                <div className="h-px w-24 md:w-40 bg-gradient-to-r from-transparent via-slate-900/30 to-slate-900/50"></div>
+              </div>
+
+              {/* Center ornament */}
+              <div className="relative flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-full blur-md opacity-30"></div>
+                <div className="relative w-4 h-4 rounded-full bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 shadow-xl ring-4 ring-white/80"></div>
+              </div>
+
+              {/* Right decoration */}
+              <div className="flex items-center gap-3">
+                <div className="h-px w-24 md:w-40 bg-gradient-to-l from-transparent via-slate-900/30 to-slate-900/50"></div>
+                <div className="flex gap-1.5">
+                  <div className="w-1 h-1 rounded-full bg-slate-900/40"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-900/30"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-900/20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20 md:py-24 bg-gradient-to-b from-white to-gray-50">
         <PageContainer>
-          <SectionHeader
-            align="left"
-            label={
-              <>
-                <div className="w-2 h-2 bg-accent-600 rounded-full animate-pulse" />
-                <span className="text-sm font-light text-primary-900 uppercase tracking-[0.2em]">
-                  Service Breakdown
-                </span>
-              </>
-            }
-            title="Explore Our Services"
-            subtitle="Comprehensive solutions tailored to your needs"
-          />
+          {/* Redesigned centered header */}
+          <div className="text-center mb-16">
+            {/* Premium badge */}
+            <div className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-gradient-to-r from-slate-50 via-white to-slate-50 border-2 border-slate-900/10 mb-8 shadow-lg hover:shadow-xl hover:border-slate-900/20 transition-all duration-500 group">
+              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+              <span className="text-[11px] font-extrabold bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 bg-clip-text text-transparent tracking-[0.3em] uppercase">
+                Service Breakdown
+              </span>
+              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-primary-950 to-slate-900 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+            </div>
+
+            {/* Large heading */}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-slate-900 mb-5 tracking-tight leading-[1.1]">
+              Explore Our{" "}
+              <span className="font-normal bg-gradient-to-r from-slate-900 via-primary-900 to-slate-800 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed mb-8">
+              Comprehensive solutions tailored to your needs
+            </p>
+
+            {/* Subtle accent */}
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-slate-900/20"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-slate-900/40"></div>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-slate-900/20"></div>
+            </div>
+          </div>
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => (
               <div
@@ -234,61 +366,141 @@ export default function Services() {
             </h2>
           </div>
           <div className="relative grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Connection lines */}
-            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-300 to-transparent" />
-            <div className="hidden md:block absolute top-10 left-1/4 w-1/4 h-0.5">
-              <div className="w-full h-full bg-gradient-to-r from-slate-900 to-primary-950 animate-pulse" />
-            </div>
-            <div className="hidden md:block absolute top-10 right-1/4 w-1/4 h-0.5">
-              <div
-                className="w-full h-full bg-gradient-to-r from-slate-900 to-primary-950 animate-pulse"
-                style={{ animationDelay: "0.5s" }}
-              />
+            {/* Premium Animated Connectors with Multiple Visual Layers */}
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-1">
+              {/* Base gradient line with subtle glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-300 to-transparent opacity-30 blur-[1px]" />
+
+              {/* First Connector - Enhanced */}
+              <div className="absolute left-[16.66%] right-[50%] h-full">
+                {/* Static dark gradient base */}
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 via-primary-950/50 to-slate-900/40 rounded-full" />
+
+                {/* Flowing shimmer effect */}
+                <div className="absolute inset-0 overflow-hidden rounded-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-flowRight" />
+                </div>
+
+                {/* Flowing color gradient */}
+                <div className="absolute inset-0 overflow-hidden rounded-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-500/60 to-transparent animate-flowRight" />
+                </div>
+
+                {/* Glow effect underneath */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-500/20 to-transparent blur-md" />
+
+                {/* Pulsing dot */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative">
+                    <div className="absolute inset-0 w-3 h-3 bg-accent-500 rounded-full blur-sm animate-pulse" />
+                    <div className="relative w-2.5 h-2.5 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full shadow-lg shadow-accent-500/50 animate-pulse" />
+                  </div>
+                </div>
+
+                {/* Particle effects */}
+                <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-1 h-1 bg-accent-400/60 rounded-full animate-pulse" />
+                <div
+                  className="absolute left-3/4 top-1/2 -translate-y-1/2 w-1 h-1 bg-primary-400/60 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.3s" }}
+                />
+              </div>
+
+              {/* Second Connector - Enhanced with delay */}
+              <div className="absolute left-[50%] right-[16.66%] h-full">
+                {/* Static dark gradient base */}
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 via-primary-950/50 to-slate-900/40 rounded-full" />
+
+                {/* Flowing shimmer effect */}
+                <div className="absolute inset-0 overflow-hidden rounded-full">
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-flowRight"
+                    style={{ animationDelay: "1s" }}
+                  />
+                </div>
+
+                {/* Flowing color gradient */}
+                <div className="absolute inset-0 overflow-hidden rounded-full">
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-500/60 to-transparent animate-flowRight"
+                    style={{ animationDelay: "1s" }}
+                  />
+                </div>
+
+                {/* Glow effect underneath */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-500/20 to-transparent blur-md" />
+
+                {/* Pulsing dot */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative">
+                    <div
+                      className="absolute inset-0 w-3 h-3 bg-primary-500 rounded-full blur-sm animate-pulse"
+                      style={{ animationDelay: "0.5s" }}
+                    />
+                    <div
+                      className="relative w-2.5 h-2.5 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full shadow-lg shadow-primary-500/50 animate-pulse"
+                      style={{ animationDelay: "0.5s" }}
+                    />
+                  </div>
+                </div>
+
+                {/* Particle effects */}
+                <div
+                  className="absolute left-1/4 top-1/2 -translate-y-1/2 w-1 h-1 bg-primary-400/60 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.8s" }}
+                />
+                <div
+                  className="absolute left-3/4 top-1/2 -translate-y-1/2 w-1 h-1 bg-accent-400/60 rounded-full animate-pulse"
+                  style={{ animationDelay: "1.1s" }}
+                />
+              </div>
             </div>
 
+            {/* Step 1 */}
             <div className="text-center group relative">
               <div className="relative inline-block">
-                <div className="absolute inset-0 bg-accent-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-primary-950/20 to-slate-950/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-semibold mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg border border-slate-800">
                   1
                 </div>
               </div>
-              <h3 className="text-xl font-light mb-3 text-gray-900">
+              <h3 className="text-xl font-semibold mb-3 text-slate-900 tracking-tight">
                 Book a Discovery Call
               </h3>
-              <p className="text-gray-600 leading-relaxed font-light">
+              <p className="text-slate-600 leading-relaxed font-light">
                 Schedule a free consultation to discuss your needs and how we
                 can help
               </p>
             </div>
 
+            {/* Step 2 */}
             <div className="text-center group relative">
               <div className="relative inline-block">
-                <div className="absolute inset-0 bg-primary-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-primary-950/20 to-slate-950/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-semibold mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg border border-slate-800">
                   2
                 </div>
               </div>
-              <h3 className="text-xl font-light mb-3 text-gray-900">
+              <h3 className="text-xl font-semibold mb-3 text-slate-900 tracking-tight">
                 Custom Plan Creation
               </h3>
-              <p className="text-gray-600 leading-relaxed font-light">
+              <p className="text-slate-600 leading-relaxed font-light">
                 We&apos;ll create a tailored service plan based on your specific
                 requirements
               </p>
             </div>
 
+            {/* Step 3 - Fixed gradient */}
             <div className="text-center group relative">
               <div className="relative inline-block">
-                <div className="absolute inset-0 bg-accent-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-accent-500 to-accent-600 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-primary-950/20 to-slate-950/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-semibold mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg border border-slate-800">
                   3
                 </div>
               </div>
-              <h3 className="text-xl font-light mb-3 text-gray-900">
+              <h3 className="text-xl font-semibold mb-3 text-slate-900 tracking-tight">
                 Get Started
               </h3>
-              <p className="text-gray-600 leading-relaxed font-light">
+              <p className="text-slate-600 leading-relaxed font-light">
                 We begin working on your tasks with regular updates and clear
                 communication
               </p>

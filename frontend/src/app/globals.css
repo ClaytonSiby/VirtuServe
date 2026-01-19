@@ -154,6 +154,23 @@ body {
   }
 }
 
+@keyframes flowRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 .animate-float {
   animation: float 8s ease-in-out infinite;
 }
@@ -173,6 +190,10 @@ body {
 .animate-gradient-shift {
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
+}
+
+.animate-flowRight {
+  animation: flowRight 3s ease-in-out infinite;
 }
 
 /* Smooth scroll behavior */
