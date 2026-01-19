@@ -15,10 +15,10 @@ export default function Privacy() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-primary-50/50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900/95 via-accent-900/90 to-primary-800/95 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-400/20 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-primary-400/15 to-transparent blur-3xl"></div>
+      <section className="relative bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/20 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-primary-500/15 to-transparent blur-3xl"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

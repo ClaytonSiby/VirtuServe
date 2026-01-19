@@ -70,18 +70,22 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-primary-50/20 via-white to-accent-50/15">
-      <section className="pt-32 pb-24 md:pt-40 md:pb-36">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-accent-500/20 to-transparent blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary-500/15 to-transparent blur-3xl"></div>
+        </div>
         <PageContainer>
-          <div className="mb-20 md:mb-24 text-center">
-            <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-xl border border-gray-200/40 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
-              <span className="text-[10px] font-medium text-gray-600 uppercase tracking-[0.25em]">
+          <div className="relative z-10 mb-20 md:mb-24 text-center">
+            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-400"></div>
+              <span className="text-[10px] font-medium text-white/90 uppercase tracking-[0.25em]">
                 Let&apos;s Connect
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white mb-6 tracking-tight leading-tight">
               Get In Touch
             </h1>
 
@@ -91,7 +95,7 @@ export default function Contact() {
               <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary-400 to-transparent"></div>
             </div>
 
-            <p className="text-lg md:text-xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
               Ready to transform your workflow? Choose your preferred way to
               connect.
             </p>

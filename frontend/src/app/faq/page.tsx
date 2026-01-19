@@ -132,23 +132,23 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-primary-50/30 to-white">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-primary-900/95 via-accent-900/90 to-primary-800/95">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-600/20 via-transparent to-transparent" />
         <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-accent-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
 
         <PageContainer>
           <div className="relative z-10 max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-primary-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-              <span className="text-xs font-medium text-primary-900 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-400" />
+              <span className="text-xs font-medium text-white/90 uppercase tracking-wider">
                 Help Center
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-white">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
               Find answers to common questions about our services, pricing, and
               how we work
             </p>
