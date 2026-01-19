@@ -183,10 +183,16 @@ export default function About() {
           <div className="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             {/* Photo and Quick Bio */}
             <div className="lg:col-span-1">
-              <div className="relative bg-gradient-to-br from-white to-primary-50/50 border border-primary-200/60 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 sticky top-24 overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-accent-200/30 to-transparent blur-2xl" />
+              <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-10 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 sticky top-24 overflow-hidden group">
+                {/* Decorative gradient orbs */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-radial from-primary-200/40 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-radial from-slate-200/30 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+
+                {/* Corner accent */}
+                <div className="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-slate-900/10 rounded-tr-2xl"></div>
+
                 <div className="relative z-10">
-                  <div className="aspect-square rounded-2xl mb-6 overflow-hidden border border-primary-200 group-hover:scale-105 transition-transform duration-500">
+                  <div className="aspect-square rounded-[2rem] mb-8 overflow-hidden border-2 border-slate-700/20 group-hover:border-slate-900/40 group-hover:scale-105 transition-all duration-700 shadow-xl group-hover:shadow-2xl">
                     <Image
                       src={founderImage}
                       alt="Sheridan De Laroche - Founder & Lead VA"
@@ -194,20 +200,27 @@ export default function About() {
                       priority
                     />
                   </div>
-                  <h3 className="text-3xl font-light text-primary-900 mb-1 tracking-tight">
+                  <h3 className="text-3xl md:text-4xl font-light bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 bg-clip-text text-transparent mb-2 tracking-tight">
                     Sheridan De Laroche
                   </h3>
-                  <p className="text-accent-600 font-light mb-2 text-sm uppercase tracking-wider">
+                  <p className="text-slate-700 font-medium mb-2 text-sm uppercase tracking-[0.2em]">
                     Founder & Lead VA
                   </p>
-                  <p className="text-gray-600 text-sm mb-6 font-light leading-relaxed">
+                  <p className="text-slate-600 text-sm mb-8 font-light leading-relaxed">
                     International Property Manager & Executive Assistant
                   </p>
-                  <div className="h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent mb-6" />
+
+                  {/* Elegant divider */}
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-700/30 to-slate-900/20" />
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm"></div>
+                    <div className="flex-1 h-px bg-gradient-to-l from-transparent via-slate-700/30 to-slate-900/20" />
+                  </div>
+
                   <div className="flex gap-3">
                     <a
                       href="https://www.linkedin.com/in/sheridan-de-laroche-ba4506127/"
-                      className="flex-1 px-4 py-3 rounded-xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white text-sm font-normal border border-slate-800 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center"
+                      className="flex-1 px-5 py-3.5 rounded-2xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white text-sm font-medium border border-slate-800 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 text-center"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -215,7 +228,7 @@ export default function About() {
                     </a>
                     <a
                       href="/contact"
-                      className="flex-1 px-4 py-3 rounded-xl border border-primary-300 text-primary-900 text-sm font-normal hover:border-accent-400 hover:bg-accent-50/50 transition-all duration-300 text-center"
+                      className="flex-1 px-5 py-3.5 rounded-2xl border border-slate-700/30 text-slate-900 text-sm font-medium hover:border-slate-900 hover:bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
                     >
                       Contact
                     </a>
@@ -227,25 +240,47 @@ export default function About() {
             {/* Detailed Bio and Experience */}
             <div className="lg:col-span-2 space-y-8">
               {/* Bio */}
-              <div className="relative bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 shadow-sm overflow-hidden group">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-radial from-accent-100/30 to-transparent blur-3xl" />
+              <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-10 md:p-14 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 overflow-hidden group">
+                {/* Animated gradient orbs */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-radial from-primary-200/40 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-radial from-slate-200/30 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+
+                {/* Decorative corner elements */}
+                <div className="absolute top-8 right-8 w-20 h-20 border-t-2 border-r-2 border-slate-900/15 rounded-tr-3xl"></div>
+                <div className="absolute bottom-8 left-8 w-20 h-20 border-b-2 border-l-2 border-slate-900/15 rounded-bl-3xl"></div>
+
                 <div className="relative z-10">
-                  <h4 className="text-3xl md:text-4xl font-extralight text-primary-900 mb-8 tracking-tight">
+                  <div className="flex items-center gap-4 mb-10">
+                    <div className="flex items-center gap-3">
+                      <div className="h-1 w-12 bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 rounded-full"></div>
+                      <div className="h-1 w-6 bg-gradient-to-r from-primary-950 to-slate-700 rounded-full opacity-60"></div>
+                    </div>
+                  </div>
+
+                  <h4 className="text-3xl md:text-4xl lg:text-5xl font-extralight bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 bg-clip-text text-transparent mb-10 tracking-tight leading-tight">
                     Expertise & Background
                   </h4>
-                  <div className="space-y-6 text-gray-700 leading-relaxed">
-                    <p className="text-xl font-light text-gray-800">
+
+                  <div className="space-y-8 text-slate-700 leading-relaxed">
+                    <p className="text-xl md:text-2xl font-light text-slate-800 leading-relaxed">
                       Sheridan brings dual expertise as an International
                       Property Manager and Executive Assistant, delivering
                       exceptional results for clients across borders.
                     </p>
-                    <p className="text-lg font-light">
+
+                    {/* Elegant separator */}
+                    <div className="flex items-center gap-4 py-2">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm"></div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-slate-700/30 to-transparent"></div>
+                    </div>
+
+                    <p className="text-lg md:text-xl font-light leading-relaxed">
                       With a proven track record managing diverse portfolios and
                       supporting senior executives, she excels at complex
                       scheduling, travel coordination, and confidential
                       matters—all handled with precision and discretion.
                     </p>
-                    <p className="text-lg font-light">
+                    <p className="text-lg md:text-xl font-light leading-relaxed">
                       Her strength lies in building productive relationships
                       while thriving in fast-paced environments, making her an
                       invaluable partner for organizational growth.
@@ -255,55 +290,60 @@ export default function About() {
               </div>
 
               {/* Professional Experience */}
-              <div className="relative bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 shadow-sm overflow-hidden">
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-radial from-primary-100/30 to-transparent blur-3xl" />
+              <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-10 md:p-14 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 overflow-hidden">
+                {/* Gradient orbs */}
+                <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-radial from-primary-200/40 to-transparent blur-3xl opacity-60" />
+
                 <div className="relative z-10">
-                  <h4 className="text-2xl font-light text-primary-900 mb-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center border border-primary-200">
-                      <Users className="w-5 h-5 text-primary-700" />
+                  <div className="flex items-center gap-4 mb-10">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center border border-slate-800 shadow-xl">
+                      <Users className="w-7 h-7 text-white" />
                     </div>
-                    <span>Key Expertise</span>
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
-                        <Target className="w-6 h-6" />
+                    <h4 className="text-2xl md:text-3xl font-light bg-gradient-to-r from-slate-900 to-primary-900 bg-clip-text text-transparent">
+                      Key Expertise
+                    </h4>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-5 p-6 md:p-7 rounded-[2rem] bg-white/90 border border-slate-700/30 hover:border-slate-900 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white flex items-center justify-center flex-shrink-0 border border-slate-800 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        <Target className="w-7 h-7" />
                       </div>
                       <div className="flex-1">
-                        <h5 className="font-medium text-primary-900 mb-1">
+                        <h5 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">
                           Property Management
                         </h5>
-                        <p className="text-sm text-gray-600 font-light leading-relaxed">
+                        <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
                           International & national portfolio oversight with
                           proven cost-effective strategies
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
-                        <Zap className="w-6 h-6" />
+                    <div className="flex items-start gap-5 p-6 md:p-7 rounded-[2rem] bg-white/90 border border-slate-700/30 hover:border-slate-900 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white flex items-center justify-center flex-shrink-0 border border-slate-800 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        <Zap className="w-7 h-7" />
                       </div>
                       <div className="flex-1">
-                        <h5 className="font-medium text-primary-900 mb-1">
+                        <h5 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">
                           Executive Support
                         </h5>
-                        <p className="text-sm text-gray-600 font-light leading-relaxed">
+                        <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
                           High-level assistance to senior executives with
                           exceptional organizational expertise
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
-                        <Globe className="w-6 h-6" />
+                    <div className="flex items-start gap-5 p-6 md:p-7 rounded-[2rem] bg-white/90 border border-slate-700/30 hover:border-slate-900 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white flex items-center justify-center flex-shrink-0 border border-slate-800 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        <Globe className="w-7 h-7" />
                       </div>
                       <div className="flex-1">
-                        <h5 className="font-medium text-primary-900 mb-1">
+                        <h5 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">
                           International Operations
                         </h5>
-                        <p className="text-sm text-gray-600 font-light leading-relaxed">
+                        <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
                           Cross-border coordination and management with cultural
                           fluency
                         </p>
