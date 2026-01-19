@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     "virtual assistant, VA services, administrative support, international clients, remote assistant, business support",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#1e40af",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,6 +27,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        {/* Preload Calendly widget script */}
+        <link
+          rel="preload"
+          href="https://assets.calendly.com/assets/external/widget.js"
+          as="script"
+        />
+        <link
+          rel="preload"
+          href="https://assets.calendly.com/assets/external/widget.css"
+          as="style"
+        />
+      </head>
       <body suppressHydrationWarning>
         <Navigation />
         {children}
