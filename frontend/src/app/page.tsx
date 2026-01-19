@@ -481,7 +481,17 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-white to-beige-50/50 relative overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-slate-50 via-gray-50 to-primary-50/30 overflow-hidden">
+        {/* Elegant background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/8 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-primary-500/10 to-transparent blur-3xl" />
+          <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-radial from-slate-400/5 to-transparent blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.03),rgba(255,255,255,0))]" />
+
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}

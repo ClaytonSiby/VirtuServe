@@ -102,9 +102,19 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-28 md:py-40 bg-gradient-to-b from-white via-gray-50/30 to-white">
+      <section className="relative py-28 md:py-40 bg-gradient-to-br from-slate-50 via-gray-50 to-primary-50/30 overflow-hidden">
+        {/* Elegant background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/8 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-primary-500/10 to-transparent blur-3xl" />
+          <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-radial from-slate-400/5 to-transparent blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.03),rgba(255,255,255,0))]" />
+
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+        </div>
         <PageContainer>
-          <div className="text-center mb-20 md:mb-28">
+          <div className="relative z-10 text-center mb-20 md:mb-28">
             <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-slate-900/10 to-primary-950/10 border border-slate-700/30 rounded-full px-5 py-3 mb-8 shadow-sm">
               <div className="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
               <span className="text-xs font-semibold text-accent-700 uppercase tracking-[0.25em]">
@@ -121,7 +131,7 @@ export default function About() {
               Empowering businesses worldwide through professional excellence
             </p>
           </div>
-          <div className="max-w-5xl mx-auto">
+          <div className="relative z-10 max-w-5xl mx-auto">
             <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-12 md:p-20 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 overflow-hidden group">
               {/* Animated gradient orbs */}
               <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-primary-200/40 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
