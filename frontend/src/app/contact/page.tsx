@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./contact.module.css";
 import {
   Calendar,
   Mail,
@@ -9,9 +10,12 @@ import {
   Building,
   MessageSquare,
   Send,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import PageContainer from "@/components/ui/PageContainer";
 import CalendlyWidget from "@/components/CalendlyWidget";
+import { submitContactForm } from "@/lib/api";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,19 +30,18 @@ export default function Contact() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await submitContactForm(formData);
 
-      if (response.ok) {
+      if (response.success) {
         setSubmitStatus("success");
         setFormData({
           name: "",
@@ -48,11 +51,21 @@ export default function Contact() {
           service: "",
           message: "",
         });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus("idle");
+        }, 5000);
       } else {
         setSubmitStatus("error");
+        setErrorMessage(response.message || "Failed to submit the form");
       }
-    } catch {
+    } catch (error) {
       setSubmitStatus("error");
+      setErrorMessage(
+        "Unable to connect to the server. Please try again later.",
+      );
+      console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -71,15 +84,56 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-accent-500/20 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-primary-500/15 to-transparent blur-3xl"></div>
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-gradient-to-br from-slate-700 via-primary-800 to-slate-700">
+        {/* Elegant diagonal flowing waves and stars background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Diagonal flowing waves - bottom left to top right */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-500/30 via-accent-600/15 to-transparent ${styles.diagonalWave1}`}
+          />
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-primary-500/28 via-primary-600/13 to-transparent ${styles.diagonalWave2}`}
+          />
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-600/22 via-accent-500/10 to-transparent ${styles.diagonalWave3}`}
+          />
+
+          {/* Diagonal accent lines */}
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-accent-400/40 to-transparent opacity-70 ${styles.accentLine1}`}
+          />
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-primary-400/35 to-transparent opacity-60 ${styles.accentLine2}`}
+          />
+
+          {/* Scattered stars */}
+          <div className="absolute top-[8%] left-[12%] w-1 h-1 rounded-full bg-accent-400/60 shadow-sm shadow-accent-400/40" />
+          <div className="absolute top-[15%] right-[8%] w-1.5 h-1.5 rounded-full bg-primary-300/70 shadow-md shadow-primary-300/50" />
+          <div className="absolute top-[22%] left-[25%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[12%] right-[28%] w-1 h-1 rounded-full bg-accent-500/65 shadow-sm shadow-accent-500/45" />
+          <div className="absolute top-[28%] left-[35%] w-1.5 h-1.5 rounded-full bg-primary-400/60 shadow-md shadow-primary-400/40" />
+          <div className="absolute top-[18%] right-[42%] w-0.5 h-0.5 rounded-full bg-white/40" />
+          <div className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
+          <div className="absolute top-[25%] right-[55%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
+          <div className="absolute top-[32%] left-[48%] w-0.5 h-0.5 rounded-full bg-white/45" />
+          <div className="absolute top-[10%] right-[18%] w-1 h-1 rounded-full bg-accent-300/60 shadow-sm shadow-accent-300/40" />
+          <div className="absolute top-[38%] left-[62%] w-1.5 h-1.5 rounded-full bg-primary-400/70 shadow-md shadow-primary-400/50" />
+          <div className="absolute top-[20%] right-[65%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[30%] left-[75%] w-1 h-1 rounded-full bg-accent-500/60 shadow-sm shadow-accent-500/40" />
+          <div className="absolute top-[14%] right-[72%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
+          <div className="absolute top-[36%] left-[88%] w-0.5 h-0.5 rounded-full bg-white/40" />
+          <div className="absolute top-[24%] right-[85%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
+
+          {/* Soft atmospheric glow */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-accent-500/10 to-transparent blur-3xl" />
         </div>
+
         <PageContainer>
           <div className="relative z-10 mb-20 md:mb-24 text-center">
             <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-400"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-300"></div>
               <span className="text-[10px] font-medium text-white/90 uppercase tracking-[0.25em]">
                 Let&apos;s Connect
               </span>
@@ -90,17 +144,17 @@ export default function Contact() {
             </h1>
 
             <div className="flex items-center justify-center gap-3 opacity-60 mb-6">
-              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-accent-400 to-transparent"></div>
-              <div className="w-1 h-1 rounded-full bg-accent-400"></div>
-              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary-400 to-transparent"></div>
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-accent-300/60 to-transparent"></div>
+              <div className="w-1 h-1 rounded-full bg-accent-300"></div>
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary-300/60 to-transparent"></div>
             </div>
 
-            <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
               Ready to transform your workflow? Choose your preferred way to
               connect.
             </p>
           </div>
-          <div className="grid lg:grid-cols-5 gap-12 xl:gap-16">
+          <div className="relative z-10 grid lg:grid-cols-5 gap-12 xl:gap-16">
             {/* Contact Information */}
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-gradient-to-br from-accent-50/60 via-white to-primary-50/40 rounded-2xl p-8 border border-gray-200/60 shadow-md">
@@ -113,12 +167,12 @@ export default function Contact() {
               <div className="space-y-5">
                 <a
                   href="mailto:hello@virtuserve.com"
-                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-accent-300/70 transition-all duration-300"
+                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-accent-300/70 transition-all duration-300 overflow-hidden"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-accent-100 to-accent-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     <Mail className="w-6 h-6 text-accent-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-gray-900 mb-2 text-lg tracking-wide">
                       Email
                     </h3>
@@ -133,12 +187,12 @@ export default function Contact() {
 
                 <a
                   href="#booking"
-                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-primary-300/70 transition-all duration-300"
+                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-primary-300/70 transition-all duration-300 overflow-hidden"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     <Calendar className="w-6 h-6 text-primary-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-gray-900 mb-2 text-lg tracking-wide">
                       Discovery Call
                     </h3>
@@ -154,12 +208,12 @@ export default function Contact() {
 
                 <a
                   href="tel:+27828997062"
-                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-accent-300/70 transition-all duration-300"
+                  className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-accent-300/70 transition-all duration-300 overflow-hidden"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-accent-100 to-accent-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     <Phone className="w-6 h-6 text-accent-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-gray-900 mb-2 text-lg tracking-wide">
                       Phone
                     </h3>
@@ -397,23 +451,29 @@ export default function Contact() {
                     </button>
 
                     {submitStatus === "success" && (
-                      <div className="bg-gradient-to-br from-accent-50 to-primary-50 border border-accent-300 text-accent-800 p-5 rounded-xl shadow-sm">
-                        <p className="font-light">
-                          ✓ Message sent successfully!
-                        </p>
-                        <p className="text-sm mt-1 text-accent-700">
-                          We&apos;ll get back to you within 24 hours.
-                        </p>
+                      <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-300 text-green-800 p-5 rounded-xl shadow-sm flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-medium">
+                            Message sent successfully!
+                          </p>
+                          <p className="text-sm mt-1 text-green-700 font-light">
+                            We&apos;ll get back to you within 24 hours.
+                          </p>
+                        </div>
                       </div>
                     )}
 
                     {submitStatus === "error" && (
-                      <div className="bg-red-50 border border-red-300 text-red-800 p-5 rounded-xl shadow-sm">
-                        <p className="font-light">× Something went wrong</p>
-                        <p className="text-sm mt-1 text-red-700">
-                          Please try again or email us directly at
-                          hello@virtuserve.com
-                        </p>
+                      <div className="bg-red-50 border border-red-300 text-red-800 p-5 rounded-xl shadow-sm flex items-start gap-3">
+                        <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-medium">Something went wrong</p>
+                          <p className="text-sm mt-1 text-red-700 font-light">
+                            {errorMessage ||
+                              "Please try again or email us directly at hello@virtuserve.com"}
+                          </p>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -427,10 +487,21 @@ export default function Contact() {
       {/* Booking Calendar Section */}
       <section
         id="booking"
-        className="py-28 md:py-40 bg-gradient-to-b from-gray-50 via-white to-gray-50/50"
+        className="relative py-28 md:py-40 bg-gradient-to-br from-slate-50 via-gray-50 to-primary-50/30 overflow-hidden"
       >
+        {/* Elegant background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/8 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-primary-500/10 to-transparent blur-3xl" />
+          <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-radial from-slate-400/5 to-transparent blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.03),rgba(255,255,255,0))]" />
+
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+        </div>
+
         <PageContainer>
-          <div className="text-center mb-20 md:mb-24">
+          <div className="relative z-10 text-center mb-20 md:mb-24">
             <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-slate-50/95 via-primary-50/90 to-slate-50/95 backdrop-blur-sm border border-slate-700/30 rounded-full px-6 py-3 mb-8 shadow-lg hover:shadow-xl hover:border-slate-900/40 transition-all duration-300">
               <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm"></div>
               <span className="text-xs font-semibold bg-gradient-to-r from-slate-900 to-primary-950 bg-clip-text text-transparent uppercase tracking-[0.2em]">
@@ -453,7 +524,9 @@ export default function Contact() {
             </div>
           </div>
 
-          <CalendlyWidget />
+          <div className="relative z-10">
+            <CalendlyWidget />
+          </div>
         </PageContainer>
       </section>
     </main>

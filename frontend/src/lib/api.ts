@@ -36,4 +36,24 @@ export async function healthCheck() {
     return response.data;
 }
 
+export interface ContactRequest {
+    name: string;
+    email: string;
+    company?: string;
+    phone?: string;
+    service?: string;
+    message: string;
+}
+
+export interface ContactResponse {
+    success: boolean;
+    message: string;
+    timestamp: string;
+}
+
+export async function submitContactForm(request: ContactRequest): Promise<ContactResponse> {
+    const response = await api.post<ContactResponse>('/contact', request);
+    return response.data;
+}
+
 export default api;

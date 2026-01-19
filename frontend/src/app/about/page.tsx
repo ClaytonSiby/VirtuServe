@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import {
   Award,
@@ -14,12 +15,7 @@ import founderImage from "@/assets/sheridan.JPG";
 import Link from "next/link";
 import SectionHeader from "@/components/ui/SectionHeader";
 import PageContainer from "@/components/ui/PageContainer";
-
-export const metadata: Metadata = {
-  title: "About Us | VirtuServe",
-  description:
-    "Learn about our professional story, background, experience, and what drives us. Building trust with international clients.",
-};
+import styles from "./about.module.css";
 
 export default function About() {
   return (
@@ -174,13 +170,58 @@ export default function About() {
       </section>
 
       {/* Founder Bio */}
-      <section className="py-20 md:py-24 bg-gradient-to-br from-gray-50 to-white">
-        <PageContainer>
-          <SectionHeader
-            title="Meet Sheridan"
-            subtitle="The founder behind VirtuServe"
+      <section className="relative py-20 md:py-24 bg-gradient-to-br from-slate-700 via-primary-800 to-slate-700">
+        {/* Elegant diagonal flowing waves and stars background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Diagonal flowing waves - bottom left to top right */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-500/30 via-accent-600/15 to-transparent ${styles.diagonalWave1}`}
           />
-          <div className="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-primary-500/28 via-primary-600/13 to-transparent ${styles.diagonalWave2}`}
+          />
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-600/22 via-accent-500/10 to-transparent ${styles.diagonalWave3}`}
+          />
+
+          {/* Diagonal accent lines */}
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-accent-400/40 to-transparent opacity-70 ${styles.accentLine1}`}
+          />
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-primary-400/35 to-transparent opacity-60 ${styles.accentLine2}`}
+          />
+
+          {/* Scattered stars */}
+          <div className="absolute top-[8%] left-[12%] w-1 h-1 rounded-full bg-accent-400/60 shadow-sm shadow-accent-400/40" />
+          <div className="absolute top-[15%] right-[8%] w-1.5 h-1.5 rounded-full bg-primary-300/70 shadow-md shadow-primary-300/50" />
+          <div className="absolute top-[22%] left-[25%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[12%] right-[28%] w-1 h-1 rounded-full bg-accent-500/65 shadow-sm shadow-accent-500/45" />
+          <div className="absolute top-[28%] left-[35%] w-1.5 h-1.5 rounded-full bg-primary-400/60 shadow-md shadow-primary-400/40" />
+          <div className="absolute top-[18%] right-[42%] w-0.5 h-0.5 rounded-full bg-white/40" />
+          <div className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
+          <div className="absolute top-[25%] right-[55%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
+          <div className="absolute top-[32%] left-[48%] w-0.5 h-0.5 rounded-full bg-white/45" />
+          <div className="absolute top-[40%] right-[18%] w-1 h-1 rounded-full bg-accent-500/60 shadow-sm shadow-accent-500/40" />
+          <div className="absolute top-[45%] left-[62%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[38%] right-[65%] w-1.5 h-1.5 rounded-full bg-primary-400/65 shadow-md shadow-primary-400/45" />
+        </div>
+
+        <PageContainer>
+          <div className="relative z-10 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 tracking-tight leading-[1.1]">
+              Meet{" "}
+              <span className="font-normal bg-gradient-to-r from-accent-300 via-primary-200 to-accent-300 bg-clip-text text-transparent">
+                Sheridan
+              </span>
+            </h2>
+            <p className="text-lg md:text-xl text-primary-100/90 font-light max-w-2xl mx-auto leading-relaxed">
+              The founder behind VirtuServe
+            </p>
+          </div>
+          <div className="relative z-10 grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             {/* Photo and Quick Bio */}
             <div className="lg:col-span-1">
               <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-10 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 sticky top-24 overflow-hidden group">

@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import {
   CheckCircle,
   Clock,
@@ -16,12 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
-
-export const metadata: Metadata = {
-  title: "Virtual Assistant Services | VirtuServe",
-  description:
-    "Detailed breakdown of VA services including administrative support, customer service, digital marketing, and more. Organized clearly for potential clients.",
-};
+import styles from "./services.module.css";
 
 export default function Services() {
   const services = [
@@ -272,40 +268,78 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 md:py-24 bg-gradient-to-b from-white to-gray-50">
+      <section className="relative py-20 md:py-24 bg-gradient-to-br from-slate-700 via-primary-800 to-slate-700">
+        {/* Elegant diagonal flowing waves and stars background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Diagonal flowing waves - bottom left to top right */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-500/30 via-accent-600/15 to-transparent ${styles.diagonalWave1}`}
+          />
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-primary-500/28 via-primary-600/13 to-transparent ${styles.diagonalWave2}`}
+          />
+
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-accent-600/22 via-accent-500/10 to-transparent ${styles.diagonalWave3}`}
+          />
+
+          {/* Diagonal accent lines */}
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-accent-400/40 to-transparent opacity-70 ${styles.accentLine1}`}
+          />
+          <div
+            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-primary-400/35 to-transparent opacity-60 ${styles.accentLine2}`}
+          />
+
+          {/* Scattered stars */}
+          <div className="absolute top-[8%] left-[12%] w-1 h-1 rounded-full bg-accent-400/60 shadow-sm shadow-accent-400/40" />
+          <div className="absolute top-[15%] right-[8%] w-1.5 h-1.5 rounded-full bg-primary-300/70 shadow-md shadow-primary-300/50" />
+          <div className="absolute top-[22%] left-[25%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[12%] right-[28%] w-1 h-1 rounded-full bg-accent-500/65 shadow-sm shadow-accent-500/45" />
+          <div className="absolute top-[28%] left-[35%] w-1.5 h-1.5 rounded-full bg-primary-400/60 shadow-md shadow-primary-400/40" />
+          <div className="absolute top-[18%] right-[42%] w-0.5 h-0.5 rounded-full bg-white/40" />
+          <div className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
+          <div className="absolute top-[25%] right-[55%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
+          <div className="absolute top-[32%] left-[48%] w-0.5 h-0.5 rounded-full bg-white/45" />
+          <div className="absolute top-[40%] right-[18%] w-1 h-1 rounded-full bg-accent-500/60 shadow-sm shadow-accent-500/40" />
+          <div className="absolute top-[45%] left-[62%] w-0.5 h-0.5 rounded-full bg-white/50" />
+          <div className="absolute top-[38%] right-[65%] w-1.5 h-1.5 rounded-full bg-primary-400/65 shadow-md shadow-primary-400/45" />
+        </div>
+
         <PageContainer>
           {/* Redesigned centered header */}
-          <div className="text-center mb-16">
+          <div className="relative z-10 text-center mb-16">
             {/* Premium badge */}
-            <div className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-gradient-to-r from-slate-50 via-white to-slate-50 border-2 border-slate-900/10 mb-8 shadow-lg hover:shadow-xl hover:border-slate-900/20 transition-all duration-500 group">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm group-hover:scale-125 transition-transform duration-300" />
-              <span className="text-[11px] font-extrabold bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 bg-clip-text text-transparent tracking-[0.3em] uppercase">
+            <div className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-gradient-to-r from-white/10 via-white/5 to-white/10 border-2 border-white/20 mb-8 shadow-lg hover:shadow-xl hover:border-white/30 transition-all duration-500 group backdrop-blur-sm">
+              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-accent-400 to-primary-400 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+              <span className="text-[11px] font-extrabold bg-gradient-to-r from-white via-accent-100 to-white bg-clip-text text-transparent tracking-[0.3em] uppercase">
                 Service Breakdown
               </span>
-              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-primary-950 to-slate-900 shadow-sm group-hover:scale-125 transition-transform duration-300" />
+              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 shadow-sm group-hover:scale-125 transition-transform duration-300" />
             </div>
 
             {/* Large heading */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-slate-900 mb-5 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-5 tracking-tight leading-[1.1]">
               Explore Our{" "}
-              <span className="font-normal bg-gradient-to-r from-slate-900 via-primary-900 to-slate-800 bg-clip-text text-transparent">
+              <span className="font-normal bg-gradient-to-r from-accent-300 via-primary-200 to-accent-300 bg-clip-text text-transparent">
                 Services
               </span>
             </h2>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-primary-100/90 font-light max-w-2xl mx-auto leading-relaxed mb-8">
               Comprehensive solutions tailored to your needs
             </p>
 
             {/* Subtle accent */}
             <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-slate-900/20"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-900/40"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-slate-900/20"></div>
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-300/60"></div>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/30"></div>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+          <div className="relative z-10 grid lg:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
