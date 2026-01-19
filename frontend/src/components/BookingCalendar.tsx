@@ -116,26 +116,26 @@ export default function BookingCalendar() {
       <div className="grid lg:grid-cols-5 gap-8">
         {/* Calendar */}
         <div className="lg:col-span-3">
-          <div className="bg-gradient-to-br from-white via-gray-50/30 to-white border border-gray-200/50 rounded-[2rem] p-8 md:p-10 shadow-lg backdrop-blur-sm">
+          <div className="bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2rem] p-8 md:p-10 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 backdrop-blur-sm">
             {/* Month Navigation */}
-            <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-200/50">
+            <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-700/30">
               <h3 className="text-3xl font-extralight text-gray-900 tracking-tight">
                 {monthYear}
               </h3>
               <div className="flex gap-3">
                 <button
                   onClick={goToPreviousMonth}
-                  className="w-10 h-10 rounded-xl bg-white border border-gray-200/60 hover:bg-gray-50 hover:border-accent-300 hover:shadow-md transition-all duration-300 flex items-center justify-center group"
+                  className="w-10 h-10 rounded-xl bg-white border border-slate-700/30 hover:border-slate-900 hover:bg-slate-50 hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center group"
                   aria-label="Previous month"
                 >
-                  <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-accent-600 transition-colors" />
+                  <ChevronLeft className="w-5 h-5 text-slate-700 group-hover:text-slate-900 transition-colors" />
                 </button>
                 <button
                   onClick={goToNextMonth}
-                  className="w-10 h-10 rounded-xl bg-white border border-gray-200/60 hover:bg-gray-50 hover:border-accent-300 hover:shadow-md transition-all duration-300 flex items-center justify-center group"
+                  className="w-10 h-10 rounded-xl bg-white border border-slate-700/30 hover:border-slate-900 hover:bg-slate-50 hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center group"
                   aria-label="Next month"
                 >
-                  <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-accent-600 transition-colors" />
+                  <ChevronRight className="w-5 h-5 text-slate-700 group-hover:text-slate-900 transition-colors" />
                 </button>
               </div>
             </div>
@@ -177,10 +177,10 @@ export default function BookingCalendar() {
                         disabled
                           ? "text-gray-300 cursor-not-allowed bg-gray-50/50"
                           : selected
-                            ? "bg-gradient-to-br from-accent-500 to-primary-500 text-white shadow-lg shadow-accent-200/50 scale-105 font-medium ring-2 ring-accent-200/50"
+                            ? "bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white shadow-xl shadow-slate-900/30 scale-105 font-medium ring-2 ring-slate-700/30"
                             : today
-                              ? "bg-white border-2 border-accent-400 text-accent-700 font-medium hover:shadow-md hover:scale-105"
-                              : "bg-white border border-gray-200/60 hover:border-accent-300 hover:shadow-md hover:scale-105 text-gray-700"
+                              ? "bg-white border-2 border-slate-900 text-slate-900 font-medium hover:shadow-lg hover:scale-105"
+                              : "bg-white border border-slate-700/30 hover:border-slate-900 hover:shadow-lg hover:scale-105 text-gray-700"
                       }
                     `}
                   >
@@ -197,10 +197,10 @@ export default function BookingCalendar() {
 
         {/* Time Slots & Booking Info */}
         <div className="lg:col-span-2">
-          <div className="bg-gradient-to-br from-white via-gray-50/30 to-white border border-gray-200/50 rounded-[2rem] p-8 shadow-lg sticky top-24 backdrop-blur-sm">
-            <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200/50">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-50 to-primary-50 flex items-center justify-center border border-accent-200/30 shadow-sm">
-                <CalendarIcon className="w-6 h-6 text-accent-600" />
+          <div className="bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2rem] p-8 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 sticky top-24 backdrop-blur-sm">
+            <div className="flex items-center gap-4 mb-8 pb-6 border-b border-slate-700/30">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-slate-50 to-primary-50 flex items-center justify-center border border-slate-700/30 shadow-sm">
+                <CalendarIcon className="w-6 h-6 text-slate-700" />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-900 mb-1">
@@ -215,7 +215,7 @@ export default function BookingCalendar() {
 
             {!selectedDate ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200/60 flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-700/30 flex items-center justify-center mx-auto mb-4 shadow-sm">
                   <CalendarIcon className="w-8 h-8 text-gray-400" />
                 </div>
                 <p className="text-sm text-gray-500 font-light leading-relaxed">
@@ -226,7 +226,7 @@ export default function BookingCalendar() {
               </div>
             ) : (
               <>
-                <div className="mb-6 p-4 bg-gradient-to-br from-accent-50/50 to-primary-50/50 rounded-xl border border-accent-200/30">
+                <div className="mb-6 p-4 bg-gradient-to-br from-slate-50/80 to-primary-50/60 rounded-xl border border-slate-700/30 shadow-sm">
                   <p className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-2">
                     Selected Date
                   </p>
@@ -248,8 +248,8 @@ export default function BookingCalendar() {
                           w-full px-4 py-3.5 rounded-xl text-sm font-light transition-all duration-300 text-left flex items-center justify-between group
                           ${
                             selectedTime === time
-                              ? "bg-gradient-to-br from-accent-500 to-primary-500 text-white shadow-lg shadow-accent-200/50 scale-[1.02]"
-                              : "bg-white border border-gray-200/60 hover:border-accent-300 hover:shadow-md hover:scale-[1.02] text-gray-700"
+                              ? "bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white shadow-xl shadow-slate-900/30 scale-[1.02] border border-slate-800"
+                              : "bg-white border border-slate-700/30 hover:border-slate-900 hover:shadow-lg hover:scale-[1.02] text-gray-700"
                           }
                         `}
                       >
@@ -267,7 +267,7 @@ export default function BookingCalendar() {
                 </div>
 
                 {selectedTime && (
-                  <button className="w-full mt-6 px-6 py-4 rounded-xl bg-gradient-to-br from-accent-500 to-primary-500 text-white font-medium shadow-lg shadow-accent-200/50 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 tracking-wide">
+                  <button className="w-full mt-6 px-6 py-4 rounded-xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white font-medium shadow-xl shadow-slate-900/30 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 tracking-wide border border-slate-800">
                     Confirm Booking
                   </button>
                 )}
@@ -279,11 +279,11 @@ export default function BookingCalendar() {
 
       {/* Summary Bar */}
       {selectedDate && selectedTime && (
-        <div className="mt-10 bg-gradient-to-br from-white via-gray-50/30 to-white border border-gray-200/50 rounded-[2rem] p-8 shadow-lg backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="mt-10 bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2rem] p-8 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="flex items-center justify-between flex-wrap gap-6">
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-50 to-primary-50 flex items-center justify-center border border-accent-200/30 shadow-sm">
-                <Check className="w-7 h-7 text-accent-600" />
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-50 to-primary-50 flex items-center justify-center border border-slate-700/30 shadow-sm">
+                <Check className="w-7 h-7 text-slate-700" />
               </div>
               <div>
                 <p className="text-base font-medium text-gray-900 mb-1">
@@ -294,7 +294,7 @@ export default function BookingCalendar() {
                 </p>
               </div>
             </div>
-            <button className="px-8 py-4 rounded-xl bg-gradient-to-br from-accent-500 to-primary-500 text-white font-medium shadow-lg shadow-accent-200/50 hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 tracking-wide">
+            <button className="px-8 py-4 rounded-xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white font-medium shadow-xl shadow-slate-900/30 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 tracking-wide border border-slate-800">
               Complete Booking
             </button>
           </div>

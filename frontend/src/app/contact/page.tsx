@@ -431,25 +431,25 @@ export default function Contact() {
       >
         <PageContainer>
           <div className="text-center mb-20 md:mb-24">
-            <div className="inline-flex items-center gap-2.5 bg-primary-50/90 backdrop-blur-sm border border-primary-200/70 rounded-full px-6 py-3 mb-8 shadow-md">
-              <div className="w-2 h-2 rounded-full bg-primary-500"></div>
-              <span className="text-xs font-semibold text-primary-700 uppercase tracking-[0.2em]">
+            <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-slate-50/95 via-primary-50/90 to-slate-50/95 backdrop-blur-sm border border-slate-700/30 rounded-full px-6 py-3 mb-8 shadow-lg hover:shadow-xl hover:border-slate-900/40 transition-all duration-300">
+              <div className="w-2 h-2 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-sm"></div>
+              <span className="text-xs font-semibold bg-gradient-to-r from-slate-900 to-primary-950 bg-clip-text text-transparent uppercase tracking-[0.2em]">
                 Book a Call
               </span>
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-8 text-gray-900 tracking-tight leading-tight">
               Choose Your{" "}
-              <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 bg-clip-text text-transparent font-light">
+              <span className="bg-gradient-to-r from-slate-700 via-primary-800 to-slate-800 bg-clip-text text-transparent font-light">
                 Time
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
               Select a convenient slot for your free 30-minute discovery call
             </p>
-            <div className="flex items-center justify-center gap-4 mt-6">
-              <div className="h-px w-20 bg-gradient-to-r from-transparent to-primary-300"></div>
-              <div className="w-2 h-2 rounded-full bg-primary-400"></div>
-              <div className="h-px w-20 bg-gradient-to-l from-transparent to-accent-300"></div>
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-slate-700/40 to-slate-900/30"></div>
+              <div className="w-3 h-3 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-lg shadow-slate-900/30"></div>
+              <div className="h-px w-24 bg-gradient-to-l from-transparent via-slate-700/40 to-slate-900/30"></div>
             </div>
           </div>
 

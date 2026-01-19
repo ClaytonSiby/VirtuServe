@@ -29,12 +29,12 @@ export default function Navigation() {
         <div
           className={`transition-all duration-300 ${
             scrolled
-              ? "glass border-b border-primary-200/30 shadow-2xl backdrop-blur-xl"
-              : "bg-white/95 backdrop-blur-md shadow-sm"
+              ? "bg-gradient-to-r from-slate-50/95 via-white/95 to-primary-50/90 backdrop-blur-xl border-b border-slate-900/20 shadow-2xl"
+              : "bg-gradient-to-r from-slate-50/80 via-white/90 to-primary-50/70 backdrop-blur-md shadow-sm"
           }`}
         >
           <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center h-20">
+            <div className="flex items-center h-20">
               {/* Logo - Client Selected Design */}
               <Link href="/" className="flex items-center gap-3 group">
                 <motion.div
@@ -53,13 +53,13 @@ export default function Navigation() {
                     {/* Simple V icon */}
                     <path
                       d="M0 0 L20 0 L30 50 Z"
-                      fill="#1a1a1a"
-                      className="group-hover:fill-primary-700 transition-colors duration-300"
+                      fill="#0f172a"
+                      className="group-hover:fill-primary-950 transition-colors duration-300"
                     />
                     <path
                       d="M40 0 L60 0 L30 50 Z"
-                      fill="#1a1a1a"
-                      className="group-hover:fill-primary-700 transition-colors duration-300"
+                      fill="#0f172a"
+                      className="group-hover:fill-primary-950 transition-colors duration-300"
                     />
                   </svg>
                 </motion.div>
@@ -73,8 +73,8 @@ export default function Navigation() {
                 </div>
               </Link>
 
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center gap-2">
+              {/* Desktop Navigation - Centered */}
+              <div className="hidden md:flex items-center gap-2 flex-1 justify-center">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/services", label: "Services" },
@@ -85,18 +85,22 @@ export default function Navigation() {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="relative text-primary-900 hover:text-accent-600 transition-colors px-5 py-2.5 rounded-full font-light group"
+                      className="relative text-slate-900 hover:text-primary-950 transition-colors px-5 py-2.5 rounded-full font-light group"
                     >
                       {item.label}
-                      <motion.div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-accent-500 to-primary-500 group-hover:w-3/4 transition-all duration-300 rounded-full" />
+                      <motion.div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 group-hover:w-3/4 transition-all duration-300 rounded-full" />
                     </motion.div>
                   </Link>
                 ))}
+              </div>
+
+              {/* Get Started Button - Right Side */}
+              <div className="hidden md:block">
                 <Link href="/contact">
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="ml-4 relative group bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-3 rounded-full font-normal overflow-hidden shadow-lg hover:shadow-xl hover:shadow-accent-500/30 transition-all duration-300"
+                    className="relative group bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white px-8 py-3 rounded-full font-normal overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary-950/30 transition-all duration-300"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Get Started
@@ -110,7 +114,7 @@ export default function Navigation() {
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden text-gray-700 p-2 hover:bg-accent-100 rounded-xl transition"
+                className="md:hidden text-gray-700 p-2 hover:bg-accent-100 rounded-xl transition ml-auto"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </motion.button>
@@ -139,7 +143,7 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-primary-100/80 via-white to-accent-100/70 backdrop-blur-md shadow-2xl z-[70] overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-slate-900/5 via-white to-primary-950/5 backdrop-blur-md shadow-2xl z-[70] overflow-y-auto"
             >
               {/* Drawer Header */}
               <div className="p-6 border-b border-gray-200">
@@ -156,8 +160,8 @@ export default function Navigation() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M0 0 L20 0 L30 50 Z" fill="#1a1a1a" />
-                      <path d="M40 0 L60 0 L30 50 Z" fill="#1a1a1a" />
+                      <path d="M0 0 L20 0 L30 50 Z" fill="#0f172a" />
+                      <path d="M40 0 L60 0 L30 50 Z" fill="#0f172a" />
                     </svg>
                     <div className="flex flex-col">
                       <span className="text-xl font-normal text-gray-900 tracking-tight">
@@ -210,7 +214,7 @@ export default function Navigation() {
                 >
                   <Link
                     href="/contact"
-                    className="block bg-gradient-to-r from-accent-500 to-accent-600 text-white text-center px-4 py-3 rounded-xl font-normal shadow-lg hover:shadow-xl transition-all"
+                    className="block bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white text-center px-4 py-3 rounded-xl font-normal shadow-lg hover:shadow-xl transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started

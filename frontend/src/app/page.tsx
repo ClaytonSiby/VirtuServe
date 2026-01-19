@@ -21,13 +21,13 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-beige-50 via-white to-beige-200/20">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
       {/* Hero Section - Refined & Eye-Catching */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-br from-slate-900/[0.08] via-primary-950/[0.10] to-slate-950/[0.08]">
         {/* Elegant background effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent-200/20 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-200/15 to-transparent blur-3xl" />
+          <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent-500/10 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-500/10 to-transparent blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 pt-12 md:pt-16">
@@ -45,9 +45,9 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent-500/10 to-primary-500/10 border border-accent-300/30"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-slate-900/10 to-primary-950/10 border border-slate-700/30"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-accent-600" />
+                  <Sparkles className="w-3.5 h-3.5 text-slate-900" />
                   <span className="text-xs font-medium text-primary-900 tracking-wider uppercase">
                     Premium Virtual Services
                   </span>
@@ -61,12 +61,12 @@ export default function Home() {
                   className="space-y-4"
                 >
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-                    <span className="bg-gradient-to-r from-primary-900 to-primary-700 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-slate-700 to-primary-800 bg-clip-text text-transparent">
                       Elevate Your Business
                     </span>
                     <br />
                     <span className="relative inline-block mt-2">
-                      <span className="bg-gradient-to-r from-accent-600 to-primary-600 bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-slate-700 to-slate-800 bg-clip-text text-transparent">
                         with Expert Support
                       </span>
                       <motion.div
@@ -77,7 +77,7 @@ export default function Home() {
                           delay: 0.5,
                           ease: "easeOut",
                         }}
-                        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full origin-left"
+                        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full origin-left"
                       />
                     </span>
                   </h1>
@@ -100,20 +100,20 @@ export default function Home() {
                     <motion.button
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
-                      className="group relative px-8 py-4 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-xl font-semibold shadow-xl shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
+                      className="group relative px-8 py-4 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white rounded-xl font-semibold shadow-xl shadow-slate-900/25 hover:shadow-slate-900/40 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
                     >
                       <span className="relative z-10 flex items-center gap-2">
                         Get Started
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-primary-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </motion.button>
                   </Link>
                   <Link href="/services">
                     <motion.button
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 bg-white/80 backdrop-blur-sm text-primary-900 rounded-xl font-semibold border-2 border-primary-300 hover:border-accent-500 hover:shadow-xl hover:shadow-accent-500/15 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="px-8 py-4 bg-white/80 backdrop-blur-sm text-primary-900 rounded-xl font-semibold border-2 border-slate-700 hover:border-slate-900 hover:shadow-xl hover:shadow-slate-900/15 transition-all duration-300 flex items-center justify-center gap-2"
                     >
                       View Services
                     </motion.button>
@@ -134,7 +134,7 @@ export default function Home() {
                             duration: 0.4,
                             type: "spring",
                           }}
-                          className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-400 to-primary-400 border-2 border-white shadow-md"
+                          className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-700 to-primary-900 border-2 border-white shadow-md"
                         />
                       ))}
                     </div>
@@ -168,7 +168,7 @@ export default function Home() {
                 className="lg:sticky lg:top-24"
               >
                 {/* Sophisticated Services Network Animation */}
-                <div className="relative bg-gradient-to-br from-white via-primary-50/30 to-accent-50/30 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-primary-200/40 overflow-hidden group">
+                <div className="relative bg-gradient-to-br from-white via-primary-50/30 to-accent-50/30 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-slate-700/30/40 overflow-hidden group">
                   {/* Animated Background Effects */}
                   <div className="absolute inset-0 opacity-30">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-radial from-accent-300/30 to-transparent blur-3xl" />
@@ -317,7 +317,7 @@ export default function Home() {
                               duration: 2,
                               repeat: Infinity,
                             }}
-                            className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl border-2 border-primary-200"
+                            className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl border-2 border-slate-700"
                           >
                             <motion.div
                               animate={{ rotate: 360 }}
@@ -376,7 +376,7 @@ export default function Home() {
                       >
                         <div className="relative group">
                           <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-beige-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-primary-200 group-hover:border-primary-400 transition-all">
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-slate-700 group-hover:border-slate-900 transition-all">
                             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg sm:rounded-xl flex items-center justify-center">
                               <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
@@ -418,7 +418,7 @@ export default function Home() {
                       >
                         <div className="relative group">
                           <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-accent-300 group-hover:border-accent-500 transition-all">
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-slate-700 group-hover:border-slate-900 transition-all">
                             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-accent-500 to-primary-500 rounded-lg sm:rounded-xl flex items-center justify-center">
                               <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
@@ -439,7 +439,7 @@ export default function Home() {
                       >
                         <div className="relative group">
                           <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-accent-400/40 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-primary-300 group-hover:border-primary-500 transition-all">
+                          <div className="relative bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border-2 border-slate-700 group-hover:border-slate-900 transition-all">
                             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg sm:rounded-xl flex items-center justify-center">
                               <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
@@ -507,9 +507,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -533,9 +533,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -559,9 +559,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-600 to-primary-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -584,9 +584,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Search className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -609,9 +609,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-primary-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -634,9 +634,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group bg-white/80 backdrop-blur-sm border border-slate-700/30 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-slate-900 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Calendar className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
@@ -660,7 +660,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-16 bg-gradient-to-br from-primary-50 via-beige-50 to-accent-50 rounded-3xl p-12 md:p-16 text-center border border-primary-200 relative overflow-hidden"
+              className="mt-16 bg-gradient-to-br from-primary-50 via-beige-50 to-accent-50 rounded-3xl p-12 md:p-16 text-center border border-slate-700/30 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-accent-200/30 to-transparent blur-3xl" />
               <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary-200/20 to-transparent blur-3xl" />
@@ -676,7 +676,7 @@ export default function Home() {
                   <motion.button
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group px-8 py-4 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-xl font-normal text-lg shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
+                    className="group px-8 py-4 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white rounded-xl font-normal text-lg shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2">
                   >
                     Get in Touch
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -717,7 +717,7 @@ export default function Home() {
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
             {/* Testimonial 1 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
+            <div className="group relative bg-white/80 backdrop-blur-sm border border-slate-700/30 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-slate-900">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
@@ -731,7 +731,7 @@ export default function Home() {
                 detail and professionalism is unmatched. Highly recommend!&quot;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center text-white font-semibold">
+                <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-primary-950 rounded-full flex items-center justify-center text-white font-semibold">
                   SM
                 </div>
                 <div>
@@ -746,7 +746,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
+            <div className="group relative bg-white/80 backdrop-blur-sm border border-slate-700/30 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-slate-900">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
@@ -773,7 +773,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
+            <div className="group relative bg-white/80 backdrop-blur-sm border border-slate-700/30 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-slate-900">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
@@ -802,25 +802,25 @@ export default function Home() {
 
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
+            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-700/30">
               <p className="text-4xl font-bold text-accent-600 mb-2">500+</p>
               <p className="text-sm text-primary-700 font-medium">
                 Happy Clients
               </p>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
+            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-700/30">
               <p className="text-4xl font-bold text-accent-600 mb-2">98%</p>
               <p className="text-sm text-primary-700 font-medium">
                 Satisfaction Rate
               </p>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
+            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-700/30">
               <p className="text-4xl font-bold text-accent-600 mb-2">24/7</p>
               <p className="text-sm text-primary-700 font-medium">
                 Support Available
               </p>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
+            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-700/30">
               <p className="text-4xl font-bold text-accent-600 mb-2">10+</p>
               <p className="text-sm text-primary-700 font-medium">
                 Years Experience
@@ -842,7 +842,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Main CTA Card */}
-            <div className="relative bg-gradient-to-br from-white via-white to-primary-50/30 rounded-3xl p-10 md:p-16 shadow-2xl border border-primary-200/60 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-white via-white to-primary-50/30 rounded-3xl p-10 md:p-16 shadow-2xl border border-slate-700/30/60 overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-radial from-accent-200/20 to-transparent blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-radial from-primary-200/20 to-transparent blur-2xl"></div>
@@ -850,7 +850,7 @@ export default function Home() {
               <div className="relative z-10">
                 {/* Badge */}
                 <div className="flex justify-center mb-8">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-100 to-primary-100 border border-accent-200/60 rounded-full px-5 py-2.5">
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-900/10 to-primary-950/10 border border-slate-700/30 rounded-full px-5 py-2.5">
                     <div className="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></div>
                     <span className="text-xs font-semibold text-primary-900 uppercase tracking-wider">
                       Ready to Get Started?
@@ -862,7 +862,7 @@ export default function Home() {
                 <div className="text-center mb-6">
                   <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-primary-900 leading-tight">
                     Transform Your Business
-                    <span className="block mt-2 bg-gradient-to-r from-accent-600 via-accent-500 to-primary-600 bg-clip-text text-transparent font-normal">
+                    <span className="block mt-2 bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 bg-clip-text text-transparent font-normal">
                       Starting Today
                     </span>
                   </h2>
@@ -876,20 +876,20 @@ export default function Home() {
                 <div className="flex justify-center mb-12">
                   <Link
                     href="/contact"
-                    className="group relative inline-flex items-center gap-3 bg-gradient-to-br from-accent-500 to-primary-500 text-white px-10 py-5 rounded-xl font-normal text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/30 hover:-translate-y-1"
+                    className="group relative inline-flex items-center gap-3 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white px-10 py-5 rounded-xl font-normal text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-slate-900/30 hover:-translate-y-1"
                   >
                     <span className="relative z-10">
                       Book Free Consultation
                     </span>
                     <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-primary-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Link>
                 </div>
 
                 {/* Benefits Grid */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-slate-700/30/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
                       <CheckCircle className="w-6 h-6 text-accent-600" />
                     </div>
                     <span className="font-medium text-primary-900">
@@ -897,7 +897,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-slate-700/30/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
                       <CheckCircle className="w-6 h-6 text-accent-600" />
                     </div>
                     <span className="font-medium text-primary-900">
@@ -905,7 +905,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-slate-700/30/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
                       <CheckCircle className="w-6 h-6 text-accent-600" />
                     </div>
                     <span className="font-medium text-primary-900">

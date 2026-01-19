@@ -50,12 +50,12 @@ export default function About() {
                 <div className="space-y-6">
                   <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white leading-[0.95] tracking-tighter">
                     About
-                    <span className="block mt-2 bg-gradient-to-r from-accent-400 via-primary-400 to-accent-500 bg-clip-text text-transparent font-light">
+                    <span className="block mt-2 bg-gradient-to-r from-slate-800 via-primary-900 to-slate-900 bg-clip-text text-transparent font-light">
                       VirtuServe
                     </span>
                   </h1>
 
-                  <div className="h-1 w-24 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full"></div>
+                  <div className="h-1 w-24 bg-gradient-to-r from-slate-900 to-primary-950 rounded-full"></div>
                 </div>
 
                 <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-xl">
@@ -110,7 +110,7 @@ export default function About() {
       <section className="py-28 md:py-40 bg-gradient-to-b from-white via-gray-50/30 to-white">
         <PageContainer>
           <div className="text-center mb-20 md:mb-28">
-            <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-accent-50 to-primary-50 border border-accent-200/60 rounded-full px-5 py-3 mb-8 shadow-sm">
+            <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-slate-900/10 to-primary-950/10 border border-slate-700/30 rounded-full px-5 py-3 mb-8 shadow-sm">
               <div className="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
               <span className="text-xs font-semibold text-accent-700 uppercase tracking-[0.25em]">
                 Our Story
@@ -118,7 +118,7 @@ export default function About() {
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-8 text-gray-900 tracking-tight leading-tight">
               From desk to{" "}
-              <span className="block md:inline bg-gradient-to-r from-accent-600 via-primary-600 to-accent-600 bg-clip-text text-transparent font-light">
+              <span className="block md:inline bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 bg-clip-text text-transparent font-light">
                 global impact
               </span>
             </h2>
@@ -127,31 +127,46 @@ export default function About() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="relative bg-gradient-to-br from-white via-primary-50/40 to-accent-50/30 border border-gray-200/80 rounded-[2.5rem] p-12 md:p-20 shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden group">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-accent-100/50 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary-100/50 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative bg-gradient-to-br from-slate-50/95 via-white to-primary-50/80 border border-slate-700/30 rounded-[2.5rem] p-12 md:p-20 shadow-2xl hover:shadow-[0_20px_80px_-15px_rgba(15,23,42,0.3)] hover:border-slate-900/40 transition-all duration-700 overflow-hidden group">
+              {/* Animated gradient orbs */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-primary-200/40 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-slate-200/40 to-transparent blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
 
-              {/* Decorative quote mark */}
-              <div className="absolute top-8 left-8 text-8xl font-serif text-accent-200/30 leading-none">
+              {/* Decorative corner accents */}
+              <div className="absolute top-8 right-8 w-24 h-24 border-t-2 border-r-2 border-slate-900/20 rounded-tr-3xl"></div>
+              <div className="absolute bottom-8 left-8 w-24 h-24 border-b-2 border-l-2 border-slate-900/20 rounded-bl-3xl"></div>
+
+              {/* Elegant quote mark with gradient */}
+              <div className="absolute top-12 left-12 text-9xl font-serif bg-gradient-to-br from-slate-900/20 via-primary-950/15 to-slate-950/20 bg-clip-text text-transparent leading-none">
                 &ldquo;
               </div>
 
               <div className="relative z-10 space-y-10">
-                <p className="text-2xl md:text-3xl text-gray-800 font-light leading-relaxed tracking-tight">
+                <p className="text-2xl md:text-3xl bg-gradient-to-br from-slate-800 via-slate-700 to-primary-800 bg-clip-text text-transparent font-light leading-relaxed tracking-tight">
                   We help businesses reclaim their time to focus on growth—not
                   administrative tasks. Serving international clients across
                   time zones and industries.
                 </p>
-                <div className="flex items-center gap-6">
-                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
-                  <div className="w-2 h-2 rounded-full bg-accent-400"></div>
-                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+
+                {/* Elegant divider */}
+                <div className="flex items-center gap-6 py-2">
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-700/40 to-slate-900/30" />
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-lg shadow-slate-900/30"></div>
+                  <div className="flex-1 h-px bg-gradient-to-l from-transparent via-slate-700/40 to-slate-900/30" />
                 </div>
-                <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
+
+                <p className="text-xl md:text-2xl text-slate-700 font-light leading-relaxed">
                   From startups to established enterprises, we deliver tailored
                   support that treats your business with the care it deserves.
                   Building lasting partnerships, not transactions.
                 </p>
+
+                {/* Decorative footer accent */}
+                <div className="pt-4 flex items-center gap-3">
+                  <div className="h-1 w-16 bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 rounded-full"></div>
+                  <div className="h-1 w-8 bg-gradient-to-r from-primary-950 to-slate-700 rounded-full opacity-60"></div>
+                  <div className="h-1 w-4 bg-slate-700/40 rounded-full"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -192,7 +207,7 @@ export default function About() {
                   <div className="flex gap-3">
                     <a
                       href="https://www.linkedin.com/in/sheridan-de-laroche-ba4506127/"
-                      className="flex-1 px-4 py-3 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 text-primary-900 text-sm font-normal border border-primary-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center"
+                      className="flex-1 px-4 py-3 rounded-xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white text-sm font-normal border border-slate-800 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -250,8 +265,8 @@ export default function About() {
                     <span>Key Expertise</span>
                   </h4>
                   <div className="space-y-3">
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-primary-200/50 hover:border-accent-300/50 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-accent-200 text-accent-700 flex items-center justify-center flex-shrink-0 font-light border border-accent-300">
+                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
                         <Target className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
@@ -265,8 +280,8 @@ export default function About() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-primary-200/50 hover:border-accent-300/50 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 text-primary-700 flex items-center justify-center flex-shrink-0 font-light border border-primary-300">
+                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
                         <Zap className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
@@ -280,8 +295,8 @@ export default function About() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-primary-200/50 hover:border-accent-300/50 hover:shadow-md transition-all duration-300">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 text-accent-700 flex items-center justify-center flex-shrink-0 font-light border border-accent-200">
+                    <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/80 border border-slate-700/30 hover:border-slate-900 hover:shadow-md transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 text-white flex items-center justify-center flex-shrink-0 font-light border border-slate-800">
                         <Globe className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
@@ -317,8 +332,8 @@ export default function About() {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-white to-gray-50 border border-primary-200/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary-900 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+            <div className="bg-gradient-to-br from-white to-gray-50 border border-slate-700/30 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                 <Heart className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-light mb-4 text-primary-900">
@@ -329,8 +344,8 @@ export default function About() {
                 every single time. We meet deadlines and exceed expectations.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-white to-gray-50 border border-primary-200/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary-800 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+            <div className="bg-gradient-to-br from-white to-gray-50 border border-slate-700/30 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                 <Globe className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-light mb-4 text-gray-900">
@@ -341,8 +356,8 @@ export default function About() {
                 perspective and adapt to your unique business needs.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-white to-gray-50 border border-primary-200/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary-700 to-primary-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+            <div className="bg-gradient-to-br from-white to-gray-50 border border-slate-700/30 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                 <Target className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-light mb-4 text-gray-900">
@@ -363,16 +378,16 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
               What Makes Us{" "}
-              <span className="bg-gradient-to-r from-accent-600 to-accent-500 bg-clip-text text-transparent font-normal">
+              <span className="bg-gradient-to-r from-slate-900 to-slate-950 bg-clip-text text-transparent font-normal">
                 Different
               </span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="bg-white border border-gray-200/50 rounded-3xl p-8 hover:shadow-xl hover:border-accent-200 transition-all duration-500 group">
+            <div className="bg-white border border-slate-700/30 rounded-3xl p-8 hover:shadow-xl hover:border-slate-900 transition-all duration-500 group">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-accent-100 to-accent-200 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <Zap className="w-7 h-7 text-accent-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-slate-900 to-primary-950 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <Zap className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium mb-3 text-gray-900">
@@ -388,8 +403,8 @@ export default function About() {
             </div>
             <div className="bg-white border border-gray-200/50 rounded-3xl p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-500 group">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <Users className="w-7 h-7 text-accent-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-slate-900 to-primary-950 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <Users className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium mb-3 text-gray-900">
@@ -405,8 +420,8 @@ export default function About() {
             </div>
             <div className="bg-white border border-gray-200/50 rounded-3xl p-8 hover:shadow-xl hover:border-purple-200 transition-all duration-500 group">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <Award className="w-7 h-7 text-primary-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-slate-900 to-primary-950 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <Award className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium mb-3 text-gray-900">
@@ -419,10 +434,10 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="bg-white border border-gray-200/50 rounded-3xl p-8 hover:shadow-xl hover:border-accent-200 transition-all duration-500 group">
+            <div className="bg-white border border-slate-700/30 rounded-3xl p-8 hover:shadow-xl hover:border-slate-900 transition-all duration-500 group">
               <div className="flex gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-accent-100 to-accent-200 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                  <Heart className="w-7 h-7 text-accent-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-slate-900 to-primary-950 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                  <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium mb-3 text-gray-900">
@@ -468,7 +483,7 @@ export default function About() {
                 <div className="pt-4 space-y-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-3 bg-gradient-to-r from-accent-500 to-primary-500 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-accent-500/20 hover:shadow-xl hover:shadow-accent-500/30 transition-all duration-300 hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-3 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-slate-900/20 hover:shadow-xl hover:shadow-slate-900/30 transition-all duration-300 hover:-translate-y-0.5"
                   >
                     Start Your Journey
                     <ArrowRight className="w-5 h-5" />

@@ -184,7 +184,7 @@ export default function Services() {
 
                 <div className="relative z-10">
                   <div className="flex items-start gap-5 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-500 border border-primary-200">
+                    <div className="w-16 h-16 bg-gradient-to-br from-slate-900 to-primary-950 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-500 border border-slate-800">
                       <service.icon className="w-8 h-8 text-primary-700" />
                     </div>
                     <div className="flex-1">
@@ -237,11 +237,11 @@ export default function Services() {
             {/* Connection lines */}
             <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-300 to-transparent" />
             <div className="hidden md:block absolute top-10 left-1/4 w-1/4 h-0.5">
-              <div className="w-full h-full bg-gradient-to-r from-accent-400 to-primary-400 animate-pulse" />
+              <div className="w-full h-full bg-gradient-to-r from-slate-900 to-primary-950 animate-pulse" />
             </div>
             <div className="hidden md:block absolute top-10 right-1/4 w-1/4 h-0.5">
               <div
-                className="w-full h-full bg-gradient-to-r from-primary-400 to-accent-400 animate-pulse"
+                className="w-full h-full bg-gradient-to-r from-slate-900 to-primary-950 animate-pulse"
                 style={{ animationDelay: "0.5s" }}
               />
             </div>
@@ -249,7 +249,7 @@ export default function Services() {
             <div className="text-center group relative">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-accent-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-accent-500 to-accent-600 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   1
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function Services() {
             <div className="text-center group relative">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-primary-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-primary-700 to-primary-800 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                <div className="relative w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-light mx-auto mb-6 bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   2
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function Services() {
             </p>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            <div className="bg-white border-2 border-gray-200/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-accent-200 transition-all duration-500 hover:-translate-y-2">
+            <div className="bg-white border-2 border-slate-700/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-slate-900 transition-all duration-500 hover:-translate-y-2">
               <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
                 Starter
               </h3>
@@ -340,8 +340,8 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="bg-white border-2 border-accent-500 rounded-3xl p-8 lg:p-10 relative shadow-2xl hover:-translate-y-2 transition-all duration-500 hover:shadow-accent-500/20">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-6 py-2 rounded-full text-sm font-normal shadow-lg">
+            <div className="bg-white border-2 border-slate-900 rounded-3xl p-8 lg:p-10 relative shadow-2xl hover:-translate-y-2 transition-all duration-500 hover:shadow-slate-900/20">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-slate-900 to-primary-950 text-white px-6 py-2 rounded-full text-sm font-normal shadow-lg">
                 Popular
               </div>
               <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
@@ -374,7 +374,7 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="bg-white border-2 border-gray-200/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-accent-200 transition-all duration-500 hover:-translate-y-2">
+            <div className="bg-white border-2 border-slate-700/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-slate-900 transition-all duration-500 hover:-translate-y-2">
               <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
                 Enterprise
               </h3>
@@ -409,7 +409,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-28 md:py-40 overflow-hidden bg-gradient-to-br from-primary-900 via-accent-900 to-primary-800">
+      <section className="relative py-28 md:py-40 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-gradient-radial from-accent-400/20 to-transparent blur-3xl"></div>
           <div className="absolute bottom-1/4 left-0 w-[800px] h-[800px] bg-gradient-radial from-primary-400/15 to-transparent blur-3xl"></div>

@@ -163,7 +163,7 @@ export default function FAQPage() {
             {faqs.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-16 last:mb-0">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-primary-200">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-primary-950 flex items-center justify-center border border-slate-800">
                     <HelpCircle className="w-5 h-5 text-accent-700" />
                   </div>
                   <h2 className="text-3xl md:text-4xl font-light text-primary-900">
@@ -247,7 +247,7 @@ export default function FAQPage() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link
                     href="/contact"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-500 to-primary-500 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                   >
                     <span>Contact Us</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
