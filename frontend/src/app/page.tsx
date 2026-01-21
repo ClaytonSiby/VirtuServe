@@ -304,7 +304,7 @@ export default function Home() {
                     <p className="text-[8px] text-[#697184] font-semibold uppercase tracking-wider mb-0.5">
                       Support Hours
                     </p>
-                    <p className="text-[9px] font-bold text-[#413F3D] leading-tight">
+                    <p className="text-[9px] sm:text-[10px] font-normal text-[#413F3D] leading-tight">
                       UK: 9AM-5PM
                       <br />
                       SA: 8AM-5PM
@@ -989,7 +989,7 @@ export default function Home() {
                 <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em] mb-1">
                   Support Hours
                 </p>
-                <p className="text-xs font-semibold text-[#413F3D] leading-tight">
+                <p className="text-xs sm:text-sm font-normal text-[#413F3D] leading-tight">
                   UK: 9AM-5PM
                   <br />
                   SA: 8AM-5PM
@@ -1146,7 +1146,7 @@ export default function Home() {
                 <div className="flex justify-center mb-16">
                   <Link
                     href="/contact"
-                    className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white px-12 py-5 rounded-2xl font-semibold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_-15px_rgba(105,113,132,0.4)] hover:-translate-y-1"
+                    className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_-15px_rgba(105,113,132,0.4)] hover:-translate-y-1"
                   >
                     <span className="relative z-10 flex items-center gap-3">
                       Book Discovery Call

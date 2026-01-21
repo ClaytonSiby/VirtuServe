@@ -789,13 +789,13 @@ export default function About() {
                 </div>
 
                 <div className="bg-[#B1A6A4]/15 backdrop-blur-xl border border-[#697184]/15 rounded-2xl p-6 hover:shadow-lg hover:border-[#697184]/25 transition-all duration-300">
-                  <div className="text-sm text-[#413F3D]/70 font-medium uppercase tracking-wider mb-2">
-                    Support Hours
-                  </div>
-                  <div className="text-lg font-bold text-[#697184] leading-tight">
+                  <div className="text-base sm:text-lg font-normal text-[#697184] leading-tight mb-2">
                     UK: 9AM-5PM
                     <br />
                     SA: 8AM-5PM
+                  </div>
+                  <div className="text-sm text-[#413F3D]/70 font-medium">
+                    Support Hours
                   </div>
                 </div>
 

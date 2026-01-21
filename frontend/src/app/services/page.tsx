@@ -740,9 +740,9 @@ export default function Services() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
                   <Link
                     href="/contact"
-                    className="group px-10 py-5 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300 flex items-center gap-3"
+                    className="group px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white rounded-2xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300 flex items-center gap-3"
                   >
-                    Book Your Discovery Call
+                    Book Discovery Call
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <a
