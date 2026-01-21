@@ -115,12 +115,12 @@ export default function Contact() {
         <PageContainer>
           <div className="relative z-10 mb-20 md:mb-24 text-center">
             <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
+              <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
                 Let&apos;s Connect
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-[#413F3D] mb-6 tracking-tight leading-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-[#413F3D] mb-6 tracking-tighter leading-[0.95]">
               Get In Touch
             </h1>
 
@@ -130,7 +130,7 @@ export default function Contact() {
               <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#697184]/60 to-transparent"></div>
             </div>
 
-            <p className="text-xl md:text-2xl text-[#413F3D]/70 font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#413F3D]/80 font-light max-w-3xl mx-auto leading-relaxed">
               Ready to transform your workflow? Choose your preferred way to
               connect.
             </p>

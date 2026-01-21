@@ -66,10 +66,10 @@ export default function Navigation() {
                   </svg>
                 </motion.div>
                 <div className="flex flex-col">
-                  <span className="text-3xl font-semibold bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
+                  <span className="text-3xl font-medium bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
                     VirtuServe
                   </span>
-                  <span className="text-[11px] font-medium text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
+                  <span className="text-[11px] font-normal text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
                     Excellence Delivered
                   </span>
                 </div>
@@ -90,7 +90,7 @@ export default function Navigation() {
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`relative transition-all px-5 py-2.5 rounded-full font-medium group ${
+                        className={`relative transition-all px-5 py-2.5 rounded-full font-normal group ${
                           isActive
                             ? "text-[#697184]"
                             : "text-[#413F3D] hover:text-[#697184]"
@@ -114,7 +114,7 @@ export default function Navigation() {
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative group bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white px-8 py-3 rounded-full font-semibold overflow-hidden shadow-lg hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300"
+                    className="relative group bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white px-8 py-3 rounded-full font-medium overflow-hidden shadow-lg hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Get Started
@@ -179,10 +179,10 @@ export default function Navigation() {
                       <path d="M40 0 L60 0 L30 50 Z" fill="#413F3D" />
                     </svg>
                     <div className="flex flex-col">
-                      <span className="text-2xl font-semibold bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
+                      <span className="text-2xl font-medium bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
                         VirtuServe
                       </span>
-                      <span className="text-[10px] font-medium text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
+                      <span className="text-[10px] font-normal text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
                         Excellence Delivered
                       </span>
                     </div>
@@ -219,7 +219,7 @@ export default function Navigation() {
                         href={item.href}
                         className={`block transition px-4 py-3 rounded-xl font-light text-lg ${
                           isActive
-                            ? "text-[#697184] font-semibold"
+                            ? "text-[#697184] font-medium"
                             : "text-gray-700 hover:text-[#697184] hover:bg-[#D8CFD0]/20"
                         }`}
                         onClick={() => setIsOpen(false)}
@@ -237,7 +237,7 @@ export default function Navigation() {
                 >
                   <Link
                     href="/contact"
-                    className="block bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white text-center px-4 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+                    className="block bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white text-center px-4 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started

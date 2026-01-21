@@ -43,15 +43,15 @@ export default function Privacy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#D8CFD0]/30 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
             <Shield className="w-4 h-4 text-[#697184]" />
-            <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
+            <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
               Legal
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-[#413F3D] tracking-tight leading-[1.1]">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight mb-6 text-[#413F3D] tracking-tighter leading-[0.95]">
             Privacy{" "}
-            <span className="font-serif italic text-[#697184]">Policy</span>
+            <span className="font-light italic text-[#697184]">Policy</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#697184]/75 max-w-3xl mx-auto leading-[1.7] font-light">
+          <p className="text-xl md:text-2xl text-[#413F3D]/80 max-w-3xl mx-auto leading-relaxed font-light">
             Your privacy and data security are our top priorities
           </p>
           <p className="text-sm text-[#697184]/70 mt-6 font-medium">

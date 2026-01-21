@@ -26,16 +26,16 @@ export default function Home() {
         {/* Sophisticated mesh gradient background */}
         <div className="absolute inset-0">
           {/* Elegant mesh gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-[#F2F1EF]/40 to-white/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F2F1EF]/20 to-white" />
 
           {/* Overlay gradient for subtle depth */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#697184]/3 via-transparent to-[#B1A6A4]/2" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#697184]/[0.015] via-transparent to-[#B1A6A4]/[0.01]" />
 
           {/* Subtle animated orbs */}
           <div className="absolute inset-0">
             <motion.div
               animate={{
-                opacity: [0.02, 0.04, 0.02],
+                opacity: [0.03, 0.06, 0.03],
                 scale: [1, 1.08, 1],
                 x: [0, 30, 0],
                 y: [0, 20, 0],
@@ -45,11 +45,11 @@ export default function Home() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#697184]/6 via-[#B1A6A4]/4 to-transparent blur-3xl rounded-full"
+              className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#697184]/[0.08] via-[#B1A6A4]/[0.06] to-transparent blur-3xl rounded-full"
             />
             <motion.div
               animate={{
-                opacity: [0.025, 0.05, 0.025],
+                opacity: [0.04, 0.07, 0.04],
                 scale: [1, 1.06, 1],
                 x: [0, -30, 0],
                 y: [0, 25, 0],
@@ -60,11 +60,11 @@ export default function Home() {
                 ease: "easeInOut",
                 delay: 3,
               }}
-              className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-[#D8CFD0]/5 via-[#697184]/3 to-transparent blur-3xl rounded-full"
+              className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-[#D8CFD0]/[0.07] via-[#697184]/[0.05] to-transparent blur-3xl rounded-full"
             />
             <motion.div
               animate={{
-                opacity: [0.015, 0.035, 0.015],
+                opacity: [0.025, 0.05, 0.025],
                 scale: [1, 1.04, 1],
               }}
               transition={{
@@ -73,7 +73,7 @@ export default function Home() {
                 ease: "easeInOut",
                 delay: 5,
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#B1A6A4]/4 to-transparent blur-3xl rounded-full"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#B1A6A4]/[0.06] to-transparent blur-3xl rounded-full"
             />
           </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
                   >
                     <Sparkles className="w-4 h-4 text-[#697184]" />
                   </motion.div>
-                  <span className="text-xs font-bold bg-gradient-to-r from-[#697184] to-[#413F3D] bg-clip-text text-transparent tracking-[0.2em] uppercase">
+                  <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
                     Elite Virtual Support
                   </span>
                 </motion.div>
@@ -156,15 +156,13 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="space-y-5"
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95]">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tighter leading-[0.95]">
                     <span className="block mb-2">
-                      <span className="text-[#413F3D]">Your Business,</span>
+                      <span className="text-[#2C2A29]">Your Business,</span>
                     </span>
                     <span className="block relative">
                       <span className="relative inline-block">
-                        <span className="bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent">
-                          Elevated
-                        </span>
+                        <span className="text-[#4A5568]">Elevated</span>
                         <motion.div
                           initial={{ scaleX: 0 }}
                           animate={{ scaleX: 1 }}
@@ -183,10 +181,10 @@ export default function Home() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="text-lg md:text-xl text-[#697184] font-normal leading-relaxed max-w-xl"
+                    className="text-xl md:text-2xl text-[#374151] font-light leading-relaxed max-w-xl"
                   >
                     Where sophisticated{" "}
-                    <span className="text-[#413F3D] font-semibold italic">
+                    <span className="font-normal italic">
                       virtual assistance
                     </span>{" "}
                     meets visionary ambition. Transform your operations with

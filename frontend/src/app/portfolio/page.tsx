@@ -105,10 +105,10 @@ export default function Portfolio() {
               Client Success
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight mb-6 leading-[0.95] tracking-tighter">
             Portfolio & Success Stories
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/80 font-light leading-relaxed">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 font-light leading-relaxed">
             Real results from real clients who trust us with their business
           </p>
         </div>

@@ -140,16 +140,16 @@ export default function Services() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 shadow-sm">
-              <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
+              <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
                 What We Offer
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-[#413F3D] leading-tight tracking-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-[#413F3D] leading-[0.95] tracking-tighter">
               Our Services
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#413F3D]/70 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#413F3D]/80 font-light leading-relaxed max-w-2xl mx-auto">
               Comprehensive virtual assistant solutions designed to transform
               your business operations
             </p>
@@ -533,23 +533,71 @@ export default function Services() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-white to-gray-50">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Unique sophisticated background */}
+        <div className="absolute inset-0">
+          {/* Base gradient with soft color transitions */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F2F1EF]/30 to-white" />
+
+          {/* Layered mesh gradients for depth */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#697184]/5 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#B1A6A4]/6 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#D8CFD0]/4 via-transparent to-transparent" />
+
+          {/* Decorative floating orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#697184]/8 to-transparent rounded-full blur-3xl opacity-60" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-[#D8CFD0]/10 to-transparent rounded-full blur-3xl opacity-50" />
+          <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#B1A6A4]/6 to-transparent rounded-full blur-3xl opacity-40" />
+
+          {/* Elegant grid pattern overlay */}
+          <div className="absolute inset-0 opacity-[0.015]">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+                  repeating-linear-gradient(0deg, #697184 0px, #697184 1px, transparent 1px, transparent 60px),
+                  repeating-linear-gradient(90deg, #697184 0px, #697184 1px, transparent 1px, transparent 60px)
+                `,
+              }}
+            />
+          </div>
+
+          {/* Subtle dot pattern */}
+          <div className="absolute inset-0 opacity-[0.03]">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.4) 1px, transparent 0)`,
+                backgroundSize: "40px 40px",
+              }}
+            />
+          </div>
+
+          {/* Floating decorative shapes */}
+          <div className="absolute top-32 right-20 w-64 h-64 border border-[#697184]/10 rounded-full opacity-30" />
+          <div className="absolute bottom-32 left-20 w-56 h-56 border-2 border-[#B1A6A4]/10 rounded-full opacity-40" />
+
+          {/* Gradient accent lines */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#697184]/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B1A6A4]/20 to-transparent" />
+        </div>
+
         <PageContainer>
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-accent-50 border border-accent-200/50 rounded-full px-5 py-2.5 mb-6">
-              <DollarSign className="w-4 h-4 text-accent-600" />
-              <span className="text-sm font-light text-accent-800 uppercase tracking-[0.2em]">
+          <div className="relative z-10 text-center mb-16">
+            <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
+              <DollarSign className="w-4 h-4 text-[#697184]" />
+              <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
                 Pricing Plans
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-[#413F3D] mb-6 leading-[1.1] tracking-tight">
               Flexible Pricing Options
             </h2>
-            <p className="lead max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#413F3D]/80 font-light leading-relaxed max-w-2xl mx-auto">
               Choose a plan that works for your business needs and budget
             </p>
           </div>
-          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+          <div className="relative z-10 grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             <div className="bg-white border-2 border-slate-700/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-slate-900 transition-all duration-500 hover:-translate-y-2">
               <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
                 Starter
