@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/lib/utils";
 import {
   Calendar,
   Mail,
@@ -391,7 +392,7 @@ export default function Home() {
                         }}
                       >
                         <Image
-                          src="/virtual_assistant.jpg"
+                          src={getImagePath("/virtual_assistant.jpg")}
                           alt="Premium Virtual Assistant"
                           width={600}
                           height={750}

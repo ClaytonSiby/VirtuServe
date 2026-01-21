@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
+import { getImagePath } from "@/lib/utils";
 
 export default function About() {
   return (
@@ -248,7 +249,7 @@ export default function About() {
                     <div className="absolute -inset-4 bg-gradient-to-br from-[#697184]/5 to-[#B1A6A4]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(105,113,132,0.3)] transition-all duration-700">
                       <Image
-                        src="/assets/sheridan.JPG"
+                        src={getImagePath("/assets/sheridan.JPG")}
                         alt="Sheridan De Laroche - Founder & Lead VA"
                         width={420}
                         height={560}
@@ -536,7 +537,9 @@ export default function About() {
                     <div className="absolute -inset-4 bg-gradient-to-bl from-[#B1A6A4]/5 to-[#D8CFD0]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(177,166,164,0.3)] transition-all duration-700">
                       <Image
-                        src="/assets/assistant_ashley_image.jpeg"
+                        src={getImagePath(
+                          "/assets/assistant_ashley_image.jpeg",
+                        )}
                         alt="Ashley Janse van Vuuren - Virtual Assistant"
                         width={420}
                         height={560}
