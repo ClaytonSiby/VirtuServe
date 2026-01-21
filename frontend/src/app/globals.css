@@ -30,7 +30,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family:
-    "Inter",
+    var(--font-inter),
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -39,44 +39,139 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+
+  /* Elegant textured background */
+  background-image:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(216, 207, 208, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(177, 166, 164, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(105, 113, 132, 0.02) 0%,
+      transparent 50%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 60px,
+      rgba(105, 113, 132, 0.008) 60px,
+      rgba(105, 113, 132, 0.008) 61px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 60px,
+      rgba(177, 166, 164, 0.008) 60px,
+      rgba(177, 166, 164, 0.008) 61px
+    );
+  background-color: #fefefe;
+  background-attachment: fixed;
 }
 
-/* Standardized Typography System */
+/* ============================================================================
+   TYPOGRAPHY SYSTEM - VirtuServe Design System v2.0
+   ============================================================================
+   
+   Font Families:
+   - Headings: Playfair Display (serif) - weights: 400, 500, 600, 700, 800, 900
+   - Body: Inter (sans-serif) - weights: 300, 400, 500, 600, 700
+   
+   Brand Colors for Typography:
+   - Primary Text: #413F3D (charcoal)
+   - Secondary Text: #697184 (slate)
+   - Accent Text: #D8CFD0 (dusty pink)
+   - Body Text: #413F3D with 70-80% opacity
+   
+   Hero Heading Scale (H1):
+   - Mobile: text-6xl (3.75rem)
+   - Tablet: text-7xl (4.5rem)
+   - Desktop: text-8xl (6rem)
+   - Font Weight: font-extralight (200)
+   - Tracking: tracking-tight (-0.025em)
+   
+   Section Heading Scale (H2):
+   - Mobile: text-4xl (2.25rem)
+   - Tablet: text-5xl (3rem)
+   - Desktop: text-6xl (3.75rem)
+   - Font Weight: font-extralight (200) or font-light (300)
+   - Tracking: tracking-tight
+   
+   Subsection Heading Scale (H3):
+   - Mobile: text-2xl (1.5rem)
+   - Tablet: text-3xl (1.875rem)
+   - Font Weight: font-light (300)
+   
+   Badge Text:
+   - Size: text-xs (0.75rem)
+   - Weight: font-medium (500) or font-semibold (600)
+   - Tracking: tracking-[0.25em]
+   - Transform: uppercase
+   
+   Body Text:
+   - Paragraph: text-base (1rem) with text-[#413F3D]/70
+   - Lead: text-lg md:text-xl with font-light
+   - Small: text-sm (0.875rem)
+   
+   Line Height:
+   - Headings: leading-tight (1.25) or leading-[0.95] for hero
+   - Body: leading-relaxed (1.625)
+   
+   ============================================================================ */
+
 @layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair), serif;
+    letter-spacing: -0.02em;
+  }
+
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-gray-900;
+    @apply text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-[#413F3D] leading-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-gray-900;
+    @apply text-4xl md:text-5xl lg:text-6xl font-extralight tracking-tight text-[#413F3D] leading-tight;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-light text-gray-900;
+    @apply text-2xl md:text-3xl font-light text-[#413F3D];
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-normal text-gray-900;
+    @apply text-xl md:text-2xl font-normal text-[#413F3D];
   }
 
   h5 {
-    @apply text-lg md:text-xl font-normal text-gray-900;
+    @apply text-lg md:text-xl font-normal text-[#413F3D];
   }
 
   h6 {
-    @apply text-base md:text-lg font-medium text-gray-900;
+    @apply text-base md:text-lg font-medium text-[#413F3D];
   }
 
   p {
-    @apply text-base text-gray-700 leading-relaxed;
+    @apply text-base text-[#413F3D]/70 leading-relaxed;
   }
 
   .lead {
-    @apply text-lg md:text-xl text-gray-600 leading-relaxed font-light;
+    @apply text-xl md:text-2xl text-[#413F3D]/70 font-light leading-relaxed;
   }
 
   .small-text {
-    @apply text-sm text-gray-600;
+    @apply text-sm text-[#697184]/70;
   }
 }
 

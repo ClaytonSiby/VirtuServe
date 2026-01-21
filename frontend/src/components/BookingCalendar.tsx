@@ -129,7 +129,7 @@ export default function BookingCalendar() {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <span className="text-xs font-semibold text-white/80 uppercase tracking-[0.25em]">
-                Free Consultation
+                Free Discovery Call
               </span>
             </div>
             <h3 className="text-4xl md:text-5xl font-extralight text-white mb-4 tracking-tight leading-tight">
@@ -137,7 +137,7 @@ export default function BookingCalendar() {
             </h3>
             <p className="text-lg text-white/70 font-light leading-relaxed max-w-2xl">
               Let&apos;s discuss how we can elevate your business. Choose a
-              convenient time for a personalized 30-minute consultation.
+              convenient time for a personalized 30-minute discovery call.
             </p>
           </div>
 

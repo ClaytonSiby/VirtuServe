@@ -84,72 +84,54 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-gradient-to-br from-slate-700 via-primary-800 to-slate-700">
-        {/* Elegant diagonal flowing waves and stars background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Diagonal flowing waves - bottom left to top right */}
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
           <div
-            className={`absolute inset-0 bg-gradient-to-br from-accent-500/30 via-accent-600/15 to-transparent ${styles.diagonalWave1}`}
-          />
-
+            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
+            style={{ animationDuration: "8s" }}
+          ></div>
           <div
-            className={`absolute inset-0 bg-gradient-to-br from-primary-500/28 via-primary-600/13 to-transparent ${styles.diagonalWave2}`}
-          />
-
-          <div
-            className={`absolute inset-0 bg-gradient-to-br from-accent-600/22 via-accent-500/10 to-transparent ${styles.diagonalWave3}`}
-          />
-
-          {/* Diagonal accent lines */}
-          <div
-            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-accent-400/40 to-transparent opacity-70 ${styles.accentLine1}`}
-          />
-          <div
-            className={`absolute inset-0 h-px bg-gradient-to-br from-transparent via-primary-400/35 to-transparent opacity-60 ${styles.accentLine2}`}
-          />
-
-          {/* Scattered stars */}
-          <div className="absolute top-[8%] left-[12%] w-1 h-1 rounded-full bg-accent-400/60 shadow-sm shadow-accent-400/40" />
-          <div className="absolute top-[15%] right-[8%] w-1.5 h-1.5 rounded-full bg-primary-300/70 shadow-md shadow-primary-300/50" />
-          <div className="absolute top-[22%] left-[25%] w-0.5 h-0.5 rounded-full bg-white/50" />
-          <div className="absolute top-[12%] right-[28%] w-1 h-1 rounded-full bg-accent-500/65 shadow-sm shadow-accent-500/45" />
-          <div className="absolute top-[28%] left-[35%] w-1.5 h-1.5 rounded-full bg-primary-400/60 shadow-md shadow-primary-400/40" />
-          <div className="absolute top-[18%] right-[42%] w-0.5 h-0.5 rounded-full bg-white/40" />
-          <div className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
-          <div className="absolute top-[25%] right-[55%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
-          <div className="absolute top-[32%] left-[48%] w-0.5 h-0.5 rounded-full bg-white/45" />
-          <div className="absolute top-[10%] right-[18%] w-1 h-1 rounded-full bg-accent-300/60 shadow-sm shadow-accent-300/40" />
-          <div className="absolute top-[38%] left-[62%] w-1.5 h-1.5 rounded-full bg-primary-400/70 shadow-md shadow-primary-400/50" />
-          <div className="absolute top-[20%] right-[65%] w-0.5 h-0.5 rounded-full bg-white/50" />
-          <div className="absolute top-[30%] left-[75%] w-1 h-1 rounded-full bg-accent-500/60 shadow-sm shadow-accent-500/40" />
-          <div className="absolute top-[14%] right-[72%] w-1.5 h-1.5 rounded-full bg-primary-300/65 shadow-md shadow-primary-300/45" />
-          <div className="absolute top-[36%] left-[88%] w-0.5 h-0.5 rounded-full bg-white/40" />
-          <div className="absolute top-[24%] right-[85%] w-1 h-1 rounded-full bg-accent-400/55 shadow-sm shadow-accent-400/35" />
-
-          {/* Soft atmospheric glow */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-accent-500/10 to-transparent blur-3xl" />
+            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
+            style={{ animationDuration: "6s" }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Decorative grid overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.15) 1px, transparent 0)`,
+              backgroundSize: "48px 48px",
+            }}
+          ></div>
+        </div>
+
+        {/* Floating decorative shapes */}
+        <div className="absolute top-20 left-10 w-72 h-72 border-2 border-[#697184]/15 rounded-full opacity-40 animate-[spin_20s_linear_infinite]"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#B1A6A4]/15 rounded-full opacity-40 animate-[spin_25s_linear_infinite_reverse]"></div>
 
         <PageContainer>
           <div className="relative z-10 mb-20 md:mb-24 text-center">
-            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-300"></div>
-              <span className="text-[10px] font-medium text-white/90 uppercase tracking-[0.25em]">
+            <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
+              <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
                 Let&apos;s Connect
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-[#413F3D] mb-6 tracking-tight leading-tight">
               Get In Touch
             </h1>
 
             <div className="flex items-center justify-center gap-3 opacity-60 mb-6">
-              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-accent-300/60 to-transparent"></div>
-              <div className="w-1 h-1 rounded-full bg-accent-300"></div>
-              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary-300/60 to-transparent"></div>
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#697184]/60 to-transparent"></div>
+              <div className="w-1 h-1 rounded-full bg-[#697184]"></div>
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#697184]/60 to-transparent"></div>
             </div>
 
-            <p className="text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#413F3D]/70 font-light max-w-3xl mx-auto leading-relaxed">
               Ready to transform your workflow? Choose your preferred way to
               connect.
             </p>
@@ -197,7 +179,7 @@ export default function Contact() {
                       Discovery Call
                     </h3>
                     <p className="text-primary-600 font-medium text-base mb-1">
-                      Free 30-minute consultation
+                      Free 30-minute discovery call
                     </p>
                     <p className="text-gray-500 text-sm font-light inline-flex items-center gap-1.5">
                       Book below{" "}
@@ -234,26 +216,26 @@ export default function Contact() {
                     What Happens Next
                   </h3>
                   <ul className="space-y-4 text-gray-700">
-                    <li className="flex items-start gap-3.5 text-base font-light">
-                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-accent-500 to-accent-600 text-white text-xs font-medium flex-shrink-0 mt-0.5 shadow-sm">
+                    <li className="flex items-center gap-3.5 text-base font-light">
+                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-accent-500 to-accent-600 text-white text-xs font-medium flex-shrink-0 shadow-sm">
                         1
                       </span>
                       <span>Quick response within 24 hours</span>
                     </li>
-                    <li className="flex items-start gap-3.5 text-base font-light">
-                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-accent-400 to-accent-500 text-white text-xs font-medium flex-shrink-0 mt-0.5 shadow-sm">
+                    <li className="flex items-center gap-3.5 text-base font-light">
+                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-[#D8CFD0] to-[#B1A6A4] text-white text-xs font-medium flex-shrink-0 shadow-sm">
                         2
                       </span>
-                      <span>Free consultation to discuss your needs</span>
+                      <span>Free discovery call to discuss your needs</span>
                     </li>
-                    <li className="flex items-start gap-3.5 text-base font-light">
-                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 text-white text-xs font-medium flex-shrink-0 mt-0.5 shadow-sm">
+                    <li className="flex items-center gap-3.5 text-base font-light">
+                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 text-white text-xs font-medium flex-shrink-0 shadow-sm">
                         3
                       </span>
                       <span>Custom proposal tailored for you</span>
                     </li>
-                    <li className="flex items-start gap-3.5 text-base font-light">
-                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-white text-xs font-medium flex-shrink-0 mt-0.5 shadow-sm">
+                    <li className="flex items-center gap-3.5 text-base font-light">
+                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-white text-xs font-medium flex-shrink-0 shadow-sm">
                         4
                       </span>
                       <span>No pressure, just possibilities</span>
@@ -435,7 +417,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-accent-600 to-primary-600 text-white py-5 rounded-xl font-medium text-lg hover:shadow-2xl hover:shadow-accent-500/30 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all duration-300 flex items-center justify-center gap-3 mt-8 tracking-wide"
+                      className="w-full bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white py-5 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-[#697184]/30 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all duration-300 flex items-center justify-center gap-3 mt-8 tracking-wide"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center gap-2">

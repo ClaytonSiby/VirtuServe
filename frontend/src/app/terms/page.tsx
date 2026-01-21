@@ -15,26 +15,45 @@ export default function Terms() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-primary-50/50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/20 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-primary-500/15 to-transparent blur-3xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5"></div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
+            style={{ animationDuration: "8s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
+            style={{ animationDuration: "6s" }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Decorative grid overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.15) 1px, transparent 0)`,
+              backgroundSize: "48px 48px",
+            }}
+          ></div>
+        </div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
-            <Scale className="w-4 h-4 text-white/90" />
-            <span className="text-xs font-light text-white/90 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-[#D8CFD0]/30 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
+            <Scale className="w-4 h-4 text-[#697184]" />
+            <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
               Legal
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-6 text-[#413F3D] tracking-tight leading-tight">
             Terms of Service
           </h1>
-          <p className="lead max-w-3xl mx-auto text-white/85 leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#697184]/80 max-w-3xl mx-auto leading-relaxed font-light">
             The terms and conditions governing our services
           </p>
-          <p className="text-sm text-white/70 mt-6">
+          <p className="text-sm text-[#697184]/70 mt-6 font-medium">
             Last updated: {lastUpdated}
           </p>
         </div>

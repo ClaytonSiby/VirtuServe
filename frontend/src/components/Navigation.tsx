@@ -3,12 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +31,8 @@ export default function Navigation() {
         <div
           className={`transition-all duration-300 ${
             scrolled
-              ? "bg-gradient-to-r from-slate-50/95 via-white/95 to-primary-50/90 backdrop-blur-xl border-b border-slate-900/20 shadow-2xl"
-              : "bg-gradient-to-r from-slate-50/80 via-white/90 to-primary-50/70 backdrop-blur-md shadow-sm"
+              ? "bg-white/80 backdrop-blur-xl border-b border-[#697184]/10 shadow-lg"
+              : "bg-white/60 backdrop-blur-md shadow-md"
           }`}
         >
           <div className="container mx-auto px-4">
@@ -43,31 +45,31 @@ export default function Navigation() {
                   className="relative"
                 >
                   <svg
-                    width="44"
-                    height="44"
+                    width="56"
+                    height="56"
                     viewBox="0 0 60 50"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="drop-shadow-md"
+                    className="drop-shadow-lg"
                   >
-                    {/* Simple V icon */}
+                    {/* V icon with color palette */}
                     <path
                       d="M0 0 L20 0 L30 50 Z"
-                      fill="#0f172a"
-                      className="group-hover:fill-primary-950 transition-colors duration-300"
+                      fill="#697184"
+                      className="group-hover:opacity-90 transition-opacity duration-300"
                     />
                     <path
                       d="M40 0 L60 0 L30 50 Z"
-                      fill="#0f172a"
-                      className="group-hover:fill-primary-950 transition-colors duration-300"
+                      fill="#413F3D"
+                      className="group-hover:opacity-90 transition-opacity duration-300"
                     />
                   </svg>
                 </motion.div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-normal text-gray-900 tracking-tight">
+                  <span className="text-3xl font-semibold bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
                     VirtuServe
                   </span>
-                  <span className="text-[10px] font-light text-gray-500 tracking-[0.3em] uppercase -mt-0.5">
+                  <span className="text-[11px] font-medium text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
                     Excellence Delivered
                   </span>
                 </div>
@@ -79,19 +81,31 @@ export default function Navigation() {
                   { href: "/", label: "Home" },
                   { href: "/services", label: "Services" },
                   { href: "/about", label: "About" },
+                  { href: "/faq", label: "FAQ" },
                   { href: "/contact", label: "Contact" },
-                ].map((item) => (
-                  <Link key={item.href} href={item.href}>
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="relative text-slate-900 hover:text-primary-950 transition-colors px-5 py-2.5 rounded-full font-light group"
-                    >
-                      {item.label}
-                      <motion.div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-slate-900 via-primary-950 to-slate-950 group-hover:w-3/4 transition-all duration-300 rounded-full" />
-                    </motion.div>
-                  </Link>
-                ))}
+                ].map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link key={item.href} href={item.href}>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`relative transition-all px-5 py-2.5 rounded-full font-medium group ${
+                          isActive
+                            ? "text-[#697184]"
+                            : "text-[#413F3D] hover:text-[#697184]"
+                        }`}
+                      >
+                        {item.label}
+                        <motion.div
+                          className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] transition-all duration-300 rounded-full ${
+                            isActive ? "w-3/4" : "w-0 group-hover:w-3/4"
+                          }`}
+                        />
+                      </motion.div>
+                    </Link>
+                  );
+                })}
               </div>
 
               {/* Get Started Button - Right Side */}
@@ -100,12 +114,12 @@ export default function Navigation() {
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative group bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white px-8 py-3 rounded-full font-normal overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary-950/30 transition-all duration-300"
+                    className="relative group bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white px-8 py-3 rounded-full font-semibold overflow-hidden shadow-lg hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Get Started
                     </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-600 via-accent-700 to-accent-800 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#413F3D] via-[#697184] to-[#413F3D] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </motion.div>
                 </Link>
               </div>
@@ -143,7 +157,7 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-slate-900/5 via-white to-primary-950/5 backdrop-blur-md shadow-2xl z-[70] overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-gradient-to-br from-[#F2F1EF]/95 via-[#D8CFD0]/90 to-[#F2F1EF]/95 backdrop-blur-md shadow-2xl z-[70] overflow-y-auto"
             >
               {/* Drawer Header */}
               <div className="p-6 border-b border-gray-200">
@@ -154,20 +168,21 @@ export default function Navigation() {
                     onClick={() => setIsOpen(false)}
                   >
                     <svg
-                      width="35"
-                      height="35"
+                      width="45"
+                      height="45"
                       viewBox="0 0 60 50"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="drop-shadow-lg"
                     >
-                      <path d="M0 0 L20 0 L30 50 Z" fill="#0f172a" />
-                      <path d="M40 0 L60 0 L30 50 Z" fill="#0f172a" />
+                      <path d="M0 0 L20 0 L30 50 Z" fill="#697184" />
+                      <path d="M40 0 L60 0 L30 50 Z" fill="#413F3D" />
                     </svg>
                     <div className="flex flex-col">
-                      <span className="text-xl font-normal text-gray-900 tracking-tight">
+                      <span className="text-2xl font-semibold bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
                         VirtuServe
                       </span>
-                      <span className="text-[9px] font-light text-gray-500 tracking-[0.3em] uppercase -mt-0.5">
+                      <span className="text-[10px] font-medium text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
                         Excellence Delivered
                       </span>
                     </div>
@@ -189,23 +204,31 @@ export default function Navigation() {
                   { href: "/", label: "Home" },
                   { href: "/services", label: "Services" },
                   { href: "/about", label: "About" },
+                  { href: "/faq", label: "FAQ" },
                   { href: "/contact", label: "Contact Us" },
-                ].map((item, index) => (
-                  <motion.div
-                    key={item.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="block text-gray-700 hover:text-accent-600 transition px-4 py-3 rounded-xl hover:bg-accent-50 font-light text-lg"
-                      onClick={() => setIsOpen(false)}
+                ].map((item, index) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <motion.div
+                      key={item.href}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={item.href}
+                        className={`block transition px-4 py-3 rounded-xl font-light text-lg ${
+                          isActive
+                            ? "text-[#697184] font-semibold"
+                            : "text-gray-700 hover:text-[#697184] hover:bg-[#D8CFD0]/20"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -214,7 +237,7 @@ export default function Navigation() {
                 >
                   <Link
                     href="/contact"
-                    className="block bg-gradient-to-br from-slate-900 via-primary-950 to-slate-950 text-white text-center px-4 py-3 rounded-xl font-normal shadow-lg hover:shadow-xl transition-all"
+                    className="block bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white text-center px-4 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
