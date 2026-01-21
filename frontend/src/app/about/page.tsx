@@ -137,7 +137,7 @@ export default function About() {
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#69718408_1px,transparent_1px),linear-gradient(to_bottom,#69718408_1px,transparent_1px)] bg-[size:64px_64px]" />
         </div>
-        
+
         <PageContainer>
           {/* Header Section */}
           <div className="relative z-10 text-center mb-24 md:mb-32">
@@ -164,7 +164,6 @@ export default function About() {
           {/* Content Section */}
           <div className="relative z-10 max-w-5xl mx-auto">
             <div className="relative bg-gradient-to-br from-white via-white to-[#F2F1EF]/30 border border-[#697184]/10 rounded-[3rem] p-16 md:p-20 lg:p-24 shadow-[0_20px_70px_-15px_rgba(65,63,61,0.1)] hover:shadow-[0_30px_90px_-15px_rgba(105,113,132,0.15)] transition-all duration-700 overflow-hidden group">
-              
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-[#D8CFD0]/8 to-transparent blur-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-gradient-to-tr from-[#B1A6A4]/6 to-transparent blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
@@ -174,7 +173,9 @@ export default function About() {
                 {/* First Paragraph */}
                 <div className="space-y-4">
                   <p className="text-3xl md:text-4xl lg:text-[2.75rem] text-[#413F3D] font-light leading-[1.5] tracking-tight">
-                    We help businesses reclaim their time to focus on growth—not administrative tasks. Serving international clients across time zones and industries.
+                    We help businesses reclaim their time to focus on growth—not
+                    administrative tasks. Serving international clients across
+                    time zones and industries.
                   </p>
                 </div>
 
@@ -191,7 +192,9 @@ export default function About() {
                 {/* Second Paragraph */}
                 <div className="space-y-4">
                   <p className="text-2xl md:text-3xl text-[#413F3D]/70 font-light leading-[1.6]">
-                    From startups to established enterprises, we deliver tailored support that treats your business with the care it deserves. Building lasting partnerships, not transactions.
+                    From startups to established enterprises, we deliver
+                    tailored support that treats your business with the care it
+                    deserves. Building lasting partnerships, not transactions.
                   </p>
                 </div>
               </div>
