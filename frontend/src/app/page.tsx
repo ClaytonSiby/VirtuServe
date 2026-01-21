@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getImagePath } from "@/lib/utils";
 import {
   Calendar,
   Mail,
@@ -15,6 +14,7 @@ import {
   Users,
   Star,
   Quote,
+  Clock,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -298,17 +298,29 @@ export default function Home() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", delay: 1.4 }}
-                    className="min-h-[120px] flex flex-col justify-center p-4 bg-gradient-to-br from-[#B1A6A4]/20 to-[#D8CFD0]/30 backdrop-blur-xl rounded-2xl border border-[#697184]/20 shadow-lg"
+                    className="p-4 bg-gradient-to-br from-[#B1A6A4]/20 to-[#D8CFD0]/30 backdrop-blur-xl rounded-2xl border border-[#697184]/20 shadow-lg"
                   >
-                    <Globe className="w-5 h-5 text-[#697184] mb-1.5" />
-                    <p className="text-[8px] text-[#697184] font-semibold uppercase tracking-wider mb-0.5">
-                      Support Hours
-                    </p>
-                    <p className="text-[9px] sm:text-[10px] font-normal text-[#413F3D] leading-tight">
-                      UK: 9AM-5PM
-                      <br />
-                      SA: 8AM-5PM
-                    </p>
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
+                        <div className="text-xs font-bold text-[#697184]">
+                          9-5
+                        </div>
+                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                          UK
+                        </div>
+                      </div>
+                      <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
+                        <div className="text-xs font-bold text-[#697184]">
+                          8-5
+                        </div>
+                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                          SA
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-[9px] text-[#697184] font-semibold uppercase tracking-wide text-center">
+                      Support
+                    </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -392,7 +404,7 @@ export default function Home() {
                         }}
                       >
                         <Image
-                          src={getImagePath("/virtual_assistant.jpg")}
+                          src="/virtual_assistant.jpg"
                           alt="Premium Virtual Assistant"
                           width={600}
                           height={750}
@@ -982,17 +994,31 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute inset-0 bg-[#697184]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative text-center p-6 bg-white/80 backdrop-blur-sm border border-[#697184]/15 rounded-xl hover:shadow-md hover:border-[#697184]/25 transition-all duration-500">
-                <Globe
+                <Clock
                   className="w-7 h-7 text-[#697184] mx-auto mb-2"
                   strokeWidth={1.5}
                 />
-                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em] mb-1">
+                <div className="flex items-center justify-center gap-1.5 mb-1">
+                  <div className="text-center">
+                    <p className="text-2xl font-extralight text-[#413F3D] leading-tight">
+                      9–5
+                    </p>
+                    <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
+                      UK
+                    </p>
+                  </div>
+                  <div className="text-[#697184]/30 text-lg pb-2">|</div>
+                  <div className="text-center">
+                    <p className="text-2xl font-extralight text-[#413F3D] leading-tight">
+                      8–5
+                    </p>
+                    <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
+                      SA
+                    </p>
+                  </div>
+                </div>
+                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
                   Support Hours
-                </p>
-                <p className="text-xs sm:text-sm font-normal text-[#413F3D] leading-tight">
-                  UK: 9AM-5PM
-                  <br />
-                  SA: 8AM-5PM
                 </p>
               </div>
             </div>

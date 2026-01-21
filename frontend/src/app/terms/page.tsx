@@ -47,10 +47,11 @@ export default function Terms() {
               Legal
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-6 text-[#413F3D] tracking-tight leading-tight">
-            Terms of Service
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-[#413F3D] tracking-tight leading-[1.1]">
+            Terms of{" "}
+            <span className="font-serif italic text-[#697184]">Service</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#697184]/80 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-[#697184]/75 max-w-3xl mx-auto leading-[1.7] font-light">
             The terms and conditions governing our services
           </p>
           <p className="text-sm text-[#697184]/70 mt-6 font-medium">
@@ -70,10 +71,10 @@ export default function Terms() {
                   <FileText className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-light text-primary-900 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-3 tracking-tight">
                     Agreement to Terms
                   </h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-[15px] text-gray-700 leading-[1.7] font-light">
                     By accessing or using VirtuServe&apos;s virtual assistant
                     services, you agree to be bound by these Terms of Service.
                     If you disagree with any part of these terms, you may not
@@ -86,10 +87,10 @@ export default function Terms() {
 
             {/* Services Description */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                 Services Description
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
                 <p>
                   VirtuServe provides professional virtual assistant services
                   including but not limited to:
@@ -125,13 +126,11 @@ export default function Terms() {
 
             {/* User Responsibilities */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                 User Responsibilities
               </h2>
-              <div className="space-y-4 text-gray-700">
-                <p className="leading-relaxed">
-                  When using our services, you agree to:
-                </p>
+              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+                <p>When using our services, you agree to:</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <span className="text-accent-600 mt-1">•</span>
@@ -180,12 +179,14 @@ export default function Terms() {
 
             {/* Payment Terms */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                 Payment Terms
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
                 <p>
-                  <strong className="text-primary-900">Billing:</strong>{" "}
+                  <strong className="text-primary-900 font-semibold">
+                    Billing:
+                  </strong>{" "}
                   Services are billed according to the package or hourly rate
                   agreed upon in your service agreement. Invoices are typically
                   issued monthly or as otherwise specified.
@@ -211,14 +212,14 @@ export default function Terms() {
 
             {/* Confidentiality */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                 Confidentiality
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-[15px] text-gray-700 font-light leading-[1.7] mb-4">
                 We understand the sensitive nature of the information you may
                 share with us. VirtuServe commits to:
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
                 <li className="flex items-start gap-2">
                   <span className="text-accent-600 mt-1">•</span>
                   <span>

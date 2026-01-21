@@ -83,15 +83,15 @@ export default function Footer() {
                   />
                 </svg>
                 <div className="flex flex-col">
-                  <span className="text-3xl font-semibold text-white tracking-tight">
+                  <span className="text-3xl md:text-4xl font-bold text-white tracking-tight">
                     VirtuServe
                   </span>
-                  <span className="text-xs font-medium text-[#D8CFD0] tracking-[0.3em] uppercase -mt-0.5">
+                  <span className="text-[10px] font-bold text-[#D8CFD0] tracking-[0.25em] uppercase mt-0.5">
                     Excellence Delivered
                   </span>
                 </div>
               </Link>
-              <p className="text-gray-300 text-base leading-relaxed max-w-md">
+              <p className="text-gray-300 text-[15px] leading-[1.7] max-w-md font-light">
                 Professional virtual assistant services designed to elevate your
                 business operations with precision and care.
               </p>
@@ -132,7 +132,7 @@ export default function Footer() {
 
             {/* Navigation Columns */}
             <div className="lg:col-span-2">
-              <h4 className="text-sm font-bold text-white/90 mb-5 tracking-[0.15em] uppercase">
+              <h4 className="text-[11px] font-bold text-white mb-5 tracking-[0.2em] uppercase">
                 Quick Links
               </h4>
               <ul className="space-y-3.5">
@@ -159,7 +159,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:col-span-2">
-              <h4 className="text-sm font-bold text-white/90 mb-5 tracking-[0.15em] uppercase">
+              <h4 className="text-[11px] font-bold text-white mb-5 tracking-[0.2em] uppercase">
                 Resources
               </h4>
               <ul className="space-y-3.5">
@@ -186,13 +186,13 @@ export default function Footer() {
             </div>
 
             <div className="lg:col-span-3">
-              <h4 className="text-sm font-bold text-white/90 mb-5 tracking-[0.15em] uppercase">
+              <h4 className="text-[11px] font-bold text-white mb-5 tracking-[0.2em] uppercase">
                 Get In Touch
               </h4>
               <div className="space-y-4">
                 <a
                   href="mailto:hello@virtuserve.com"
-                  className="text-gray-300 hover:text-white transition-colors text-base flex items-start gap-3 group"
+                  className="text-gray-300 hover:text-white transition-colors text-[15px] font-light flex items-start gap-3 group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#697184] group-hover:border-[#697184] flex items-center justify-center flex-shrink-0 transition-all duration-300">
                     <Mail
@@ -201,7 +201,7 @@ export default function Footer() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 pt-1">
-                    <span className="text-xs text-gray-400 uppercase tracking-wider">
+                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-semibold">
                       Email
                     </span>
                     <span className="break-all">hello@virtuserve.com</span>
@@ -209,7 +209,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="tel:+27828997062"
-                  className="text-gray-300 hover:text-white transition-colors text-base flex items-start gap-3 group"
+                  className="text-gray-300 hover:text-white transition-colors text-[15px] font-light flex items-start gap-3 group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#697184] group-hover:border-[#697184] flex items-center justify-center flex-shrink-0 transition-all duration-300">
                     <Phone
@@ -218,7 +218,7 @@ export default function Footer() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 pt-1">
-                    <span className="text-xs text-gray-400 uppercase tracking-wider">
+                    <span className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-semibold">
                       Phone
                     </span>
                     <span>+27 82 899 7062</span>
@@ -232,19 +232,19 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-[13px] font-light">
               &copy; 2026 VirtuServe. All rights reserved.
             </p>
             <div className="flex gap-8">
               <Link
                 href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-white transition-colors text-[13px] font-light"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-white transition-colors text-[13px] font-light"
               >
                 Terms of Service
               </Link>

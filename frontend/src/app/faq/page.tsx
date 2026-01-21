@@ -168,10 +168,13 @@ export default function FAQPage() {
                 Help Center
               </span>
             </div>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight mb-6 text-[#413F3D] leading-tight tracking-tight">
-              Frequently Asked Questions
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-[#413F3D] leading-[1.1] tracking-tight">
+              Frequently Asked{" "}
+              <span className="block mt-2 font-serif italic text-[#697184]">
+                Questions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#413F3D]/70 font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-[#413F3D]/70 font-light leading-relaxed">
               Find answers to common questions about our services, pricing, and
               how we work
             </p>
@@ -189,7 +192,7 @@ export default function FAQPage() {
                   <div className="w-10 h-10 rounded-xl bg-[#F2F1EF] flex items-center justify-center border border-[#697184]/20">
                     <HelpCircle className="w-5 h-5 text-[#697184]" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-light text-[#413F3D]">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-[#413F3D] tracking-tight">
                     {category.category}
                   </h2>
                 </div>
@@ -208,7 +211,7 @@ export default function FAQPage() {
                           onClick={() => toggleItem(categoryIndex, index)}
                           className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-[#F2F1EF]/30 transition-colors duration-200"
                         >
-                          <h3 className="text-lg md:text-xl font-medium text-[#413F3D] pr-4">
+                          <h3 className="text-[17px] md:text-[19px] font-semibold text-[#413F3D] pr-4 tracking-tight">
                             {faq.question}
                           </h3>
                           <ChevronDown
@@ -224,7 +227,7 @@ export default function FAQPage() {
                         >
                           <div className="px-6 pb-6 pt-2">
                             <div className="h-px bg-gray-200 mb-4" />
-                            <p className="text-[#413F3D]/70 font-light leading-relaxed">
+                            <p className="text-[15px] text-[#413F3D]/75 font-light leading-[1.7]">
                               {faq.answer}
                             </p>
                           </div>
@@ -252,11 +255,14 @@ export default function FAQPage() {
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-[#413F3D] leading-tight">
-                  Still Have Questions?
+                <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-light text-[#413F3D] leading-[1.15] tracking-tight">
+                  Still Have{" "}
+                  <span className="font-serif italic text-[#697184]">
+                    Questions?
+                  </span>
                 </h2>
 
-                <p className="text-xl text-[#413F3D]/70 font-light leading-relaxed">
+                <p className="text-lg md:text-xl text-[#413F3D]/70 font-light leading-[1.7]">
                   Can&apos;t find what you&apos;re looking for? Book a free
                   discovery call and we&apos;ll answer all your questions
                   personally.

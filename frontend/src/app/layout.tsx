@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CalendlyPreloader from "@/components/CalendlyPreloader";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -65,6 +66,7 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning>
+        <CalendlyPreloader />
         <Navigation />
         {children}
         <Footer />

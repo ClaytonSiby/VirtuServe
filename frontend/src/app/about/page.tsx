@@ -126,75 +126,64 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Story - Refined Elegant Layout */}
-      <section className="relative py-32 md:py-44 bg-white overflow-hidden">
-        {/* Elegant background effects */}
+      {/* Our Story - Modern Elegant Layout */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50/50 to-white overflow-hidden">
+        {/* Minimal background effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#D8CFD0]/10 blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#B1A6A4]/8 blur-3xl" />
-          <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#F2F1EF]/50 blur-3xl" />
-
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#69718408_1px,transparent_1px),linear-gradient(to_bottom,#69718408_1px,transparent_1px)] bg-[size:64px_64px]" />
+          <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#D8CFD0]/8 blur-3xl" />
         </div>
 
         <PageContainer>
-          {/* Header Section */}
-          <div className="relative z-10 text-center mb-24 md:mb-32">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2.5 bg-[#D8CFD0]/20 backdrop-blur-sm border border-[#D8CFD0]/40 rounded-full px-6 py-3 mb-12 shadow-sm">
-              <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.25em]">
-                Our Story
-              </span>
-            </div>
+          <div className="relative z-10 max-w-7xl mx-auto">
+            {/* Asymmetric Grid Layout */}
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start lg:items-center">
+              {/* Left: Heading - Takes 5 columns */}
+              <div className="lg:col-span-5 space-y-8">
+                <div className="inline-block">
+                  <span className="text-[11px] font-bold text-[#697184] uppercase tracking-[0.25em] border-b-2 border-[#697184]/40 pb-2">
+                    Our Story
+                  </span>
+                </div>
 
-            {/* Main Heading */}
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-extralight mb-10 text-[#413F3D] tracking-tight leading-[0.95]">
-              From desk to
-              <span className="block mt-4 bg-gradient-to-r from-[#697184] to-[#D8CFD0] bg-clip-text text-transparent font-light">
-                global impact
-              </span>
-            </h2>
+                <h2 className="text-5xl md:text-6xl lg:text-[5rem] font-light text-[#413F3D] leading-[1.05] tracking-[-0.02em]">
+                  From Desk to{" "}
+                  <span className="block mt-4 font-serif font-normal italic text-[#697184]">
+                    Global Impact
+                  </span>
+                </h2>
 
-            <p className="text-2xl md:text-3xl text-[#697184]/75 font-light max-w-3xl mx-auto leading-relaxed">
-              Empowering businesses worldwide through professional excellence
-            </p>
-          </div>
+                {/* Decorative line */}
+                <div className="flex items-center gap-4 pt-2">
+                  <div className="w-16 h-[2px] bg-gradient-to-r from-[#697184]/40 to-[#697184]/10" />
+                  <div className="w-2 h-2 rounded-full bg-[#697184]/50" />
+                </div>
+              </div>
 
-          {/* Content Section */}
-          <div className="relative z-10 max-w-5xl mx-auto">
-            <div className="relative bg-gradient-to-br from-white via-white to-[#F2F1EF]/30 border border-[#697184]/10 rounded-[3rem] p-16 md:p-20 lg:p-24 shadow-[0_20px_70px_-15px_rgba(65,63,61,0.1)] hover:shadow-[0_30px_90px_-15px_rgba(105,113,132,0.15)] transition-all duration-700 overflow-hidden group">
-              {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-[#D8CFD0]/8 to-transparent blur-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
-              <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-gradient-to-tr from-[#B1A6A4]/6 to-transparent blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
-
-              {/* Content */}
-              <div className="relative z-10 space-y-14">
-                {/* First Paragraph */}
-                <div className="space-y-4">
-                  <p className="text-3xl md:text-4xl lg:text-[2.75rem] text-[#413F3D] font-light leading-[1.5] tracking-tight">
+              {/* Right: Content - Takes 7 columns */}
+              <div className="lg:col-span-7 space-y-10">
+                {/* First Content Block */}
+                <div className="relative pl-8 border-l-[3px] border-[#697184]/25 hover:border-[#697184]/40 transition-colors duration-500">
+                  <p className="text-[22px] md:text-[26px] text-[#413F3D] font-light leading-[1.6] tracking-[-0.01em]">
                     We help businesses reclaim their time to focus on growth—not
                     administrative tasks. Serving international clients across
                     time zones and industries.
                   </p>
                 </div>
 
-                {/* Divider */}
-                <div className="flex items-center justify-center gap-4 py-2">
-                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#D8CFD0]/30 to-[#697184]/20" />
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#D8CFD0]/60"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#B1A6A4]/50"></div>
-                  </div>
-                  <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#697184]/20 to-[#D8CFD0]/30" />
-                </div>
-
-                {/* Second Paragraph */}
-                <div className="space-y-4">
-                  <p className="text-2xl md:text-3xl text-[#413F3D]/70 font-light leading-[1.6]">
+                {/* Second Content Block */}
+                <div className="relative pl-8 border-l-[3px] border-[#B1A6A4]/20 hover:border-[#B1A6A4]/35 transition-colors duration-500">
+                  <p className="text-[18px] md:text-[21px] text-[#413F3D]/75 font-light leading-[1.65] tracking-[-0.01em]">
                     From startups to established enterprises, we deliver
                     tailored support that treats your business with the care it
                     deserves. Building lasting partnerships, not transactions.
+                  </p>
+                </div>
+
+                {/* Subtle tag line */}
+                <div className="pl-8 pt-2">
+                  <p className="text-[15px] text-[#697184]/60 font-light italic tracking-wide">
+                    Empowering businesses worldwide through professional
+                    excellence
                   </p>
                 </div>
               </div>
@@ -635,11 +624,9 @@ export default function About() {
       <section className="py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <PageContainer>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-4 tracking-tight">
               What Makes Us{" "}
-              <span className="bg-gradient-to-r from-slate-900 to-slate-950 bg-clip-text text-transparent font-normal">
-                Different
-              </span>
+              <span className="font-serif font-normal italic">Different</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -649,10 +636,10 @@ export default function About() {
                   <Zap className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-gray-900">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 tracking-tight">
                     Proactive Communication
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[15px] text-gray-600 leading-relaxed font-light">
                     We don&apos;t wait for you to check in. We provide regular
                     updates, flag potential issues early, and keep you informed
                     every step of the way.
@@ -666,10 +653,10 @@ export default function About() {
                   <Users className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-gray-900">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 tracking-tight">
                     International Experience
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[15px] text-gray-600 leading-relaxed font-light">
                     Having worked with clients across multiple countries and
                     industries, we understand different business cultures and
                     adapt accordingly.
@@ -683,10 +670,10 @@ export default function About() {
                   <Award className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-gray-900">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 tracking-tight">
                     Professional Training
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[15px] text-gray-600 leading-relaxed font-light">
                     Continuously updated skills in the latest tools and best
                     practices ensure you receive modern, efficient service.
                   </p>
@@ -699,10 +686,10 @@ export default function About() {
                   <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-gray-900">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 tracking-tight">
                     Personalized Service
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[15px] text-gray-600 leading-relaxed font-light">
                     No cookie-cutter solutions. We take time to understand your
                     business, your preferences, and your goals to deliver
                     customized support.
@@ -789,10 +776,47 @@ export default function About() {
                 </div>
 
                 <div className="bg-[#B1A6A4]/15 backdrop-blur-xl border border-[#697184]/15 rounded-2xl p-6 hover:shadow-lg hover:border-[#697184]/25 transition-all duration-300">
-                  <div className="text-base sm:text-lg font-normal text-[#697184] leading-tight mb-2">
-                    UK: 9AM-5PM
-                    <br />
-                    SA: 8AM-5PM
+                  <div className="space-y-3 mb-3">
+                    <div>
+                      <div className="text-[10px] text-[#697184]/50 font-semibold uppercase tracking-[0.15em] mb-1">
+                        United Kingdom
+                      </div>
+                      <div className="text-3xl font-bold text-[#697184] leading-none">
+                        9
+                        <span className="text-base font-normal text-[#697184]/70">
+                          am
+                        </span>{" "}
+                        – 5
+                        <span className="text-base font-normal text-[#697184]/70">
+                          pm
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative py-2">
+                      <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t border-[#697184]/20"></div>
+                      </div>
+                      <div className="relative flex justify-center">
+                        <span className="bg-[#B1A6A4]/15 px-2 text-[10px] text-[#697184]/40">
+                          •
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] text-[#697184]/50 font-semibold uppercase tracking-[0.15em] mb-1">
+                        South Africa
+                      </div>
+                      <div className="text-3xl font-bold text-[#697184] leading-none">
+                        8
+                        <span className="text-base font-normal text-[#697184]/70">
+                          am
+                        </span>{" "}
+                        – 5
+                        <span className="text-base font-normal text-[#697184]/70">
+                          pm
+                        </span>
+                      </div>
+                    </div>
                   </div>
                   <div className="text-sm text-[#413F3D]/70 font-medium">
                     Support Hours

@@ -47,10 +47,11 @@ export default function Privacy() {
               Legal
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight mb-6 text-[#413F3D] tracking-tight leading-tight">
-            Privacy Policy
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-[#413F3D] tracking-tight leading-[1.1]">
+            Privacy{" "}
+            <span className="font-serif italic text-[#697184]">Policy</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#697184]/80 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-[#697184]/75 max-w-3xl mx-auto leading-[1.7] font-light">
             Your privacy and data security are our top priorities
           </p>
           <p className="text-sm text-[#697184]/70 mt-6 font-medium">
@@ -70,10 +71,10 @@ export default function Privacy() {
                   <Shield className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-light text-primary-900 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-3 tracking-tight">
                     Introduction
                   </h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-[15px] text-gray-700 leading-[1.7] font-light">
                     At VirtuServe, we are committed to protecting your privacy
                     and ensuring the security of your personal information. This
                     Privacy Policy explains how we collect, use, disclose, and
@@ -91,15 +92,15 @@ export default function Privacy() {
                   <Database className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-light text-primary-900 mb-6">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                     Information We Collect
                   </h2>
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg font-medium text-primary-900 mb-3">
+                      <h3 className="text-[17px] font-semibold text-primary-900 mb-3 tracking-tight">
                         Personal Information
                       </h3>
-                      <ul className="space-y-2 text-gray-700">
+                      <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
                         <li className="flex items-start gap-2">
                           <span className="text-accent-600 mt-1">•</span>
                           <span>
@@ -121,10 +122,10 @@ export default function Privacy() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-primary-900 mb-3">
+                      <h3 className="text-[17px] font-semibold text-primary-900 mb-3 tracking-tight">
                         Service Data
                       </h3>
-                      <ul className="space-y-2 text-gray-700">
+                      <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
                         <li className="flex items-start gap-2">
                           <span className="text-accent-600 mt-1">•</span>
                           <span>
@@ -157,13 +158,11 @@ export default function Privacy() {
                   <Eye className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-light text-primary-900 mb-6">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
                     How We Use Your Information
                   </h2>
-                  <div className="space-y-4 text-gray-700">
-                    <p className="leading-relaxed">
-                      We use the information we collect to:
-                    </p>
+                  <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+                    <p>We use the information we collect to:</p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <span className="text-accent-600 mt-1">•</span>
