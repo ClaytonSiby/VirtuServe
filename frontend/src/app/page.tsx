@@ -17,6 +17,7 @@ import {
   Clock,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { getImagePath } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -402,7 +403,7 @@ export default function Home() {
                         }}
                       >
                         <Image
-                          src="/virtual_assistant.jpg"
+                          src={getImagePath("/virtual_assistant.jpg")}
                           alt="Premium Virtual Assistant"
                           width={600}
                           height={750}
