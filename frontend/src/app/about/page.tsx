@@ -198,21 +198,21 @@ export default function About() {
         <div className="absolute inset-0 pointer-events-none">
           {/* Base elegant gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/40 via-white to-[#D8CFD0]/20" />
-          
+
           {/* Layered radial gradients for depth */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#697184]/[0.06] via-transparent to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#D8CFD0]/[0.08] via-transparent to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#B1A6A4]/[0.04] via-transparent to-transparent" />
-          
+
           {/* Elegant border lines */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#697184]/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B1A6A4]/25 to-transparent" />
-          
+
           {/* Floating gradient orbs */}
           <div className="absolute top-32 right-[15%] w-[500px] h-[500px] bg-gradient-to-br from-[#697184]/[0.08] via-[#B1A6A4]/[0.05] to-transparent rounded-full blur-3xl opacity-70" />
           <div className="absolute bottom-32 left-[10%] w-[600px] h-[600px] bg-gradient-to-tl from-[#D8CFD0]/[0.1] via-[#697184]/[0.04] to-transparent rounded-full blur-3xl opacity-60" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#B1A6A4]/[0.05] to-transparent rounded-full blur-3xl opacity-50" />
-          
+
           {/* Sophisticated mesh pattern */}
           <div className="absolute inset-0 opacity-[0.025]">
             <div
@@ -225,27 +225,30 @@ export default function About() {
               }}
             />
           </div>
-          
+
           {/* Refined dot pattern */}
           <div className="absolute inset-0 opacity-[0.035]">
             <div
               className="absolute inset-0"
               style={{
                 backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.5) 1.5px, transparent 0)`,
-                backgroundSize: '50px 50px',
+                backgroundSize: "50px 50px",
               }}
             />
           </div>
-          
+
           {/* Decorative geometric shapes */}
           <div className="absolute top-40 left-[5%] w-80 h-80 border border-[#697184]/8 rounded-full" />
           <div className="absolute bottom-40 right-[8%] w-96 h-96 border-2 border-[#B1A6A4]/8 rounded-full" />
-          <div className="absolute top-1/3 right-[20%] w-64 h-64 border border-[#D8CFD0]/10 rotate-45" style={{ borderRadius: '30%' }} />
-          
+          <div
+            className="absolute top-1/3 right-[20%] w-64 h-64 border border-[#D8CFD0]/10 rotate-45"
+            style={{ borderRadius: "30%" }}
+          />
+
           {/* Accent gradient streaks */}
           <div className="absolute top-[20%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#697184]/10 to-transparent" />
           <div className="absolute bottom-[30%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#B1A6A4]/10 to-transparent" />
-          
+
           {/* Subtle vignette effect */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20" />
         </div>
