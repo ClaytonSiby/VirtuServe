@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./contact.module.css";
 import {
   Calendar,
   Mail,

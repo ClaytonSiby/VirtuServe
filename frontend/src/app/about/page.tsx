@@ -20,7 +20,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
-import styles from "./about.module.css";
 
 export default function About() {
   return (
@@ -288,7 +287,7 @@ export default function About() {
                       De Laroche
                     </h3>
                     <p className="text-xl font-light text-[#413F3D]/80 leading-relaxed">
-                      Highly accomplished professional with over 16 years'
+                      Highly accomplished professional with over 16 years&apos;
                       experience in international property management, executive
                       support, and operational leadership.
                     </p>
@@ -303,7 +302,7 @@ export default function About() {
                   {/* Professional Background */}
                   <div className="space-y-5">
                     <p className="text-base font-light text-[#413F3D]/80 leading-relaxed">
-                      Sheridan brings 16 years' experience spanning
+                      Sheridan brings 16 years&apos; experience spanning
                       international property management and executive support,
                       with a proven track record working alongside developers,
                       architects, CEOs, and COOs. Her expertise covers the full
@@ -313,7 +312,7 @@ export default function About() {
                       senior leadership.
                     </p>
                     <p className="text-base font-light text-[#413F3D]/70 leading-relaxed">
-                      For the past 2.5 years, she's worked fully remotely,
+                      For the past 2.5 years, she&apos;s worked fully remotely,
                       managing property portfolios and executive priorities
                       across time zones. As an operations-focused leader, she
                       designs and implements scalable processes and systems to

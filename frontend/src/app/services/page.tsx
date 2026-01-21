@@ -14,14 +14,9 @@ import {
   Award,
   Users,
   Shield,
-  Search,
-  MessageSquare,
-  ClipboardList,
-  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
-import styles from "./services.module.css";
 
 export default function Services() {
   const services = [

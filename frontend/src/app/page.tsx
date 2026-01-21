@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Calendar,
   Mail,
   Globe,
-  Zap,
   Search,
   CheckCircle,
   Sparkles,
@@ -14,9 +14,6 @@ import {
   Users,
   Star,
   Quote,
-  Target,
-  BarChart3,
-  Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -393,9 +390,11 @@ export default function Home() {
                           borderRadius: "2.75rem 2.75rem 2.75rem 7.75rem",
                         }}
                       >
-                        <img
+                        <Image
                           src="/virtual_assistant.jpg"
                           alt="Premium Virtual Assistant"
+                          width={600}
+                          height={750}
                           className="w-full aspect-[4/5] object-cover"
                         />
 
