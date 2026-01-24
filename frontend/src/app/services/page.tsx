@@ -17,8 +17,56 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
+import { useState, useEffect } from "react";
 
 export default function Services() {
+  const [currency, setCurrency] = useState<"GBP" | "ZAR">("GBP");
+  const [currencySymbol, setCurrencySymbol] = useState("£");
+
+  useEffect(() => {
+    // Detect user location
+    const detectLocation = async () => {
+      try {
+        // Try to get timezone first
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+        if (
+          timezone.includes("Africa/Johannesburg") ||
+          timezone.includes("Africa/")
+        ) {
+          setCurrency("ZAR");
+          setCurrencySymbol("R");
+        } else {
+          // Default to GBP, or use IP geolocation API if needed
+          setCurrency("GBP");
+          setCurrencySymbol("£");
+        }
+      } catch {
+        // Default to GBP on error
+        setCurrency("GBP");
+        setCurrencySymbol("£");
+      }
+    };
+
+    detectLocation();
+  }, []);
+
+  // Pricing in GBP and ZAR (approximate conversion: 1 GBP = 23 ZAR)
+  const pricing = {
+    starter: {
+      GBP: { monthly: 800, hourly: 20, placement: 1000 },
+      ZAR: { monthly: 18400, hourly: 460, placement: 23000 },
+    },
+    professional: {
+      GBP: { monthly: 1280, hourly: 16, placement: 1000 },
+      ZAR: { monthly: 29440, hourly: 368, placement: 23000 },
+    },
+    expertise: {
+      GBP: { monthly: 2240, hourly: 14, placement: 1000 },
+      ZAR: { monthly: 51520, hourly: 322, placement: 23000 },
+    },
+  };
+
   const services = [
     {
       icon: FileText,
@@ -108,34 +156,70 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Minimal & Clean */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
-        {/* Animated background elements */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-[#FAFAF9]">
+        {/* Elegant organic background */}
         <div className="absolute inset-0">
-          <div
-            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "8s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "6s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
-        </div>
+          {/* Subtle layered gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
 
-        {/* Decorative grid overlay */}
-        <div className="absolute inset-0 opacity-20">
+          {/* Elegant flowing organic shapes */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
+                fill="url(#gradient-blob1)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob1"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
+                fill="url(#gradient-blob2)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob2"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Minimal dot pattern overlay */}
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.15) 1px, transparent 0)`,
-              backgroundSize: "48px 48px",
+              backgroundImage:
+                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
+              backgroundSize: "30px 30px",
             }}
           ></div>
-        </div>
 
-        {/* Floating decorative shapes */}
-        <div className="absolute top-20 left-10 w-72 h-72 border-2 border-[#697184]/15 rounded-full opacity-40 animate-[spin_20s_linear_infinite]"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#B1A6A4]/15 rounded-full opacity-40 animate-[spin_25s_linear_infinite_reverse]"></div>
+          {/* Subtle light rays */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
+        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -185,7 +269,7 @@ export default function Services() {
                 <div className="absolute inset-0 bg-[#D8CFD0]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
                   {/* Icon */}
-                  <div className="relative mb-6">
+                  <div className="relative mb-6 flex justify-center">
                     <div className="absolute inset-0 bg-[#697184] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <div className="relative w-16 h-16 bg-[#697184] rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-[#697184]/50">
                       <Lightbulb className="w-8 h-8 text-white" />
@@ -202,7 +286,7 @@ export default function Services() {
               <div className="group relative">
                 <div className="absolute inset-0 bg-[#D8CFD0]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
-                  <div className="relative mb-6">
+                  <div className="relative mb-6 flex justify-center">
                     <div className="absolute inset-0 bg-[#697184] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <div className="relative w-16 h-16 bg-[#697184] rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-[#697184]/50">
                       <Award className="w-8 h-8 text-white" />
@@ -219,7 +303,7 @@ export default function Services() {
               <div className="group relative">
                 <div className="absolute inset-0 bg-[#D8CFD0]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
-                  <div className="relative mb-6">
+                  <div className="relative mb-6 flex justify-center">
                     <div className="absolute inset-0 bg-[#697184] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <div className="relative w-16 h-16 bg-[#697184] rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-[#697184]/50">
                       <Users className="w-8 h-8 text-white" />
@@ -236,7 +320,7 @@ export default function Services() {
               <div className="group relative">
                 <div className="absolute inset-0 bg-[#D8CFD0]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-white border-2 border-slate-900/10 rounded-3xl p-8 hover:border-slate-900/25 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.2)] hover:-translate-y-1">
-                  <div className="relative mb-6">
+                  <div className="relative mb-6 flex justify-center">
                     <div className="absolute inset-0 bg-[#697184] rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <div className="relative w-16 h-16 bg-[#697184] rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border-2 border-[#697184]/50">
                       <Shield className="w-8 h-8 text-white" />
@@ -584,110 +668,260 @@ export default function Services() {
 
         <PageContainer>
           <div className="relative z-10 text-center mb-16">
-            <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
-              <DollarSign className="w-4 h-4 text-[#697184]" />
-              <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-[#697184]/10 rounded-full px-5 py-2.5 mb-8 shadow-sm">
+              <DollarSign
+                className="w-4 h-4 text-[#697184]/70"
+                strokeWidth={1.5}
+              />
+              <span className="text-xs font-medium text-[#697184]/70 uppercase tracking-[0.2em]">
                 Pricing Plans
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-[#413F3D] mb-6 leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-normal text-[#413F3D] mb-6 leading-tight">
               Flexible Pricing Options
             </h2>
-            <p className="text-xl md:text-2xl text-[#413F3D]/80 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#697184]/70 font-light leading-relaxed max-w-2xl mx-auto">
               Choose a plan that works for your business needs and budget
             </p>
           </div>
-          <div className="relative z-10 grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            <div className="bg-white border-2 border-slate-700/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-slate-900 transition-all duration-500 hover:-translate-y-2">
-              <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
-                Starter
-              </h3>
-              <p className="text-gray-600 mb-6">Perfect for small tasks</p>
-              <div className="text-4xl md:text-5xl font-bold text-accent-600 mb-8 flex items-center gap-3">
-                <Clock className="w-10 h-10" />
-                10 hrs
+
+          <div className="relative z-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1400px] mx-auto px-4">
+            {/* Starter */}
+            <div className="group relative cursor-pointer">
+              <div className="relative bg-white rounded-3xl p-6 border-2 border-[#697184]/15 hover:border-[#697184]/30 transition-all duration-300 hover:shadow-xl min-h-[500px] flex flex-col">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
+                    Starter
+                  </h3>
+                  <p className="text-sm text-[#697184]/70">
+                    40 hours per month
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-xs text-[#697184]/60 font-light mb-1">
+                    from
+                  </p>
+                  <div className="flex items-baseline gap-1.5 mb-0.5">
+                    <span className="text-4xl font-light text-[#413F3D] tracking-tight">
+                      {currencySymbol}
+                      {pricing.starter[currency].monthly.toLocaleString()}
+                    </span>
+                    <span className="text-xs text-[#697184]/60 font-light">
+                      /month
+                    </span>
+                  </div>
+                  <div className="text-xs text-[#697184]/60 font-light">
+                    {currencySymbol}
+                    {pricing.starter[currency].hourly}/hr
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Onboarding & account support
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      No setup fees or recruitment costs
+                    </span>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Email management</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Calendar scheduling</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Basic admin tasks</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white border-2 border-slate-900 rounded-3xl p-8 lg:p-10 relative shadow-2xl hover:-translate-y-2 transition-all duration-500 hover:shadow-slate-900/20">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-slate-900 to-primary-950 text-white px-6 py-2 rounded-full text-sm font-normal shadow-lg">
-                Popular
+            {/* Professional (Popular) */}
+            <div className="group relative cursor-pointer">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                <div className="bg-[#413F3D] text-white px-5 py-1.5 rounded-full text-xs font-medium shadow-lg">
+                  Popular
+                </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
-                Professional
-              </h3>
-              <p className="text-gray-600 mb-6">For growing businesses</p>
-              <div className="text-4xl md:text-5xl font-bold text-accent-600 mb-8 flex items-center gap-3">
-                <Clock className="w-10 h-10" />
-                25 hrs
+              <div className="relative bg-white rounded-3xl p-6 border-2 border-[#413F3D]/80 hover:border-[#413F3D] transition-all duration-300 shadow-lg hover:shadow-2xl pt-10 min-h-[500px] flex flex-col">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
+                    Professional
+                  </h3>
+                  <p className="text-sm text-[#697184]/70">
+                    80 hours per month
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-xs text-[#697184]/60 font-light mb-1">
+                    from
+                  </p>
+                  <div className="flex items-baseline gap-1.5 mb-0.5">
+                    <span className="text-4xl font-light text-[#413F3D] tracking-tight">
+                      {currencySymbol}
+                      {pricing.professional[currency].monthly.toLocaleString()}
+                    </span>
+                    <span className="text-xs text-[#697184]/60 font-light">
+                      /month
+                    </span>
+                  </div>
+                  <div className="text-xs text-[#697184]/60 font-light">
+                    {currencySymbol}
+                    {pricing.professional[currency].hourly}/hr
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Onboarding & account support
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      No setup fees or recruitment costs
+                    </span>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">All Starter features</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Customer service support
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Social media management</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Priority support</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white border-2 border-slate-700/50 rounded-3xl p-8 lg:p-10 hover:shadow-2xl hover:border-slate-900 transition-all duration-500 hover:-translate-y-2">
-              <h3 className="text-2xl md:text-3xl font-light mb-2 text-gray-900">
-                Enterprise
-              </h3>
-              <p className="text-gray-600 mb-6">For established companies</p>
-              <div className="text-4xl md:text-5xl font-bold text-accent-600 mb-8 flex items-center gap-3">
-                <Clock className="w-10 h-10" />
-                50+ hrs
+            {/* Enterprise */}
+            <div className="group relative cursor-pointer">
+              <div className="relative bg-white rounded-3xl p-6 border-2 border-[#697184]/15 hover:border-[#697184]/30 transition-all duration-300 hover:shadow-xl min-h-[500px] flex flex-col">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
+                    Expert
+                  </h3>
+                  <p className="text-sm text-[#697184]/70">
+                    160 hours per month
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-xs text-[#697184]/60 font-light mb-1">
+                    from
+                  </p>
+                  <div className="flex items-baseline gap-1.5 mb-0.5">
+                    <span className="text-4xl font-light text-[#413F3D] tracking-tight">
+                      {currencySymbol}
+                      {pricing.expertise[currency].monthly.toLocaleString()}
+                    </span>
+                    <span className="text-xs text-[#697184]/60 font-light">
+                      /month
+                    </span>
+                  </div>
+                  <div className="text-xs text-[#697184]/60 font-light">
+                    {currencySymbol}
+                    {pricing.expertise[currency].hourly}/hr
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Onboarding & account support
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      No setup fees or recruitment costs
+                    </span>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    All Professional features
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Dedicated VA team</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">Custom workflows</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-accent-600 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    UK: 9AM-5PM | SA: 8AM-5PM
-                  </span>
-                </li>
-              </ul>
+            </div>
+
+            {/* Custom */}
+            <div className="group relative cursor-pointer">
+              <div className="relative bg-white rounded-3xl p-6 border-2 border-[#697184]/15 hover:border-[#697184]/30 transition-all duration-300 hover:shadow-xl min-h-[500px] flex flex-col">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
+                    Custom
+                  </h3>
+                  <p className="text-sm text-[#697184]/70">
+                    Tailored to your needs
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-xs text-[#697184]/60 font-light mb-1">
+                    <Clock
+                      className="w-4 h-4 inline-block mr-1 -mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    Flexible
+                  </p>
+                  <div className="flex items-baseline gap-1.5 mb-0.5">
+                    <span className="text-4xl font-light text-[#413F3D] tracking-tight">
+                      Contact us
+                    </span>
+                  </div>
+                  <div className="text-xs text-[#697184]/60 font-light">
+                    for a quote
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Time-limited projects
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Ad-hoc tasks
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Multiple hires or teams
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184]/70 flex-shrink-0 mt-0.5"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-[#413F3D]/80">
+                      Custom requirements
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </PageContainer>

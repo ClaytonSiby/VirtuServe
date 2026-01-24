@@ -12,7 +12,7 @@ const faqs = [
       {
         question: "What is VirtuServe?",
         answer:
-          "VirtuServe is a premium virtual assistant service led by Sheridan De Laroche, offering professional administrative support, customer service, digital marketing, property management, and executive assistance to international clients and businesses. We specialize in helping you streamline operations and focus on what matters most.",
+          "VirtuServe is a premium virtual assistant service led by Sheridan de Laroche, offering professional administrative support, customer service, digital marketing, property management, and executive assistance to international clients and businesses. We specialize in helping you streamline operations and focus on what matters most.",
       },
       {
         question: "How do I get started with VirtuServe?",

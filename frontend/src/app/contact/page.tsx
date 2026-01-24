@@ -83,18 +83,69 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
-        {/* Animated background elements */}
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-[#FAFAF9]">
+        {/* Elegant organic background */}
         <div className="absolute inset-0">
+          {/* Subtle layered gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
+
+          {/* Elegant flowing organic shapes */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
+                fill="url(#gradient-blob1)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob1"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
+                fill="url(#gradient-blob2)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob2"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Minimal dot pattern overlay */}
           <div
-            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "8s" }}
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
+              backgroundSize: "30px 30px",
+            }}
           ></div>
-          <div
-            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "6s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
+
+          {/* Subtle light rays */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
         </div>
 
         {/* Decorative grid overlay */}
@@ -107,10 +158,6 @@ export default function Contact() {
             }}
           ></div>
         </div>
-
-        {/* Floating decorative shapes */}
-        <div className="absolute top-20 left-10 w-72 h-72 border-2 border-[#697184]/15 rounded-full opacity-40 animate-[spin_20s_linear_infinite]"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#B1A6A4]/15 rounded-full opacity-40 animate-[spin_25s_linear_infinite_reverse]"></div>
 
         <PageContainer>
           <div className="relative z-10 mb-20 md:mb-24 text-center">

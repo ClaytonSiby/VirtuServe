@@ -193,64 +193,215 @@ export default function About() {
       </section>
 
       {/* Meet Our Team - Unified Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        {/* Sophisticated background elements */}
+      <section className="relative py-20 md:py-28 overflow-hidden bg-white">
+        {/* Creative Abstract Background */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* Base elegant gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/40 via-white to-[#D8CFD0]/20" />
+          {/* Artistic paint stroke effect */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.12]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1920 1080"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Abstract curved shapes */}
+            <path
+              d="M 0 300 Q 300 200, 600 350 Q 900 500, 1200 300 Q 1500 100, 1920 250"
+              fill="none"
+              stroke="#697184"
+              strokeWidth="60"
+              strokeLinecap="round"
+              opacity="0.15"
+            />
+            <path
+              d="M 0 500 Q 400 600, 800 450 Q 1200 300, 1920 500"
+              fill="none"
+              stroke="#B1A6A4"
+              strokeWidth="80"
+              strokeLinecap="round"
+              opacity="0.12"
+            />
+            <path
+              d="M 0 700 Q 500 550, 1000 750 Q 1400 950, 1920 800"
+              fill="none"
+              stroke="#D8CFD0"
+              strokeWidth="70"
+              strokeLinecap="round"
+              opacity="0.13"
+            />
+          </svg>
 
-          {/* Layered radial gradients for depth */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#697184]/[0.06] via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#D8CFD0]/[0.08] via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#B1A6A4]/[0.04] via-transparent to-transparent" />
-
-          {/* Elegant border lines */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#697184]/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B1A6A4]/25 to-transparent" />
-
-          {/* Floating gradient orbs */}
-          <div className="absolute top-32 right-[15%] w-[500px] h-[500px] bg-gradient-to-br from-[#697184]/[0.08] via-[#B1A6A4]/[0.05] to-transparent rounded-full blur-3xl opacity-70" />
-          <div className="absolute bottom-32 left-[10%] w-[600px] h-[600px] bg-gradient-to-tl from-[#D8CFD0]/[0.1] via-[#697184]/[0.04] to-transparent rounded-full blur-3xl opacity-60" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#B1A6A4]/[0.05] to-transparent rounded-full blur-3xl opacity-50" />
-
-          {/* Sophisticated mesh pattern */}
-          <div className="absolute inset-0 opacity-[0.025]">
+          {/* Layered organic shapes - paper cut effect */}
+          <div className="absolute top-[10%] right-[10%] w-[400px] h-[400px]">
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 bg-[#697184]/[0.06] rounded-[40%] rotate-12 blur-sm"
               style={{
-                backgroundImage: `
-                  repeating-linear-gradient(0deg, #697184 0px, #697184 1px, transparent 1px, transparent 80px),
-                  repeating-linear-gradient(90deg, #697184 0px, #697184 1px, transparent 1px, transparent 80px)
-                `,
+                clipPath:
+                  "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
               }}
             />
           </div>
 
-          {/* Refined dot pattern */}
-          <div className="absolute inset-0 opacity-[0.035]">
+          <div className="absolute top-[45%] left-[5%] w-[500px] h-[350px]">
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 bg-[#B1A6A4]/[0.05] rounded-[45%] -rotate-6 blur-sm"
               style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.5) 1.5px, transparent 0)`,
-                backgroundSize: "50px 50px",
+                clipPath:
+                  "polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%)",
               }}
             />
           </div>
 
-          {/* Decorative geometric shapes */}
-          <div className="absolute top-40 left-[5%] w-80 h-80 border border-[#697184]/8 rounded-full" />
-          <div className="absolute bottom-40 right-[8%] w-96 h-96 border-2 border-[#B1A6A4]/8 rounded-full" />
-          <div
-            className="absolute top-1/3 right-[20%] w-64 h-64 border border-[#D8CFD0]/10 rotate-45"
-            style={{ borderRadius: "30%" }}
-          />
+          <div className="absolute bottom-[15%] right-[20%] w-[380px] h-[380px]">
+            <div
+              className="absolute inset-0 bg-[#D8CFD0]/[0.07] rounded-[35%] rotate-[25deg] blur-sm"
+              style={{
+                clipPath:
+                  "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)",
+              }}
+            />
+          </div>
 
-          {/* Accent gradient streaks */}
-          <div className="absolute top-[20%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#697184]/10 to-transparent" />
-          <div className="absolute bottom-[30%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#B1A6A4]/10 to-transparent" />
+          {/* Minimalist dot pattern */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.08]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="creative-dots"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="20" cy="20" r="1.5" fill="#697184" opacity="0.4" />
+                <circle cx="80" cy="50" r="1" fill="#B1A6A4" opacity="0.3" />
+                <circle cx="50" cy="80" r="1.2" fill="#D8CFD0" opacity="0.35" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#creative-dots)" />
+          </svg>
 
-          {/* Subtle vignette effect */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20" />
+          {/* Abstract artistic elements - like ink drops */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.06]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="25%"
+              cy="20%"
+              r="100"
+              fill="#697184"
+              opacity="0.3"
+              style={{ filter: "blur(40px)" }}
+            />
+            <circle
+              cx="25%"
+              cy="20%"
+              r="60"
+              fill="#697184"
+              opacity="0.4"
+              style={{ filter: "blur(20px)" }}
+            />
+
+            <circle
+              cx="70%"
+              cy="60%"
+              r="120"
+              fill="#B1A6A4"
+              opacity="0.25"
+              style={{ filter: "blur(45px)" }}
+            />
+            <circle
+              cx="70%"
+              cy="60%"
+              r="70"
+              fill="#B1A6A4"
+              opacity="0.35"
+              style={{ filter: "blur(22px)" }}
+            />
+
+            <circle
+              cx="40%"
+              cy="85%"
+              r="90"
+              fill="#D8CFD0"
+              opacity="0.3"
+              style={{ filter: "blur(38px)" }}
+            />
+            <circle
+              cx="40%"
+              cy="85%"
+              r="50"
+              fill="#D8CFD0"
+              opacity="0.4"
+              style={{ filter: "blur(18px)" }}
+            />
+          </svg>
+
+          {/* Modern line art accent */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.1]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Elegant arcs */}
+            <path
+              d="M 100 200 Q 300 100, 500 200"
+              fill="none"
+              stroke="#697184"
+              strokeWidth="1.5"
+            />
+            <path
+              d="M 1400 400 Q 1600 300, 1800 400"
+              fill="none"
+              stroke="#B1A6A4"
+              strokeWidth="1.5"
+            />
+            <path
+              d="M 200 800 Q 400 700, 600 800"
+              fill="none"
+              stroke="#D8CFD0"
+              strokeWidth="1.5"
+            />
+
+            {/* Minimal circles */}
+            <circle
+              cx="350"
+              cy="150"
+              r="30"
+              fill="none"
+              stroke="#697184"
+              strokeWidth="1"
+              opacity="0.5"
+            />
+            <circle
+              cx="1650"
+              cy="350"
+              r="35"
+              fill="none"
+              stroke="#B1A6A4"
+              strokeWidth="1"
+              opacity="0.5"
+            />
+            <circle
+              cx="450"
+              cy="750"
+              r="28"
+              fill="none"
+              stroke="#D8CFD0"
+              strokeWidth="1"
+              opacity="0.5"
+            />
+          </svg>
+
+          {/* Scattered accent marks - like brush touches */}
+          <div className="absolute top-[25%] left-[30%] w-16 h-1 bg-[#697184]/20 rounded-full rotate-[35deg]" />
+          <div className="absolute top-[55%] right-[25%] w-20 h-1 bg-[#B1A6A4]/20 rounded-full -rotate-[25deg]" />
+          <div className="absolute bottom-[30%] left-[40%] w-12 h-1 bg-[#D8CFD0]/20 rounded-full rotate-[15deg]" />
+
+          {/* Very subtle vignette */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/30" />
         </div>
 
         <PageContainer>
@@ -277,29 +428,30 @@ export default function About() {
               <div className="grid lg:grid-cols-[420px_1fr] gap-16 items-start">
                 {/* Profile Image Column */}
                 <div className="relative">
-                  <div className="sticky top-32">
+                  <div className="sticky top-40 mt-40">
                     {/* Decorative frame */}
                     <div className="absolute -inset-4 bg-gradient-to-br from-[#697184]/5 to-[#B1A6A4]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(105,113,132,0.3)] transition-all duration-700">
                       <Image
                         src={getImagePath("/assets/sheridan.JPG")}
-                        alt="Sheridan De Laroche - Founder & Lead VA"
+                        alt="Sheridan de Laroche - Founder & Lead VA"
                         width={420}
                         height={560}
                         className="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-700"
                         priority
                       />
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#413F3D]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    </div>
-                    {/* Floating badge */}
-                    <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-[0_10px_40px_-10px_rgba(65,63,61,0.3)]">
-                      <div className="text-center">
-                        <div className="text-3xl font-light text-[#697184] mb-1">
-                          16+
-                        </div>
-                        <div className="text-xs text-[#413F3D]/60 uppercase tracking-wider">
-                          Years Experience
+                      {/* Elegant gradient overlay from bottom */}
+                      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#413F3D]/60 via-[#413F3D]/20 to-transparent" />
+
+                      {/* Integrated caption badge */}
+                      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-xl rounded-xl px-6 py-3 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.25)] border border-white/40 group-hover:bg-white/95 group-hover:shadow-[0_6px_30px_-4px_rgba(0,0,0,0.3)] transition-all duration-500">
+                        <div className="text-center">
+                          <div className="text-2xl font-light text-[#697184] mb-0.5">
+                            16+
+                          </div>
+                          <div className="text-[10px] text-[#413F3D]/70 uppercase tracking-[0.15em] font-medium">
+                            Years Experience
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -318,7 +470,7 @@ export default function About() {
                     <h3 className="text-5xl md:text-6xl font-extralight text-[#413F3D] mb-6 tracking-tight leading-[1.1]">
                       Sheridan
                       <br />
-                      De Laroche
+                      de Laroche
                     </h3>
                     <p className="text-xl font-light text-[#413F3D]/80 leading-relaxed">
                       Highly accomplished professional with over 16 years&apos;
@@ -565,7 +717,7 @@ export default function About() {
 
                 {/* Profile Image Column */}
                 <div className="relative lg:order-2">
-                  <div className="sticky top-32">
+                  <div className="sticky top-40 mt-40">
                     {/* Decorative frame */}
                     <div className="absolute -inset-4 bg-gradient-to-bl from-[#B1A6A4]/5 to-[#D8CFD0]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(177,166,164,0.3)] transition-all duration-700">
@@ -578,17 +730,18 @@ export default function About() {
                         height={560}
                         className="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-700"
                       />
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#413F3D]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    </div>
-                    {/* Floating badge */}
-                    <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-[0_10px_40px_-10px_rgba(65,63,61,0.3)]">
-                      <div className="text-center">
-                        <div className="text-2xl font-light text-[#B1A6A4] mb-1">
-                          Strategic
-                        </div>
-                        <div className="text-xs text-[#413F3D]/60 uppercase tracking-wider">
-                          Brand Communication
+                      {/* Elegant gradient overlay from bottom */}
+                      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#413F3D]/60 via-[#413F3D]/20 to-transparent" />
+
+                      {/* Integrated caption badge */}
+                      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-xl rounded-xl px-6 py-3 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.25)] border border-white/40 group-hover:bg-white/95 group-hover:shadow-[0_6px_30px_-4px_rgba(0,0,0,0.3)] transition-all duration-500">
+                        <div className="text-center">
+                          <div className="text-xl font-light text-[#B1A6A4]">
+                            Strategic
+                          </div>
+                          <div className="text-[10px] text-[#413F3D]/70 uppercase tracking-[0.15em] font-medium">
+                            Brand Communication
+                          </div>
                         </div>
                       </div>
                     </div>

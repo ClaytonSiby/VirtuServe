@@ -738,57 +738,69 @@ export default function Home() {
       </section>
 
       {/* Client Success Metrics - Redesigned */}
-      <section className="relative py-20 md:py-24 overflow-hidden bg-gradient-to-br from-[#F2F1EF]/60 via-white to-[#F2F1EF]/40">
-        {/* Sophisticated light background with elegant patterns */}
+      <section className="relative py-20 md:py-24 overflow-hidden bg-[#FAFAF9]">
+        {/* Elegant geometric background */}
         <div className="absolute inset-0">
-          {/* Soft gradient orbs */}
-          <div className="absolute top-10 right-20 w-[300px] h-[300px] bg-[#D8CFD0]/15 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-20 w-[350px] h-[350px] bg-[#B1A6A4]/12 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-[#697184]/08 rounded-full blur-3xl"></div>
+          {/* Subtle layered gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
 
-          {/* Elegant geometric pattern */}
-          <svg
-            className="absolute inset-0 w-full h-full opacity-[0.03]"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <pattern
-                id="elegant-grid"
-                x="0"
-                y="0"
-                width="80"
-                height="80"
-                patternUnits="userSpaceOnUse"
-              >
-                <circle cx="40" cy="40" r="1" fill="#697184" />
-                <line
-                  x1="40"
-                  y1="0"
-                  x2="40"
-                  y2="80"
-                  stroke="#697184"
-                  strokeWidth="0.5"
-                  opacity="0.3"
-                />
-                <line
-                  x1="0"
-                  y1="40"
-                  x2="80"
-                  y2="40"
-                  stroke="#697184"
-                  strokeWidth="0.5"
-                  opacity="0.3"
-                />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#elegant-grid)" />
-          </svg>
+          {/* Elegant flowing organic shapes */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
+                fill="url(#gradient-blob1)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob1"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
 
-          {/* Subtle accent shapes */}
-          <div className="absolute top-20 left-1/4 w-24 h-24 border border-[#697184]/10 rounded-full"></div>
-          <div className="absolute bottom-20 right-1/3 w-32 h-32 border border-[#D8CFD0]/15 rounded-full"></div>
-          <div className="absolute top-1/3 right-20 w-2 h-2 rounded-full bg-[#B1A6A4]/30"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 rounded-full bg-[#697184]/25"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
+                fill="url(#gradient-blob2)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob2"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Minimal dot pattern overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
+              backgroundSize: "30px 30px",
+            }}
+          ></div>
+
+          {/* Subtle light rays */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
