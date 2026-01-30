@@ -10,8 +10,7 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
-        "type-check": "tsc --noEmit",
-        "postbuild": "npx @netlify/next"
+        "type-check": "tsc --noEmit"
     },
     "dependencies": {
         "@netlify/next": "^1.4.9",
