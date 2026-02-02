@@ -50,7 +50,7 @@
 
       .logo-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
         margin-top: 20px;
       }
@@ -62,6 +62,9 @@
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 1px solid #e9ecef;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
       .logo-item:hover {
@@ -87,6 +90,14 @@
         background: white;
         border-radius: 8px;
         padding: 20px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .logo-preview canvas {
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
 
       button {
