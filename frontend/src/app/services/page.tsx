@@ -669,10 +669,9 @@ export default function Services() {
         <PageContainer>
           <div className="relative z-10 text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-[#697184]/10 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <DollarSign
-                className="w-4 h-4 text-[#697184]/70"
-                strokeWidth={1.5}
-              />
+              <span className="text-sm font-medium text-[#697184]/70">
+                {currencySymbol}
+              </span>
               <span className="text-xs font-medium text-[#697184]/70 uppercase tracking-[0.2em]">
                 Pricing Plans
               </span>
@@ -698,7 +697,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-6">
                   <p className="text-xs text-[#697184]/60 font-light mb-1">
                     from
                   </p>
@@ -711,9 +710,24 @@ export default function Services() {
                       /month
                     </span>
                   </div>
-                  <div className="text-xs text-[#697184]/60 font-light">
+                  <div className="text-xs text-[#697184]/60 font-light mb-3">
                     {currencySymbol}
                     {pricing.starter[currency].hourly}/hr
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#697184]/5 to-transparent rounded-lg"></div>
+                    <div className="relative bg-[#F8F9FA] border border-[#697184]/10 rounded-lg px-3 py-2.5">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#697184]/50 font-medium mb-0.5">
+                        One-time fee
+                      </p>
+                      <p className="text-sm font-medium text-[#413F3D]">
+                        {currencySymbol}
+                        {pricing.starter[currency].placement.toLocaleString()}
+                        <span className="text-xs text-[#697184]/60 font-normal ml-1">
+                          placement
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -757,7 +771,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-6">
                   <p className="text-xs text-[#697184]/60 font-light mb-1">
                     from
                   </p>
@@ -770,9 +784,26 @@ export default function Services() {
                       /month
                     </span>
                   </div>
-                  <div className="text-xs text-[#697184]/60 font-light">
+                  <div className="text-xs text-[#697184]/60 font-light mb-3">
                     {currencySymbol}
                     {pricing.professional[currency].hourly}/hr
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#413F3D]/5 to-transparent rounded-lg"></div>
+                    <div className="relative bg-[#413F3D]/5 border border-[#413F3D]/15 rounded-lg px-3 py-2.5">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#413F3D]/50 font-medium mb-0.5">
+                        One-time fee
+                      </p>
+                      <p className="text-sm font-medium text-[#413F3D]">
+                        {currencySymbol}
+                        {pricing.professional[
+                          currency
+                        ].placement.toLocaleString()}
+                        <span className="text-xs text-[#697184]/60 font-normal ml-1">
+                          placement
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -811,7 +842,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-6">
                   <p className="text-xs text-[#697184]/60 font-light mb-1">
                     from
                   </p>
@@ -824,9 +855,24 @@ export default function Services() {
                       /month
                     </span>
                   </div>
-                  <div className="text-xs text-[#697184]/60 font-light">
+                  <div className="text-xs text-[#697184]/60 font-light mb-3">
                     {currencySymbol}
                     {pricing.expertise[currency].hourly}/hr
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#697184]/5 to-transparent rounded-lg"></div>
+                    <div className="relative bg-[#F8F9FA] border border-[#697184]/10 rounded-lg px-3 py-2.5">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#697184]/50 font-medium mb-0.5">
+                        One-time fee
+                      </p>
+                      <p className="text-sm font-medium text-[#413F3D]">
+                        {currencySymbol}
+                        {pricing.expertise[currency].placement.toLocaleString()}
+                        <span className="text-xs text-[#697184]/60 font-normal ml-1">
+                          placement
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 

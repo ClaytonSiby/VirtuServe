@@ -37,7 +37,7 @@ const faqs = [
       {
         question: "How much do your services cost?",
         answer:
-          "We offer flexible pricing with three main packages: Essential ($500/month for 20 hours), Professional ($900/month for 40 hours), and Enterprise ($1,600/month for 80 hours). Custom packages are available for unique requirements. All packages include dedicated support and regular progress updates.",
+          "We offer flexible pricing with three main packages: Starter (£800/month for 40 hours), Professional (£1,280/month for 80 hours), and Expert (£2,240/month for 160 hours). All packages include a one-time £1,000 placement fee. Custom packages are available for unique requirements. Pricing is available in GBP (£) and ZAR (R). All packages include dedicated support and regular progress updates.",
       },
       {
         question: "Can I customize a package to fit my needs?",
