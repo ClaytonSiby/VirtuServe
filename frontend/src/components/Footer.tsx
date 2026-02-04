@@ -11,50 +11,6 @@ import {
 export default function Footer() {
   return (
     <footer className="relative bg-[#413F3D] text-white overflow-hidden">
-      {/* Sophisticated wave background */}
-      <div className="absolute inset-0">
-        {/* Top wave layer */}
-        <div className="absolute top-0 left-0 right-0 h-[200px]">
-          <svg
-            className="absolute top-0 w-full h-full"
-            viewBox="0 0 1440 200"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,80 C320,20 480,60 720,40 C960,20 1120,80 1440,60 L1440,0 L0,0 Z"
-              fill="#697184"
-              fillOpacity="0.3"
-            />
-          </svg>
-        </div>
-
-        {/* Second wave layer */}
-        <div className="absolute top-0 left-0 right-0 h-[150px]">
-          <svg
-            className="absolute top-0 w-full h-full"
-            viewBox="0 0 1440 150"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,60 C360,10 540,50 720,30 C900,10 1080,70 1440,50 L1440,0 L0,0 Z"
-              fill="#B1A6A4"
-              fillOpacity="0.15"
-            />
-          </svg>
-        </div>
-
-        {/* Subtle decorative elements */}
-        <div className="absolute top-16 right-20 w-3 h-3 rounded-full bg-[#D8CFD0] opacity-20"></div>
-        <div className="absolute top-32 right-40 w-2 h-2 rounded-full bg-[#F2F1EF] opacity-15"></div>
-        <div className="absolute top-24 left-32 w-2.5 h-2.5 rounded-full bg-[#B1A6A4] opacity-20"></div>
-
-        {/* Elegant accent lines */}
-        <div className="absolute top-40 left-0 w-48 h-px bg-white opacity-5 rotate-12"></div>
-        <div className="absolute bottom-40 right-0 w-64 h-px bg-white opacity-5 -rotate-6"></div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}

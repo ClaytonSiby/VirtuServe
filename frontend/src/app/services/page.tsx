@@ -157,70 +157,6 @@ export default function Services() {
     <main className="min-h-screen bg-white">
       {/* Hero Section - Minimal & Clean */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-[#FAFAF9]">
-        {/* Elegant organic background */}
-        <div className="absolute inset-0">
-          {/* Subtle layered gradient backdrop */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
-
-          {/* Elegant flowing organic shapes */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
-                fill="url(#gradient-blob1)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob1"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
-                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
-                fill="url(#gradient-blob2)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob2"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Minimal dot pattern overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
-            }}
-          ></div>
-
-          {/* Subtle light rays */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
-          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 shadow-sm">
@@ -378,10 +314,6 @@ export default function Services() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#D8CFD0]/25 blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#B1A6A4]/15 blur-3xl" />
-
-          {/* Decorative circles */}
-          <div className="absolute top-20 right-20 w-64 h-64 border border-[#697184]/8 rounded-full"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 border border-[#B1A6A4]/8 rounded-full"></div>
         </div>
 
         <PageContainer>
@@ -628,11 +560,6 @@ export default function Services() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#B1A6A4]/6 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#D8CFD0]/4 via-transparent to-transparent" />
 
-          {/* Decorative floating orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#697184]/8 to-transparent rounded-full blur-3xl opacity-60" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-[#D8CFD0]/10 to-transparent rounded-full blur-3xl opacity-50" />
-          <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#B1A6A4]/6 to-transparent rounded-full blur-3xl opacity-40" />
-
           {/* Elegant grid pattern overlay */}
           <div className="absolute inset-0 opacity-[0.015]">
             <div
@@ -656,10 +583,6 @@ export default function Services() {
               }}
             />
           </div>
-
-          {/* Floating decorative shapes */}
-          <div className="absolute top-32 right-20 w-64 h-64 border border-[#697184]/10 rounded-full opacity-30" />
-          <div className="absolute bottom-32 left-20 w-56 h-56 border-2 border-[#B1A6A4]/10 rounded-full opacity-40" />
 
           {/* Gradient accent lines */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#697184]/20 to-transparent" />
@@ -692,7 +615,7 @@ export default function Services() {
                   <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
                     Starter
                   </h3>
-                  <p className="text-sm text-[#697184]/70">
+                  <p className="text-sm text-[#697184]/70 font-semibold">
                     40 hours per month
                   </p>
                 </div>
@@ -766,7 +689,7 @@ export default function Services() {
                   <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
                     Professional
                   </h3>
-                  <p className="text-sm text-[#697184]/70">
+                  <p className="text-sm text-[#697184]/70 font-semibold">
                     80 hours per month
                   </p>
                 </div>
@@ -837,7 +760,7 @@ export default function Services() {
                   <h3 className="text-2xl font-medium text-[#413F3D] mb-2">
                     Expert
                   </h3>
-                  <p className="text-sm text-[#697184]/70">
+                  <p className="text-sm text-[#697184]/70 font-semibold">
                     160 hours per month
                   </p>
                 </div>
@@ -1025,12 +948,6 @@ export default function Services() {
             </svg>
           </div>
 
-          {/* Decorative elements */}
-          <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-[#697184] opacity-20"></div>
-          <div className="absolute top-[25%] right-[15%] w-3 h-3 rounded-full bg-[#D8CFD0] opacity-25"></div>
-          <div className="absolute top-[50%] left-[20%] w-1.5 h-1.5 rounded-full bg-[#B1A6A4] opacity-20"></div>
-          <div className="absolute bottom-[45%] right-[30%] w-2.5 h-2.5 rounded-full bg-[#697184] opacity-15"></div>
-
           {/* Curved accent lines */}
           <div
             className="absolute top-[30%] left-0 w-full h-px bg-[#697184] opacity-5"
@@ -1046,10 +963,6 @@ export default function Services() {
           <div className="max-w-4xl mx-auto">
             {/* Glass card */}
             <div className="relative bg-white/70 backdrop-blur-2xl rounded-[2.5rem] p-12 md:p-16 shadow-[0_20px_70px_-15px_rgba(105,113,132,0.12)] border border-[#697184]/10 overflow-hidden">
-              {/* Subtle accents */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#D8CFD0] opacity-5 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#697184] opacity-5 rounded-full blur-3xl"></div>
-
               <div className="relative z-10 text-center">
                 <div className="inline-flex items-center gap-2.5 bg-white border border-[#697184]/15 rounded-full px-5 py-2.5 mb-8 shadow-sm">
                   <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.2em]">

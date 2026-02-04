@@ -25,6 +25,7 @@
     "zustand": "5.0.2"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
     "@netlify/next": "^1.4.9",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
@@ -48,10 +49,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "next lint --fix --file"
     ],
     "*.{json,md,css}": [
-      "npx prettier --write"
+      "prettier --write"
     ]
   }
 }

@@ -62,7 +62,7 @@ export default function Contact() {
     } catch (error) {
       setSubmitStatus("error");
       setErrorMessage(
-        "Unable to connect to the server. Please try again later.",
+        "Unable to connect to the server. Please try again later."
       );
       console.error("Contact form error:", error);
     } finally {
@@ -73,7 +73,7 @@ export default function Contact() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    >
   ) => {
     setFormData({
       ...formData,
@@ -82,83 +82,8 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <main className="min-h-screen bg-white">
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-[#FAFAF9]">
-        {/* Elegant organic background */}
-        <div className="absolute inset-0">
-          {/* Subtle layered gradient backdrop */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
-
-          {/* Elegant flowing organic shapes */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
-                fill="url(#gradient-blob1)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob1"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
-                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
-                fill="url(#gradient-blob2)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob2"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Minimal dot pattern overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
-            }}
-          ></div>
-
-          {/* Subtle light rays */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
-          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
-        </div>
-
-        {/* Decorative grid overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.15) 1px, transparent 0)`,
-              backgroundSize: "48px 48px",
-            }}
-          ></div>
-        </div>
-
         <PageContainer>
           <div className="relative z-10 mb-20 md:mb-24 text-center">
             <div className="inline-flex items-center gap-2.5 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-8 shadow-sm">
@@ -187,8 +112,9 @@ export default function Contact() {
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-gradient-to-br from-accent-50/60 via-white to-primary-50/40 rounded-2xl p-8 border border-gray-200/60 shadow-md">
                 <p className="text-lg text-gray-700 font-light leading-relaxed">
-                  We&apos;ll respond within 24 hours or schedule a call at your
-                  convenience.
+                  We&apos;ll respond within{" "}
+                  <span className="font-semibold">24 hours</span> or schedule a
+                  call at your convenience.
                 </p>
               </div>
 
@@ -207,7 +133,7 @@ export default function Contact() {
                     <p className="text-accent-600 font-medium text-base mb-1">
                       hello@virtuserve.com
                     </p>
-                    <p className="text-gray-500 text-sm font-light">
+                    <p className="text-gray-500 text-sm font-semibold">
                       24-hour response time
                     </p>
                   </div>
@@ -224,7 +150,7 @@ export default function Contact() {
                     <h3 className="font-medium text-gray-900 mb-2 text-lg tracking-wide">
                       Discovery Call
                     </h3>
-                    <p className="text-primary-600 font-medium text-base mb-1">
+                    <p className="text-primary-600 font-semibold text-base mb-1">
                       Free 30-minute discovery call
                     </p>
                     <p className="text-gray-500 text-sm font-light inline-flex items-center gap-1.5">
@@ -248,7 +174,7 @@ export default function Contact() {
                     <p className="text-accent-600 font-medium text-base mb-1">
                       +27 82 899 7062
                     </p>
-                    <p className="text-gray-500 text-sm font-light">
+                    <p className="text-gray-500 text-sm font-semibold">
                       Business hours
                     </p>
                   </div>
@@ -266,7 +192,10 @@ export default function Contact() {
                       <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-accent-500 to-accent-600 text-white text-xs font-medium flex-shrink-0 shadow-sm">
                         1
                       </span>
-                      <span>Quick response within 24 hours</span>
+                      <span>
+                        Quick response within{" "}
+                        <span className="font-semibold">24 hours</span>
+                      </span>
                     </li>
                     <li className="flex items-center gap-3.5 text-base font-light">
                       <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-[#D8CFD0] to-[#B1A6A4] text-white text-xs font-medium flex-shrink-0 shadow-sm">
@@ -307,7 +236,7 @@ export default function Contact() {
                     </h3>
                     <p className="text-base text-gray-600 font-light">
                       Fill out the form below and we&apos;ll get back to you
-                      within 24 hours
+                      within <span className="font-semibold">24 hours</span>
                     </p>
                   </div>
 

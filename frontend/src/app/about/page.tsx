@@ -2,44 +2,30 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
+  ArrowRight,
   Award,
+  Briefcase,
+  Building2,
+  Calendar,
+  CheckCircle,
+  FolderKanban,
   Globe,
   Heart,
+  MessageCircle,
+  Pencil,
   Target,
   Users,
   Zap,
-  ArrowRight,
-  CheckCircle,
-  Calendar,
-  MessageCircle,
-  Pencil,
-  FolderKanban,
-  Building2,
-  Briefcase,
 } from "lucide-react";
-import Link from "next/link";
 import PageContainer from "@/components/ui/PageContainer";
-import { getImagePath } from "@/lib/utils";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white scroll-smooth">
       {/* Hero Section - Split Layout */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "8s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "6s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
-        </div>
-
         {/* Decorative grid overlay */}
         <div className="absolute inset-0 opacity-20">
           <div
@@ -50,10 +36,6 @@ export default function About() {
             }}
           ></div>
         </div>
-
-        {/* Floating decorative shapes */}
-        <div className="absolute top-20 left-10 w-72 h-72 border-2 border-[#697184]/15 rounded-full opacity-40 animate-[spin_20s_linear_infinite]"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 border-2 border-[#B1A6A4]/15 rounded-full opacity-40 animate-[spin_25s_linear_infinite_reverse]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -91,10 +73,10 @@ export default function About() {
                     <div className="text-center space-y-8">
                       <div className="flex items-center justify-center gap-12">
                         <div className="text-center group">
-                          <div className="text-6xl md:text-7xl font-light text-[#697184] mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
+                          <div className="text-6xl md:text-7xl font-semibold text-[#697184] mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
                             10<span className="text-[#B1A6A4]">+</span>
                           </div>
-                          <div className="text-sm text-[#413F3D] font-medium uppercase tracking-widest">
+                          <div className="text-sm text-[#413F3D] font-semibold uppercase tracking-widest">
                             Years
                           </div>
                         </div>
@@ -117,9 +99,6 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                {/* Floating accent elements */}
-                <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#B1A6A4]/20 rounded-full blur-2xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#697184]/20 rounded-full blur-2xl"></div>
               </div>
             </div>
           </div>
@@ -128,11 +107,6 @@ export default function About() {
 
       {/* Our Story - Modern Elegant Layout */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50/50 to-white overflow-hidden">
-        {/* Minimal background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#D8CFD0]/8 blur-3xl" />
-        </div>
-
         <PageContainer>
           <div className="relative z-10 max-w-7xl mx-auto">
             {/* Asymmetric Grid Layout */}
@@ -172,7 +146,7 @@ export default function About() {
                     <div className="absolute -inset-4 bg-gradient-to-br from-[#697184]/5 to-[#B1A6A4]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(105,113,132,0.3)] transition-all duration-700">
                       <Image
-                        src={getImagePath("/assets/sheridan.JPG")}
+                        src={"/assets/sheridan.JPG"}
                         alt="Sheridan de Laroche - Founder & Lead VA"
                         width={420}
                         height={560}
@@ -185,7 +159,7 @@ export default function About() {
                       {/* Integrated caption badge */}
                       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-xl rounded-xl px-6 py-3 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.25)] border border-white/40 group-hover:bg-white/95 group-hover:shadow-[0_6px_30px_-4px_rgba(0,0,0,0.3)] transition-all duration-500">
                         <div className="text-center">
-                          <div className="text-2xl font-light text-[#697184] mb-0.5">
+                          <div className="text-2xl font-semibold text-[#697184] mb-0.5">
                             16+
                           </div>
                           <div className="text-[10px] text-[#413F3D]/70 uppercase tracking-[0.15em] font-medium">
@@ -461,9 +435,7 @@ export default function About() {
                     <div className="absolute -inset-4 bg-gradient-to-bl from-[#B1A6A4]/5 to-[#D8CFD0]/5 rounded-[3rem] -z-10" />
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(65,63,61,0.2)] group-hover:shadow-[0_25px_70px_-15px_rgba(177,166,164,0.3)] transition-all duration-700">
                       <Image
-                        src={getImagePath(
-                          "/assets/assistant_ashley_image.jpeg",
-                        )}
+                        src={"/assets/assistant_ashley_image.jpeg"}
                         alt="Ashley Janse van Vuuren - Virtual Assistant"
                         width={420}
                         height={560}
@@ -494,13 +466,6 @@ export default function About() {
 
       {/* Values */}
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-[#F2F1EF]/40 via-white/90 to-[#B1A6A4]/8 overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-[#D8CFD0]/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-[#B1A6A4]/20 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#697184]/10 rounded-full blur-3xl" />
-        </div>
-
         <PageContainer>
           <div className="relative z-10">
             <div className="text-center mb-16">
@@ -670,8 +635,10 @@ export default function About() {
                     href="/contact"
                     className="inline-flex items-center gap-3 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-[#697184]/20 hover:shadow-xl hover:shadow-[#697184]/30 transition-all duration-300 hover:-translate-y-0.5"
                   >
-                    Start Your Journey
-                    <ArrowRight className="w-5 h-5" />
+                    <span className="flex items-center gap-3 text-white">
+                      Start Your Journey
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
                   </Link>
 
                   <div className="flex flex-wrap gap-6 text-sm text-[#413F3D]/70">
@@ -719,11 +686,11 @@ export default function About() {
                       </div>
                       <div className="text-3xl font-bold text-[#697184] leading-none">
                         9
-                        <span className="text-base font-normal text-[#697184]/70">
+                        <span className="text-base font-semibold text-[#697184]">
                           am
                         </span>{" "}
                         – 5
-                        <span className="text-base font-normal text-[#697184]/70">
+                        <span className="text-base font-semibold text-[#697184]">
                           pm
                         </span>
                       </div>
@@ -744,11 +711,11 @@ export default function About() {
                       </div>
                       <div className="text-3xl font-bold text-[#697184] leading-none">
                         8
-                        <span className="text-base font-normal text-[#697184]/70">
+                        <span className="text-base font-semibold text-[#697184]">
                           am
                         </span>{" "}
                         – 5
-                        <span className="text-base font-normal text-[#697184]/70">
+                        <span className="text-base font-semibold text-[#697184]">
                           pm
                         </span>
                       </div>

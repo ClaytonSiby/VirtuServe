@@ -23,93 +23,9 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section - Premium & Modern */}
-      <section className="relative min-h-[70vh] overflow-hidden flex items-center pt-20 pb-12 bg-transparent">
-        {/* Sophisticated mesh gradient background */}
-        <div className="absolute inset-0">
-          {/* Elegant mesh gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F2F1EF]/20 to-white" />
-
-          {/* Overlay gradient for subtle depth */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#697184]/[0.015] via-transparent to-[#B1A6A4]/[0.01]" />
-
-          {/* Subtle animated orbs */}
-          <div className="absolute inset-0">
-            <motion.div
-              animate={{
-                opacity: [0.03, 0.06, 0.03],
-                scale: [1, 1.08, 1],
-                x: [0, 30, 0],
-                y: [0, 20, 0],
-              }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#697184]/[0.08] via-[#B1A6A4]/[0.06] to-transparent blur-3xl rounded-full"
-            />
-            <motion.div
-              animate={{
-                opacity: [0.04, 0.07, 0.04],
-                scale: [1, 1.06, 1],
-                x: [0, -30, 0],
-                y: [0, 25, 0],
-              }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 3,
-              }}
-              className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-[#D8CFD0]/[0.07] via-[#697184]/[0.05] to-transparent blur-3xl rounded-full"
-            />
-            <motion.div
-              animate={{
-                opacity: [0.025, 0.05, 0.025],
-                scale: [1, 1.04, 1],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 5,
-              }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-[#B1A6A4]/[0.06] to-transparent blur-3xl rounded-full"
-            />
-          </div>
-
-          {/* Subtle mesh gradient overlay */}
-          <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `
-                radial-gradient(circle at 20% 50%, rgba(105, 113, 132, 0.025) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(177, 166, 164, 0.025) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(216, 207, 208, 0.02) 0%, transparent 50%)
-              `,
-              }}
-            />
-          </div>
-
-          {/* Elegant grid pattern */}
-          <div className="absolute inset-0 opacity-[0.008]">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(0deg, #697184 0px, #697184 1px, transparent 1px, transparent 50px), repeating-linear-gradient(90deg, #697184 0px, #697184 1px, transparent 1px, transparent 50px)",
-              }}
-            />
-          </div>
-
-          {/* Soft vignette effect */}
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-white/30" />
-
-          {/* Additional elegant floating elements */}
-          <div className="absolute top-10 left-10 w-96 h-96 border border-[#697184]/5 rounded-full opacity-40"></div>
-          <div className="absolute bottom-10 right-10 w-[32rem] h-[32rem] border border-[#B1A6A4]/5 rounded-full opacity-40"></div>
-        </div>
+      <section className="relative min-h-[70vh] overflow-hidden flex items-center pt-20 pb-12 bg-[#F2F1EF]">
+        {/* Plain hero background */}
+        <div className="absolute inset-0 bg-[#F2F1EF]" />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10 py-8">
           <div className="max-w-7xl mx-auto">
@@ -341,33 +257,6 @@ export default function Home() {
                   />
 
                   {/* Floating decorative shapes */}
-                  <motion.div
-                    animate={{
-                      y: [0, -15, 0],
-                      rotate: [0, 5, 0],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-[#697184]/10 to-[#B1A6A4]/10 rounded-full blur-2xl"
-                  />
-
-                  <motion.div
-                    animate={{
-                      y: [0, 20, 0],
-                      rotate: [0, -8, 0],
-                    }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1,
-                    }}
-                    className="absolute -bottom-12 -right-12 w-40 h-40 bg-gradient-to-tl from-[#B1A6A4]/10 to-[#413F3D]/10 rounded-full blur-2xl"
-                  />
-
                   {/* Image container with organic fluid shape */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -471,17 +360,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-b from-white/50 via-[#F2F1EF]/60 to-white/50 overflow-hidden">
-        {/* Elegant background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-accent-500/8 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-primary-500/10 to-transparent blur-3xl" />
-          <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-radial from-slate-400/5 to-transparent blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.03),rgba(255,255,255,0))]" />
-
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
-        </div>
+      <section className="relative py-24 md:py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
@@ -859,14 +738,14 @@ export default function Home() {
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#697184] to-[#413F3D] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
-                    SM
+                    DN
                   </div>
                   <div>
                     <p className="font-semibold text-[#413F3D] text-[15px]">
-                      Sarah Mitchell
+                      Debbie Neilson
                     </p>
                     <p className="text-xs text-[#697184]/70 font-medium">
-                      CEO, TechStart Inc.
+                      Northlands group of companies
                     </p>
                   </div>
                 </div>
@@ -906,14 +785,14 @@ export default function Home() {
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D8CFD0] to-[#B1A6A4] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
-                    JC
+                    RD
                   </div>
                   <div>
                     <p className="font-semibold text-[#413F3D] text-[15px]">
-                      James Chen
+                      Robert de laroche
                     </p>
                     <p className="text-xs text-[#697184]/70 font-medium">
-                      Founder, Digital Wave
+                      de Laroche architecture
                     </p>
                   </div>
                 </div>
@@ -953,14 +832,14 @@ export default function Home() {
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#B1A6A4] to-[#697184] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
-                    EP
+                    OR
                   </div>
                   <div>
                     <p className="font-semibold text-[#413F3D] text-[15px]">
-                      Emily Parker
+                      Olivier Reid
                     </p>
                     <p className="text-xs text-[#697184]/70 font-medium">
-                      Director, Global Ventures
+                      Living redefined
                     </p>
                   </div>
                 </div>
@@ -1020,7 +899,7 @@ export default function Home() {
                   </div>
                   <div className="text-[#697184]/30 text-lg pb-2">|</div>
                   <div className="text-center">
-                    <p className="text-2xl font-extralight text-[#413F3D] leading-tight">
+                    <p className="text-2xl font-semibold text-[#413F3D] leading-tight">
                       8–5
                     </p>
                     <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
@@ -1041,7 +920,7 @@ export default function Home() {
                   className="w-7 h-7 text-[#697184] mx-auto mb-2"
                   strokeWidth={1.5}
                 />
-                <p className="text-3xl font-extralight text-[#413F3D] mb-1">
+                <p className="text-3xl font-semibold text-[#413F3D] mb-1">
                   10+
                 </p>
                 <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
@@ -1072,82 +951,11 @@ export default function Home() {
       </div>
 
       {/* CTA Section - Elegant Wave Design */}
-      <section className="relative py-32 md:py-40 overflow-hidden bg-gradient-to-b from-[#F2F1EF]/30 via-white/90 to-[#B1A6A4]/10">
-        {/* Elegant flowing waves background */}
-        <div className="absolute inset-0">
-          {/* Wave layer 1 - Bottom flowing curve */}
-          <div className="absolute bottom-0 left-0 right-0 h-[600px]">
-            <svg
-              className="absolute bottom-0 w-full h-full"
-              viewBox="0 0 1440 600"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0,350 C320,280 480,320 720,300 C960,280 1120,340 1440,320 L1440,600 L0,600 Z"
-                fill="#F2F1EF"
-                fillOpacity="0.4"
-              />
-            </svg>
-          </div>
-
-          {/* Wave layer 2 - Middle flowing curve */}
-          <div className="absolute bottom-0 left-0 right-0 h-[500px]">
-            <svg
-              className="absolute bottom-0 w-full h-full"
-              viewBox="0 0 1440 500"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0,280 C360,220 540,260 720,240 C900,220 1080,280 1440,260 L1440,500 L0,500 Z"
-                fill="#D8CFD0"
-                fillOpacity="0.15"
-              />
-            </svg>
-          </div>
-
-          {/* Wave layer 3 - Top flowing curve */}
-          <div className="absolute bottom-0 left-0 right-0 h-[400px]">
-            <svg
-              className="absolute bottom-0 w-full h-full"
-              viewBox="0 0 1440 400"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0,200 C400,150 600,180 800,170 C1000,160 1200,190 1440,180 L1440,400 L0,400 Z"
-                fill="#B1A6A4"
-                fillOpacity="0.1"
-              />
-            </svg>
-          </div>
-
-          {/* Decorative floating circles */}
-          <div className="absolute top-20 left-[15%] w-2 h-2 rounded-full bg-[#697184] opacity-20"></div>
-          <div className="absolute top-[30%] right-[20%] w-3 h-3 rounded-full bg-[#D8CFD0] opacity-25"></div>
-          <div className="absolute bottom-[40%] left-[25%] w-1.5 h-1.5 rounded-full bg-[#B1A6A4] opacity-20"></div>
-          <div className="absolute top-[45%] right-[35%] w-2.5 h-2.5 rounded-full bg-[#697184] opacity-15"></div>
-
-          {/* Subtle curved line accents */}
-          <div
-            className="absolute top-[25%] left-0 w-full h-px bg-[#697184] opacity-5"
-            style={{ transform: "rotate(2deg)" }}
-          ></div>
-          <div
-            className="absolute top-[65%] right-0 w-full h-px bg-[#B1A6A4] opacity-5"
-            style={{ transform: "rotate(-1deg)" }}
-          ></div>
-        </div>
-
+      <section className="relative py-32 md:py-40 overflow-hidden bg-gray-50">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Premium Glass Card */}
             <div className="relative bg-white/70 backdrop-blur-2xl rounded-[2.5rem] p-12 md:p-16 lg:p-20 shadow-[0_20px_70px_-15px_rgba(105,113,132,0.12)] border border-[#697184]/10 overflow-hidden">
-              {/* Subtle inner accents */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#D8CFD0] opacity-5 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#697184] opacity-5 rounded-full blur-3xl"></div>
-
               <div className="relative z-10">
                 {/* Badge */}
                 <div className="flex justify-center mb-10">

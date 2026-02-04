@@ -16,30 +16,6 @@ export default function Terms() {
     <main className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-primary-50/50">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#D8CFD0]/25 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "8s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[#B1A6A4]/20 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "6s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#697184]/10 rounded-full blur-3xl"></div>
-        </div>
-
-        {/* Decorative grid overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(105, 113, 132, 0.15) 1px, transparent 0)`,
-              backgroundSize: "48px 48px",
-            }}
-          ></div>
-        </div>
-
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#D8CFD0]/30 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
             <Scale className="w-4 h-4 text-[#697184]" />

@@ -41,40 +41,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   letter-spacing: -0.01em;
-
-  /* Elegant textured background */
-  background-image:
-    radial-gradient(
-      circle at 20% 50%,
-      rgba(216, 207, 208, 0.03) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(177, 166, 164, 0.03) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 40% 20%,
-      rgba(105, 113, 132, 0.02) 0%,
-      transparent 50%
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 60px,
-      rgba(105, 113, 132, 0.008) 60px,
-      rgba(105, 113, 132, 0.008) 61px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 60px,
-      rgba(177, 166, 164, 0.008) 60px,
-      rgba(177, 166, 164, 0.008) 61px
-    );
-  background-color: #fefefe;
-  background-attachment: fixed;
 }
 
 /* ============================================================================
