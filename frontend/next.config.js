@@ -24,8 +24,6 @@ const nextConfig = {
     },
     productionBrowserSourceMaps: false,
   }),
-  // Enable SWC minification for better performance
-  swcMinify: true,
 };
 
 module.exports = nextConfig;
