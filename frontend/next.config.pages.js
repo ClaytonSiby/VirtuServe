@@ -3,6 +3,12 @@ const nextConfig = {
   output: "export",
   basePath: "/VirtuServe",
   assetPrefix: "/VirtuServe/",
+  // Browser compatibility
+  swcMinify: true,
+  compiler: {
+    // Remove React properties in production
+    reactRemoveProperties: process.env.NODE_ENV === "production",
+  },
   images: {
     unoptimized: true,
   },
