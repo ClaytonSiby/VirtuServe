@@ -1,7 +1,3 @@
-import pytest
-from fastapi.testclient import TestClient
-
-
 def test_contact_form_submission(client):
     """Test contact form endpoint"""
     payload = {
@@ -15,7 +11,7 @@ def test_contact_form_submission(client):
     response = client.post("/api/contact", json=payload)
     assert response.status_code == 200
     data = response.json()
-    assert data["success"] == True
+    assert data["success"] is True
     assert "timestamp" in data
 
 
@@ -44,7 +40,7 @@ def test_booking_submission(client):
     response = client.post("/api/booking", json=payload)
     assert response.status_code == 200
     data = response.json()
-    assert data["success"] == True
+    assert data["success"] is True
 
 
 def test_get_availability(client):

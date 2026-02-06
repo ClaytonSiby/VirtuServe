@@ -1,5 +1,5 @@
 from typing import Optional
-from app.models.conversation import Conversation, Message
+from app.models.conversation import Conversation
 
 
 class AssistantService:
@@ -32,7 +32,9 @@ class AssistantService:
 
         return response
 
-    async def get_conversation_history(self, conversation_id: str) -> Optional[Conversation]:
+    async def get_conversation_history(
+        self, conversation_id: str
+    ) -> Optional[Conversation]:
         """
         Retrieve conversation history from database
         """
