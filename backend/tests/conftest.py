@@ -12,7 +12,4 @@ def client():
 @pytest.fixture
 def sample_message():
     """Sample message for testing"""
-    return {
-        "message": "Hello, I need assistance",
-        "language": "en"
-    }
+    return {"message": "Hello, I need assistance", "language": "en"}

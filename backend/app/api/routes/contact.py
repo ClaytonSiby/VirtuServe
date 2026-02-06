@@ -42,14 +42,16 @@ async def send_email_notification(contact_data: dict):
 
 
 @router.post("/contact", response_model=ContactResponse)
-async def submit_contact_form(request: ContactRequest, background_tasks: BackgroundTasks):
+async def submit_contact_form(
+    request: ContactRequest, background_tasks: BackgroundTasks
+):
     """
     Handle contact form submissions with spam protection
     """
     try:
         # Store contact submission (implement database storage)
         contact_data = request.model_dump()
-        contact_data['timestamp'] = datetime.now()
+        contact_data["timestamp"] = datetime.now()
 
         # Send email notification in background
         background_tasks.add_task(send_email_notification, contact_data)
@@ -57,16 +59,12 @@ async def submit_contact_form(request: ContactRequest, background_tasks: Backgro
         return ContactResponse(
             success=True,
             message=(
-                "Thank you for contacting us! "
-                "We'll get back to you within 24 hours."
+                "Thank you for contacting us! " "We'll get back to you within 24 hours."
             ),
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
     except Exception:
-        raise HTTPException(
-            status_code=500,
-            detail="Failed to submit contact form"
-        )
+        raise HTTPException(status_code=500, detail="Failed to submit contact form")
 
 
 @router.post("/booking", response_model=ContactResponse)
@@ -77,7 +75,7 @@ async def submit_booking(request: BookingRequest, background_tasks: BackgroundTa
     try:
         # Store booking (implement database storage)
         booking_data = request.model_dump()
-        booking_data['timestamp'] = datetime.now()
+        booking_data["timestamp"] = datetime.now()
 
         # Send confirmation email in background
         background_tasks.add_task(send_email_notification, booking_data)
@@ -88,13 +86,10 @@ async def submit_booking(request: BookingRequest, background_tasks: BackgroundTa
                 "Your discovery call has been scheduled! "
                 "You'll receive a confirmation email shortly."
             ),
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
     except Exception:
-        raise HTTPException(
-            status_code=500,
-            detail="Failed to book discovery call"
-        )
+        raise HTTPException(status_code=500, detail="Failed to book discovery call")
 
 
 @router.get("/availability")
@@ -106,10 +101,8 @@ async def get_availability():
     # Placeholder implementation
     return {
         "available_slots": [
-            {"date": "2026-01-20",
-                "times": ["09:00", "10:00", "14:00", "15:00"]},
-            {"date": "2026-01-21",
-                "times": ["09:00", "11:00", "13:00", "16:00"]},
+            {"date": "2026-01-20", "times": ["09:00", "10:00", "14:00", "15:00"]},
+            {"date": "2026-01-21", "times": ["09:00", "11:00", "13:00", "16:00"]},
         ],
-        "timezone": "UTC"
+        "timezone": "UTC",
     }

@@ -6,7 +6,7 @@ def test_contact_form_submission(client):
         "company": "Test Company",
         "phone": "+1234567890",
         "service": "administrative",
-        "message": "I need help with administrative tasks"
+        "message": "I need help with administrative tasks",
     }
     response = client.post("/api/contact", json=payload)
     assert response.status_code == 200
@@ -17,11 +17,7 @@ def test_contact_form_submission(client):
 
 def test_contact_form_invalid_email(client):
     """Test contact form with invalid email"""
-    payload = {
-        "name": "John Doe",
-        "email": "invalid-email",
-        "message": "Test message"
-    }
+    payload = {"name": "John Doe", "email": "invalid-email", "message": "Test message"}
     response = client.post("/api/contact", json=payload)
     assert response.status_code == 422  # Validation error
 
@@ -35,7 +31,7 @@ def test_booking_submission(client):
         "date": "2026-01-20",
         "time": "10:00",
         "timezone": "UTC",
-        "message": "Looking forward to the call"
+        "message": "Looking forward to the call",
     }
     response = client.post("/api/booking", json=payload)
     assert response.status_code == 200
