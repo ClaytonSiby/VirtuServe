@@ -38,14 +38,20 @@ jobs:
                   cd frontend
                   npm ci
 
-            - name: Build with Next.js
+            - name: Build with Next.js for GitHub Pages
               env:
                   NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
                   NEXT_PUBLIC_SITE_URL: https://claytonsiby.github.io/VirtuServe
                   NEXT_PUBLIC_CALENDLY_URL: ${{ secrets.NEXT_PUBLIC_CALENDLY_URL }}
               run: |
                   cd frontend
+                  # Use the GitHub Pages specific config for static export
+                  mv next.config.js next.config.heroku.js
+                  mv next.config.pages.js next.config.js
                   npm run build
+                  # Restore original config
+                  mv next.config.js next.config.pages.js
+                  mv next.config.heroku.js next.config.js
 
             - name: Add .nojekyll file
               run: touch frontend/out/.nojekyll
