@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable standalone output for Docker
-  output: 'standalone',
+  output: "standalone",
   compiler: {
     // Remove React properties in production
     reactRemoveProperties: process.env.NODE_ENV === "production",
