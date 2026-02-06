@@ -11,7 +11,14 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://frontend:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://frontend:3000",
+        "https://virtuserveva.com",
+        "https://www.virtuserveva.com",
+        "https://virtuserve-web.herokuapp.com",
+        "https://virtuserve-api.herokuapp.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -54,9 +54,11 @@ export default function Footer() {
               {/* Social Links */}
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/virtuserve-professional-virtual-assistance/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group w-11 h-11 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-[#697184] hover:border-[#697184] flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#697184]/20"
-                  aria-label="LinkedIn"
+                  aria-label="Follow us on LinkedIn"
                 >
                   <Linkedin
                     size={19}
@@ -64,9 +66,11 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/17xb1hXBjv/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group w-11 h-11 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-[#697184] hover:border-[#697184] flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#697184]/20"
-                  aria-label="Facebook"
+                  aria-label="Follow us on Facebook"
                 >
                   <Facebook
                     size={19}
@@ -74,9 +78,11 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/virtu.serve_?igsh=MWdneHA0aGpoYTNwaw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group w-11 h-11 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-[#697184] hover:border-[#697184] flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#697184]/20"
-                  aria-label="Instagram"
+                  aria-label="Follow us on Instagram"
                 >
                   <Instagram
                     size={19}

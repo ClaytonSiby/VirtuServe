@@ -6,7 +6,7 @@
     <title>VirtuServe Logo Export</title>
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, sans-serif;
         padding: 40px;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -155,6 +155,94 @@
   </head>
   <body>
     <div class="container">
+      <!-- Social Media Exports -->
+      <div class="logo-section">
+        <h2 class="section-title">Social Media Exports</h2>
+        <div class="logo-grid">
+          <!-- Facebook Cover -->
+          <div class="logo-item">
+            <h3>Facebook Cover (1200×630)</h3>
+            <div class="logo-preview">
+              <canvas id="fb-cover-1200-630" width="1200" height="630"></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('fb-cover-1200-630', 'virtuserve-facebook-cover-1200x630.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">1200 × 630 px</p>
+          </div>
+          <!-- Facebook Profile -->
+          <div class="logo-item">
+            <h3>Facebook Profile (180×180)</h3>
+            <div class="logo-preview">
+              <canvas id="fb-profile-180-180" width="180" height="180"></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('fb-profile-180-180', 'virtuserve-facebook-profile-180x180.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">180 × 180 px</p>
+          </div>
+          <!-- Instagram Post -->
+          <div class="logo-item">
+            <h3>Instagram Post (1080×1080)</h3>
+            <div class="logo-preview">
+              <canvas
+                id="ig-post-1080-1080"
+                width="1080"
+                height="1080"
+              ></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('ig-post-1080-1080', 'virtuserve-instagram-post-1080x1080.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">1080 × 1080 px</p>
+          </div>
+          <!-- Instagram Profile -->
+          <div class="logo-item">
+            <h3>Instagram Profile (320×320)</h3>
+            <div class="logo-preview">
+              <canvas id="ig-profile-320-320" width="320" height="320"></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('ig-profile-320-320', 'virtuserve-instagram-profile-320x320.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">320 × 320 px</p>
+          </div>
+          <!-- LinkedIn Share -->
+          <div class="logo-item">
+            <h3>LinkedIn Share (1200×627)</h3>
+            <div class="logo-preview">
+              <canvas id="li-share-1200-627" width="1200" height="627"></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('li-share-1200-627', 'virtuserve-linkedin-share-1200x627.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">1200 × 627 px</p>
+          </div>
+          <!-- LinkedIn Profile -->
+          <div class="logo-item">
+            <h3>LinkedIn Profile (400×400)</h3>
+            <div class="logo-preview">
+              <canvas id="li-profile-400-400" width="400" height="400"></canvas>
+            </div>
+            <button
+              onclick="downloadLogo('li-profile-400-400', 'virtuserve-linkedin-profile-400x400.png')"
+            >
+              Download PNG
+            </button>
+            <p class="dimensions">400 × 400 px</p>
+          </div>
+        </div>
+      </div>
       <h1>VirtuServe Logo Export</h1>
       <p class="subtitle">Click on any logo to download it as a PNG image</p>
 
@@ -486,126 +574,126 @@
     <script>
       // Navigation logo colors
       const navColors = {
-        left: '#697184',
-        right: '#413F3D'
-      }
+        left: "#697184",
+        right: "#413F3D",
+      };
 
       // Footer logo colors
       const footerColors = {
-        left: '#B1A6A4',
-        right: '#f8f9fa'
-      }
+        left: "#B1A6A4",
+        right: "#f8f9fa",
+      };
 
       // Draw navigation logo
       function drawNavLogo(canvasId, size) {
-        const canvas = document.getElementById(canvasId)
-        const ctx = canvas.getContext('2d', { alpha: true })
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d", { alpha: true });
 
         // Enable high-quality rendering for high DPI displays
-        const dpr = window.devicePixelRatio || 1
-        canvas.width = size * dpr
-        canvas.height = size * dpr
-        canvas.style.width = size + 'px'
-        canvas.style.height = size + 'px'
-        ctx.scale(dpr, dpr)
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = size * dpr;
+        canvas.height = size * dpr;
+        canvas.style.width = size + "px";
+        canvas.style.height = size + "px";
+        ctx.scale(dpr, dpr);
 
         // Better rendering quality
-        ctx.imageSmoothingEnabled = true
-        ctx.imageSmoothingQuality = 'high'
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
 
         // Scale factor to fit the V shape properly
-        const scale = size / 60
+        const scale = size / 60;
 
-        ctx.clearRect(0, 0, size, size)
+        ctx.clearRect(0, 0, size, size);
 
         // Left triangle
-        ctx.fillStyle = navColors.left
-        ctx.beginPath()
-        ctx.moveTo(0, 0)
-        ctx.lineTo(20 * scale, 0)
-        ctx.lineTo(30 * scale, 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = navColors.left;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(20 * scale, 0);
+        ctx.lineTo(30 * scale, 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Right triangle
-        ctx.fillStyle = navColors.right
-        ctx.beginPath()
-        ctx.moveTo(40 * scale, 0)
-        ctx.lineTo(60 * scale, 0)
-        ctx.lineTo(30 * scale, 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = navColors.right;
+        ctx.beginPath();
+        ctx.moveTo(40 * scale, 0);
+        ctx.lineTo(60 * scale, 0);
+        ctx.lineTo(30 * scale, 50 * scale);
+        ctx.closePath();
+        ctx.fill();
       }
 
       // Draw navigation logo with text
       function drawNavLogoWithText(canvasId, width, height) {
-        const canvas = document.getElementById(canvasId)
-        const ctx = canvas.getContext('2d', { alpha: true })
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d", { alpha: true });
 
         // Enable high-quality rendering for high DPI displays
-        const dpr = window.devicePixelRatio || 1
-        canvas.width = width * dpr
-        canvas.height = height * dpr
-        canvas.style.width = width + 'px'
-        canvas.style.height = height + 'px'
-        ctx.scale(dpr, dpr)
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        ctx.scale(dpr, dpr);
 
         // Better rendering quality
-        ctx.imageSmoothingEnabled = true
-        ctx.imageSmoothingQuality = 'high'
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
 
-        ctx.clearRect(0, 0, width, height)
+        ctx.clearRect(0, 0, width, height);
 
         // Calculate icon size and positioning
-        const iconHeight = height * 0.65
-        const scale = iconHeight / 50
-        const iconWidth = 60 * scale
-        const yOffset = (height - iconHeight) / 2
+        const iconHeight = height * 0.65;
+        const scale = iconHeight / 50;
+        const iconWidth = 60 * scale;
+        const yOffset = (height - iconHeight) / 2;
 
         // Left triangle
-        ctx.fillStyle = navColors.left
-        ctx.beginPath()
-        ctx.moveTo(0, yOffset)
-        ctx.lineTo(20 * scale, yOffset)
-        ctx.lineTo(30 * scale, yOffset + 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = navColors.left;
+        ctx.beginPath();
+        ctx.moveTo(0, yOffset);
+        ctx.lineTo(20 * scale, yOffset);
+        ctx.lineTo(30 * scale, yOffset + 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Right triangle
-        ctx.fillStyle = navColors.right
-        ctx.beginPath()
-        ctx.moveTo(40 * scale, yOffset)
-        ctx.lineTo(60 * scale, yOffset)
-        ctx.lineTo(30 * scale, yOffset + 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = navColors.right;
+        ctx.beginPath();
+        ctx.moveTo(40 * scale, yOffset);
+        ctx.lineTo(60 * scale, yOffset);
+        ctx.lineTo(30 * scale, yOffset + 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Text positioning
-        const textX = iconWidth + 15 * scale
-        const mainTextSize = height * 0.32
-        const subTextSize = height * 0.075
+        const textX = iconWidth + 15 * scale;
+        const mainTextSize = height * 0.32;
+        const subTextSize = height * 0.075;
 
         // Main text "VirtuServe" with gradient
-        ctx.font = `500 ${mainTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
+        ctx.font = `500 ${mainTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
         const gradient = ctx.createLinearGradient(
           textX,
           0,
           textX + (width - iconWidth) * 0.7,
           0
-        )
-        gradient.addColorStop(0, '#697184')
-        gradient.addColorStop(0.5, '#413F3D')
-        gradient.addColorStop(1, '#697184')
-        ctx.fillStyle = gradient
+        );
+        gradient.addColorStop(0, "#697184");
+        gradient.addColorStop(0.5, "#413F3D");
+        gradient.addColorStop(1, "#697184");
+        ctx.fillStyle = gradient;
 
-        const textY = height / 2 + mainTextSize * 0.3
-        ctx.fillText('VirtuServe', textX, textY)
+        const textY = height / 2 + mainTextSize * 0.3;
+        ctx.fillText("VirtuServe", textX, textY);
 
         // Tagline
-        ctx.font = `400 ${subTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
-        ctx.fillStyle = '#B1A6A4'
-        const taglineY = textY + subTextSize * 2
-        ctx.fillText('EXCELLENCE DELIVERED', textX, taglineY)
+        ctx.font = `400 ${subTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
+        ctx.fillStyle = "#B1A6A4";
+        const taglineY = textY + subTextSize * 2;
+        ctx.fillText("EXCELLENCE DELIVERED", textX, taglineY);
       }
 
       // Draw footer logo with text
@@ -615,141 +703,141 @@
         height,
         darkBackground = false
       ) {
-        const canvas = document.getElementById(canvasId)
-        const ctx = canvas.getContext('2d', { alpha: true })
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d", { alpha: true });
 
         // Enable high-quality rendering
-        const dpr = window.devicePixelRatio || 1
-        canvas.width = width * dpr
-        canvas.height = height * dpr
-        canvas.style.width = width + 'px'
-        canvas.style.height = height + 'px'
-        ctx.scale(dpr, dpr)
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        ctx.scale(dpr, dpr);
 
         // Better rendering quality
-        ctx.imageSmoothingEnabled = true
-        ctx.imageSmoothingQuality = 'high'
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
 
         // Dark background
         if (darkBackground) {
-          ctx.fillStyle = '#413F3D'
-          ctx.fillRect(0, 0, width, height)
+          ctx.fillStyle = "#413F3D";
+          ctx.fillRect(0, 0, width, height);
         } else {
-          ctx.clearRect(0, 0, width, height)
+          ctx.clearRect(0, 0, width, height);
         }
 
         // Calculate icon size and positioning
-        const iconHeight = height * 0.65
-        const scale = iconHeight / 50
-        const iconWidth = 60 * scale
-        const yOffset = (height - iconHeight) / 2
+        const iconHeight = height * 0.65;
+        const scale = iconHeight / 50;
+        const iconWidth = 60 * scale;
+        const yOffset = (height - iconHeight) / 2;
 
         // Left triangle
-        ctx.fillStyle = footerColors.left
-        ctx.beginPath()
-        ctx.moveTo(0, yOffset)
-        ctx.lineTo(20 * scale, yOffset)
-        ctx.lineTo(30 * scale, yOffset + 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = footerColors.left;
+        ctx.beginPath();
+        ctx.moveTo(0, yOffset);
+        ctx.lineTo(20 * scale, yOffset);
+        ctx.lineTo(30 * scale, yOffset + 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Right triangle
-        ctx.fillStyle = footerColors.right
-        ctx.beginPath()
-        ctx.moveTo(40 * scale, yOffset)
-        ctx.lineTo(60 * scale, yOffset)
-        ctx.lineTo(30 * scale, yOffset + 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = footerColors.right;
+        ctx.beginPath();
+        ctx.moveTo(40 * scale, yOffset);
+        ctx.lineTo(60 * scale, yOffset);
+        ctx.lineTo(30 * scale, yOffset + 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Text positioning
-        const textX = iconWidth + 15 * scale
-        const mainTextSize = height * 0.32
-        const subTextSize = height * 0.07
+        const textX = iconWidth + 15 * scale;
+        const mainTextSize = height * 0.32;
+        const subTextSize = height * 0.07;
 
         // Main text "VirtuServe"
-        ctx.font = `600 ${mainTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
-        ctx.fillStyle = '#ffffff'
+        ctx.font = `600 ${mainTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
+        ctx.fillStyle = "#ffffff";
 
-        const textY = height / 2 + mainTextSize * 0.3
-        ctx.fillText('VirtuServe', textX, textY)
+        const textY = height / 2 + mainTextSize * 0.3;
+        ctx.fillText("VirtuServe", textX, textY);
 
         // Tagline
-        ctx.font = `600 ${subTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
-        ctx.fillStyle = '#D8CFD0'
-        const taglineY = textY + subTextSize * 2
-        ctx.fillText('EXCELLENCE DELIVERED', textX, taglineY)
+        ctx.font = `600 ${subTextSize}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
+        ctx.fillStyle = "#D8CFD0";
+        const taglineY = textY + subTextSize * 2;
+        ctx.fillText("EXCELLENCE DELIVERED", textX, taglineY);
       }
 
       // Draw footer logo
       function drawFooterLogo(canvasId, size, darkBackground = false) {
-        const canvas = document.getElementById(canvasId)
-        const ctx = canvas.getContext('2d', { alpha: true })
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d", { alpha: true });
 
         // Enable high-quality rendering for high DPI displays
-        const dpr = window.devicePixelRatio || 1
-        canvas.width = size * dpr
-        canvas.height = size * dpr
-        canvas.style.width = size + 'px'
-        canvas.style.height = size + 'px'
-        ctx.scale(dpr, dpr)
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = size * dpr;
+        canvas.height = size * dpr;
+        canvas.style.width = size + "px";
+        canvas.style.height = size + "px";
+        ctx.scale(dpr, dpr);
 
         // Better rendering quality
-        ctx.imageSmoothingEnabled = true
-        ctx.imageSmoothingQuality = 'high'
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
 
         // Scale factor
-        const scale = size / 60
+        const scale = size / 60;
 
         // If dark background, fill canvas with dark color
         if (darkBackground) {
-          ctx.fillStyle = '#413F3D'
-          ctx.fillRect(0, 0, size, size)
+          ctx.fillStyle = "#413F3D";
+          ctx.fillRect(0, 0, size, size);
         } else {
-          ctx.clearRect(0, 0, size, size)
+          ctx.clearRect(0, 0, size, size);
         }
 
         // Left triangle
-        ctx.fillStyle = footerColors.left
-        ctx.beginPath()
-        ctx.moveTo(0, 0)
-        ctx.lineTo(20 * scale, 0)
-        ctx.lineTo(30 * scale, 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = footerColors.left;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(20 * scale, 0);
+        ctx.lineTo(30 * scale, 50 * scale);
+        ctx.closePath();
+        ctx.fill();
 
         // Right triangle
-        ctx.fillStyle = footerColors.right
-        ctx.beginPath()
-        ctx.moveTo(40 * scale, 0)
-        ctx.lineTo(60 * scale, 0)
-        ctx.lineTo(30 * scale, 50 * scale)
-        ctx.closePath()
-        ctx.fill()
+        ctx.fillStyle = footerColors.right;
+        ctx.beginPath();
+        ctx.moveTo(40 * scale, 0);
+        ctx.lineTo(60 * scale, 0);
+        ctx.lineTo(30 * scale, 50 * scale);
+        ctx.closePath();
+        ctx.fill();
       }
 
       // Download logo function
       function downloadLogo(canvasId, filename, hasDarkBg = false) {
-        const canvas = document.getElementById(canvasId)
-        const link = document.createElement('a')
-        link.download = filename
-        link.href = canvas.toDataURL('image/png')
-        link.click()
+        const canvas = document.getElementById(canvasId);
+        const link = document.createElement("a");
+        link.download = filename;
+        link.href = canvas.toDataURL("image/png");
+        link.click();
       }
 
       // Download all logos as individual files
       async function downloadAllLogos() {
         alert(
-          'Downloading all logos individually. Check your downloads folder!'
-        )
+          "Downloading all logos individually. Check your downloads folder!"
+        );
 
-        const iconSizes = [40, 56, 80, 128, 256, 512]
+        const iconSizes = [40, 56, 80, 128, 256, 512];
         const textSizes = [
-          { w: 300, h: 80, id: '300-80' },
-          { w: 450, h: 120, id: '450-120' },
-          { w: 600, h: 160, id: '600-160' },
-          { w: 800, h: 240, id: '800-240' }
-        ]
+          { w: 300, h: 80, id: "300-80" },
+          { w: 450, h: 120, id: "450-120" },
+          { w: 600, h: 160, id: "600-160" },
+          { w: 800, h: 240, id: "800-240" },
+        ];
 
         // Download nav icon logos
         iconSizes.forEach((size, i) => {
@@ -757,9 +845,9 @@
             downloadLogo(
               `nav-logo-${size}`,
               `virtuserve-nav-logo-${size}x${size}.png`
-            )
-          }, i * 100)
-        })
+            );
+          }, i * 100);
+        });
 
         // Download nav text logos
         setTimeout(() => {
@@ -768,10 +856,10 @@
               downloadLogo(
                 `nav-text-${size.id}`,
                 `virtuserve-nav-text-${size.w}x${size.h}.png`
-              )
-            }, i * 100)
-          })
-        }, 800)
+              );
+            }, i * 100);
+          });
+        }, 800);
 
         // Download footer text logos
         setTimeout(() => {
@@ -781,55 +869,63 @@
                 `footer-text-${size.id}`,
                 `virtuserve-footer-text-${size.w}x${size.h}.png`,
                 true
-              )
-            }, i * 100)
-          })
-        }, 1600)
+              );
+            }, i * 100);
+          });
+        }, 1600);
 
         // Download footer icon logos
         setTimeout(() => {
-          ;[40, 60, 80, 128, 256, 512].forEach((size, i) => {
+          [40, 60, 80, 128, 256, 512].forEach((size, i) => {
             setTimeout(() => {
               downloadLogo(
                 `footer-logo-${size}`,
                 `virtuserve-footer-logo-${size}x${size}.png`,
                 true
-              )
-            }, i * 100)
-          })
-        }, 2400)
+              );
+            }, i * 100);
+          });
+        }, 2400);
       }
 
       // Initialize all logos on page load
       window.onload = function () {
+        // Social Media Exports
+        drawNavLogoWithText("fb-cover-1200-630", 1200, 630);
+        drawNavLogo("fb-profile-180-180", 180);
+        drawNavLogo("ig-post-1080-1080", 1080);
+        drawNavLogo("ig-profile-320-320", 320);
+        drawNavLogoWithText("li-share-1200-627", 1200, 627);
+        drawNavLogo("li-profile-400-400", 400);
+
         // Nav icon logos
-        drawNavLogo('nav-logo-40', 40)
-        drawNavLogo('nav-logo-56', 56)
-        drawNavLogo('nav-logo-80', 80)
-        drawNavLogo('nav-logo-128', 128)
-        drawNavLogo('nav-logo-256', 256)
-        drawNavLogo('nav-logo-512', 512)
+        drawNavLogo("nav-logo-40", 40);
+        drawNavLogo("nav-logo-56", 56);
+        drawNavLogo("nav-logo-80", 80);
+        drawNavLogo("nav-logo-128", 128);
+        drawNavLogo("nav-logo-256", 256);
+        drawNavLogo("nav-logo-512", 512);
 
         // Nav text logos
-        drawNavLogoWithText('nav-text-300-80', 300, 80)
-        drawNavLogoWithText('nav-text-450-120', 450, 120)
-        drawNavLogoWithText('nav-text-600-160', 600, 160)
-        drawNavLogoWithText('nav-text-800-240', 800, 240)
+        drawNavLogoWithText("nav-text-300-80", 300, 80);
+        drawNavLogoWithText("nav-text-450-120", 450, 120);
+        drawNavLogoWithText("nav-text-600-160", 600, 160);
+        drawNavLogoWithText("nav-text-800-240", 800, 240);
 
         // Footer text logos
-        drawFooterLogoWithText('footer-text-300-80', 300, 80, true)
-        drawFooterLogoWithText('footer-text-450-120', 450, 120, true)
-        drawFooterLogoWithText('footer-text-600-160', 600, 160, true)
-        drawFooterLogoWithText('footer-text-800-240', 800, 240, true)
+        drawFooterLogoWithText("footer-text-300-80", 300, 80, true);
+        drawFooterLogoWithText("footer-text-450-120", 450, 120, true);
+        drawFooterLogoWithText("footer-text-600-160", 600, 160, true);
+        drawFooterLogoWithText("footer-text-800-240", 800, 240, true);
 
         // Footer icon logos
-        drawFooterLogo('footer-logo-40', 40, true)
-        drawFooterLogo('footer-logo-60', 60, true)
-        drawFooterLogo('footer-logo-80', 80, true)
-        drawFooterLogo('footer-logo-128', 128, true)
-        drawFooterLogo('footer-logo-256', 256, true)
-        drawFooterLogo('footer-logo-512', 512, true)
-      }
+        drawFooterLogo("footer-logo-40", 40, true);
+        drawFooterLogo("footer-logo-60", 60, true);
+        drawFooterLogo("footer-logo-80", 80, true);
+        drawFooterLogo("footer-logo-128", 128, true);
+        drawFooterLogo("footer-logo-256", 256, true);
+        drawFooterLogo("footer-logo-512", 512, true);
+      };
     </script>
   </body>
 </html>

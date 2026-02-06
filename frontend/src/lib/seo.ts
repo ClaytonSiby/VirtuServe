@@ -72,10 +72,11 @@ export function generateSEOMetadata({
 export const siteConfig = {
     name: 'VirtuServe',
     description: 'Professional Virtual Assistant Services for International Clients and Companies',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://virtuserve.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://virtuserveva.com',
     ogImage: '/og-image.jpg',
     links: {
-        linkedin: 'https://linkedin.com/company/virtuserve',
-        twitter: 'https://twitter.com/virtuserve',
+        linkedin: 'https://www.linkedin.com/company/virtuserve-professional-virtual-assistance/',
+        facebook: 'https://www.facebook.com/share/17xb1hXBjv/?mibextid=wwXIfr',
+        instagram: 'https://www.instagram.com/virtu.serve_?igsh=MWdneHA0aGpoYTNwaw==',
     },
 };
