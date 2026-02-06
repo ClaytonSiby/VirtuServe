@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Browser compatibility
-  swcMinify: true,
+  // Enable standalone output for Docker
+  output: 'standalone',
   compiler: {
     // Remove React properties in production
     reactRemoveProperties: process.env.NODE_ENV === "production",
