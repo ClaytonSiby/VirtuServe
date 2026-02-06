@@ -272,18 +272,57 @@ POST /api/booking
 ```
 
 ### Get Available Slots
-```
 GET /api/availability
 ```
 
 ## 🚢 Production Deployment
 
-### Build Production Images
+### Deployment Strategy
+
+This project uses a **multi-environment deployment strategy**:
+
+- **Production (Heroku)**: Deployed from `main` branch
+  - Frontend: https://virtuserveva.com
+  - Backend: https://virtuserve-api-8d1e0b1a84d7.herokuapp.com
+  
+- **QA/UAT (GitHub Pages)**: Deployed from `develop` branch
+  - URL: https://claytonsiby.github.io/VirtuServe
+  - Automatically deploys on push via GitHub Actions
+
+### Quick Deploy to Production
+
+**Using the deployment script:**
+
+```bash
+# Ensure you're on main branch
+git checkout main
+git pull origin main
+
+# If you have changes in develop, merge them first
+git merge develop
+
+# Deploy to Heroku (frontend + backend)
+./deploy-production.sh
+```
+
+**Manual deployment:**
+
+```bash
+# Deploy backend
+git subtree push --prefix backend heroku-backend main
+
+# Deploy frontend
+git subtree push --prefix frontend heroku-frontend main
+```
+
+> 📖 **For detailed deployment instructions**, see [DEPLOYMENT.md](DEPLOYMENT.md)
+
+### Build Production Images (Docker)
 ```bash
 make build
 ```
 
-### Start Production Services
+### Start Production Services (Docker)
 ```bash
 make prod
 ```
