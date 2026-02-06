@@ -217,23 +217,23 @@ export default function Home() {
                   >
                     <div className="grid grid-cols-2 gap-2 mb-2">
                       <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
-                        <div className="text-xs font-bold text-[#697184]">
+                        <div className="text-sm font-semibold text-[#697184]">
                           9-5
                         </div>
-                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                        <div className="text-[8px] font-semibold text-[#697184]/60 uppercase">
                           UK
                         </div>
                       </div>
                       <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
-                        <div className="text-xs font-bold text-[#697184]">
+                        <div className="text-sm font-semibold text-[#697184]">
                           8-5
                         </div>
-                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                        <div className="text-[8px] font-semibold text-[#697184]/60 uppercase">
                           SA
                         </div>
                       </div>
                     </div>
-                    <div className="text-[9px] text-[#697184] font-semibold uppercase tracking-wide text-center">
+                    <div className="text-[10px] text-[#697184] font-semibold uppercase tracking-wide text-center">
                       Support
                     </div>
                   </motion.div>
@@ -618,70 +618,6 @@ export default function Home() {
 
       {/* Client Success Metrics - Redesigned */}
       <section className="relative py-20 md:py-24 overflow-hidden bg-[#FAFAF9]">
-        {/* Elegant geometric background */}
-        <div className="absolute inset-0">
-          {/* Subtle layered gradient backdrop */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
-
-          {/* Elegant flowing organic shapes */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
-                fill="url(#gradient-blob1)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob1"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
-                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
-            <svg viewBox="0 0 600 600" className="w-full h-full">
-              <path
-                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
-                fill="url(#gradient-blob2)"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient-blob2"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Minimal dot pattern overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
-            }}
-          ></div>
-
-          {/* Subtle light rays */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
-          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           {/* Header */}
           <div className="text-center mb-16">
@@ -856,7 +792,7 @@ export default function Home() {
                   className="w-7 h-7 text-[#697184] mx-auto mb-2"
                   strokeWidth={1.5}
                 />
-                <p className="text-3xl font-extralight text-[#413F3D] mb-1">
+                <p className="text-3xl font-semibold text-[#413F3D] mb-1">
                   100+
                 </p>
                 <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
@@ -872,7 +808,7 @@ export default function Home() {
                   className="w-7 h-7 text-[#697184] mx-auto mb-2"
                   strokeWidth={1.5}
                 />
-                <p className="text-3xl font-extralight text-[#413F3D] mb-1">
+                <p className="text-3xl font-semibold text-[#413F3D] mb-1">
                   98%
                 </p>
                 <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
@@ -890,7 +826,7 @@ export default function Home() {
                 />
                 <div className="flex items-center justify-center gap-1.5 mb-1">
                   <div className="text-center">
-                    <p className="text-2xl font-extralight text-[#413F3D] leading-tight">
+                    <p className="text-2xl font-semibold text-[#413F3D] leading-tight">
                       9–5
                     </p>
                     <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
@@ -932,26 +868,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Elegant Divider */}
-      <div className="relative py-16 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="relative flex items-center justify-center">
-            {/* Center ornament */}
-            <div className="relative flex items-center gap-3">
-              <div className="h-px w-16 md:w-32 bg-gradient-to-r from-transparent to-[#697184]/20"></div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#D8CFD0]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#697184]/30"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-[#B1A6A4]"></div>
-              </div>
-              <div className="h-px w-16 md:w-32 bg-gradient-to-l from-transparent to-[#697184]/20"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section - Elegant Wave Design */}
-      <section className="relative py-32 md:py-40 overflow-hidden bg-gray-50">
+      <section className="relative py-32 md:py-40 overflow-hidden bg-[#F8F8F7]">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Premium Glass Card */}
