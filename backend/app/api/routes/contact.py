@@ -42,7 +42,9 @@ async def send_email_notification(contact_data: dict):
 
 
 @router.post("/contact", response_model=ContactResponse)
-async def submit_contact_form(request: ContactRequest, background_tasks: BackgroundTasks):
+async def submit_contact_form(
+    request: ContactRequest, background_tasks: BackgroundTasks
+):
     """
     Handle contact form submissions with spam protection
     """
@@ -70,7 +72,9 @@ async def submit_contact_form(request: ContactRequest, background_tasks: Backgro
 
 
 @router.post("/booking", response_model=ContactResponse)
-async def submit_booking(request: BookingRequest, background_tasks: BackgroundTasks):
+async def submit_booking(
+    request: BookingRequest, background_tasks: BackgroundTasks
+):
     """
     Handle discovery call booking requests
     """

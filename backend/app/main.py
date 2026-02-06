@@ -35,7 +35,10 @@ app.include_router(contact.router, prefix="/api", tags=["contact"])
 @app.get("/")
 async def root():
     return {
-        "message": "Welcome to VirtuServe API - Professional Virtual Assistant Services",
+        "message": (
+            "Welcome to VirtuServe API - "
+            "Professional Virtual Assistant Services"
+        ),
         "docs": "/docs",
         "version": "1.0.0"
     }
