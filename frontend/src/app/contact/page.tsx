@@ -120,7 +120,7 @@ export default function Contact() {
 
               <div className="space-y-5">
                 <a
-                  href="mailto:hello@virtuserve.com"
+                  href="mailto:info@virtuserveva.com"
                   className="group flex items-start gap-5 p-6 bg-white border border-gray-200/80 rounded-2xl hover:shadow-xl hover:border-accent-300/70 transition-all duration-300 overflow-hidden"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-accent-100 to-accent-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
@@ -131,7 +131,7 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-accent-600 font-medium text-base mb-1">
-                      hello@virtuserve.com
+                      info@virtuserveva.com
                     </p>
                     <p className="text-gray-500 text-sm font-semibold">
                       24-hour response time
@@ -428,7 +428,7 @@ export default function Contact() {
                           <p className="font-medium">Something went wrong</p>
                           <p className="text-sm mt-1 text-red-700 font-light">
                             {errorMessage ||
-                              "Please try again or email us directly at hello@virtuserve.com"}
+                              "Please try again or email us directly at info@virtuserveva.com"}
                           </p>
                         </div>
                       </div>

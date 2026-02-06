@@ -153,7 +153,7 @@ export default function Footer() {
               </h4>
               <div className="space-y-4">
                 <a
-                  href="mailto:hello@virtuserve.com"
+                  href="mailto:info@virtuserveva.com"
                   className="text-gray-300 hover:text-white transition-colors text-[15px] font-light flex items-start gap-3 group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#697184] group-hover:border-[#697184] flex items-center justify-center flex-shrink-0 transition-all duration-300">
@@ -166,7 +166,7 @@ export default function Footer() {
                     <span className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-semibold">
                       Email
                     </span>
-                    <span className="break-all">hello@virtuserve.com</span>
+                    <span className="break-all">info@virtuserveva.com</span>
                   </div>
                 </a>
                 <a
