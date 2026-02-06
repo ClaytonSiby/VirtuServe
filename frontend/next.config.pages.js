@@ -3,6 +3,12 @@ const nextConfig = {
   output: "export",
   basePath: "/VirtuServe",
   assetPrefix: "/VirtuServe/",
+  // Browser compatibility
+  swcMinify: true,
+  compiler: {
+    // Remove React properties in production
+    reactRemoveProperties: process.env.NODE_ENV === "production",
+  },
   images: {
     unoptimized: true,
   },
@@ -14,6 +20,7 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_SITE_URL ||
       "https://claytonsiby.github.io/VirtuServe",
     NEXT_PUBLIC_CALENDLY_URL: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
+    NEXT_PUBLIC_BASE_PATH: "/VirtuServe",
   },
   // Performance optimizations (production only)
   ...(process.env.NODE_ENV === "production" && {

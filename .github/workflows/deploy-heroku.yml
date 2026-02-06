@@ -1,0 +1,53 @@
+name: Deploy to Heroku Production
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    deploy-backend:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # Required for git subtree
+
+            - name: Deploy backend to Heroku
+              uses: akhileshns/heroku-deploy@v3.13.15
+              with:
+                  heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+                  heroku_app_name: "virtuserve-api"
+                  heroku_email: ${{ secrets.HEROKU_EMAIL }}
+                  appdir: "backend"
+                  buildpack: "heroku/python"
+
+    deploy-frontend:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # Required for git subtree
+
+            - name: Deploy frontend to Heroku
+              uses: akhileshns/heroku-deploy@v3.13.15
+              with:
+                  heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+                  heroku_app_name: "virtuserve-web"
+                  heroku_email: ${{ secrets.HEROKU_EMAIL }}
+                  appdir: "frontend"
+                  buildpack: "heroku/nodejs"
+
+    notify-success:
+        runs-on: ubuntu-latest
+        needs: [deploy-backend, deploy-frontend]
+        if: success()
+        steps:
+            - name: Deployment successful
+              run: |
+                  echo "🎉 Deployment to production successful!"
+                  echo "Backend: https://virtuserve-api-8d1e0b1a84d7.herokuapp.com"
+                  echo "Frontend: https://virtuserveva.com"

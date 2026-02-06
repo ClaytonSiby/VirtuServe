@@ -56,12 +56,17 @@ async def submit_contact_form(request: ContactRequest, background_tasks: Backgro
 
         return ContactResponse(
             success=True,
-            message="Thank you for contacting us! We'll get back to you within 24 hours.",
+            message=(
+                "Thank you for contacting us! "
+                "We'll get back to you within 24 hours."
+            ),
             timestamp=datetime.now()
         )
-    except Exception as e:
+    except Exception:
         raise HTTPException(
-            status_code=500, detail="Failed to submit contact form")
+            status_code=500,
+            detail="Failed to submit contact form"
+        )
 
 
 @router.post("/booking", response_model=ContactResponse)
@@ -79,12 +84,17 @@ async def submit_booking(request: BookingRequest, background_tasks: BackgroundTa
 
         return ContactResponse(
             success=True,
-            message="Your discovery call has been scheduled! You'll receive a confirmation email shortly.",
+            message=(
+                "Your discovery call has been scheduled! "
+                "You'll receive a confirmation email shortly."
+            ),
             timestamp=datetime.now()
         )
-    except Exception as e:
+    except Exception:
         raise HTTPException(
-            status_code=500, detail="Failed to book discovery call")
+            status_code=500,
+            detail="Failed to book discovery call"
+        )
 
 
 @router.get("/availability")

@@ -1,6 +1,6 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
 from datetime import datetime
 
 router = APIRouter()
@@ -32,7 +32,10 @@ async def chat(request: ConversationRequest):
     # This is a placeholder implementation
     # In production, integrate with AI services like OpenAI, Anthropic, etc.
 
-    response_text = f"Thank you for your message: '{request.message}'. This is a placeholder response from VirtuServe assistant."
+    response_text = (
+        f"Thank you for your message: '{request.message}'. "
+        "This is a placeholder response from VirtuServe assistant."
+    )
 
     return ConversationResponse(
         response=response_text,
