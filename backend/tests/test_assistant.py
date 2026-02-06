@@ -18,7 +18,7 @@ def test_chat_with_conversation_id(client):
     payload = {
         "message": "Follow-up question",
         "conversation_id": "test-conv-123",
-        "language": "en"
+        "language": "en",
     }
     response = client.post("/api/assistant/chat", json=payload)
     assert response.status_code == 200

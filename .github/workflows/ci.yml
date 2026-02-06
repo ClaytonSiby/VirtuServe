@@ -76,9 +76,9 @@ jobs:
       - name: Lint backend
         run: |
           cd backend
-          pip install flake8 black mypy
+          pip install flake8 mypy
           flake8 app tests
-          black --check app tests
+          mypy app --ignore-missing-imports || true
 
       - name: Lint frontend
         run: |

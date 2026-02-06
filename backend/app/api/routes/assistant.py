@@ -40,7 +40,7 @@ async def chat(request: ConversationRequest):
     return ConversationResponse(
         response=response_text,
         conversation_id=request.conversation_id or "new-conversation",
-        timestamp=datetime.now()
+        timestamp=datetime.now(),
     )
 
 
@@ -50,8 +50,4 @@ async def get_conversation(conversation_id: str):
     Retrieve conversation history
     """
     # Placeholder implementation
-    return {
-        "conversation_id": conversation_id,
-        "messages": [],
-        "status": "active"
-    }
+    return {"conversation_id": conversation_id, "messages": [], "status": "active"}

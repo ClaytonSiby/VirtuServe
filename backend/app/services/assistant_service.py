@@ -13,10 +13,7 @@ class AssistantService:
         pass
 
     async def process_message(
-        self,
-        message: str,
-        conversation_id: Optional[str] = None,
-        language: str = "en"
+        self, message: str, conversation_id: Optional[str] = None, language: str = "en"
     ) -> dict:
         """
         Process user message and generate assistant response
@@ -27,7 +24,7 @@ class AssistantService:
         response = {
             "message": f"Processed: {message}",
             "conversation_id": conversation_id or "new-id",
-            "language": language
+            "language": language,
         }
 
         return response

@@ -8,7 +8,7 @@ app = FastAPI(
         "Professional Virtual Assistant Services API "
         "for international clients and companies"
     ),
-    version="1.0.0"
+    version="1.0.0",
 )
 
 # Configure CORS
@@ -20,7 +20,7 @@ app.add_middleware(
         "https://virtuserveva.com",
         "https://www.virtuserveva.com",
         "https://virtuserve-web.herokuapp.com",
-        "https://virtuserve-api.herokuapp.com"
+        "https://virtuserve-api.herokuapp.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -36,9 +36,8 @@ app.include_router(contact.router, prefix="/api", tags=["contact"])
 async def root():
     return {
         "message": (
-            "Welcome to VirtuServe API - "
-            "Professional Virtual Assistant Services"
+            "Welcome to VirtuServe API - " "Professional Virtual Assistant Services"
         ),
         "docs": "/docs",
-        "version": "1.0.0"
+        "version": "1.0.0",
     }
