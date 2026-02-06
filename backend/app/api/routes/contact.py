@@ -48,7 +48,7 @@ async def submit_contact_form(request: ContactRequest, background_tasks: Backgro
     """
     try:
         # Store contact submission (implement database storage)
-        contact_data = request.dict()
+        contact_data = request.model_dump()
         contact_data['timestamp'] = datetime.now()
 
         # Send email notification in background
@@ -71,7 +71,7 @@ async def submit_booking(request: BookingRequest, background_tasks: BackgroundTa
     """
     try:
         # Store booking (implement database storage)
-        booking_data = request.dict()
+        booking_data = request.model_dump()
         booking_data['timestamp'] = datetime.now()
 
         # Send confirmation email in background

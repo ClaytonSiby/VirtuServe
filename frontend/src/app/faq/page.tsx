@@ -1,8 +1,7 @@
 "use client";
 
-import { HelpCircle, ArrowRight, ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
 import PageContainer from "@/components/ui/PageContainer";
-import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,7 +12,7 @@ const faqs = [
       {
         question: "What is VirtuServe?",
         answer:
-          "VirtuServe is a premium virtual assistant service led by Sheridan De Laroche, offering professional administrative support, customer service, digital marketing, property management, and executive assistance to international clients and businesses. We specialize in helping you streamline operations and focus on what matters most.",
+          "VirtuServe is a premium virtual assistant service led by Sheridan de Laroche, offering professional administrative support, customer service, digital marketing, property management, and executive assistance to international clients and businesses. We specialize in helping you streamline operations and focus on what matters most.",
       },
       {
         question: "How do I get started with VirtuServe?",
@@ -38,7 +37,7 @@ const faqs = [
       {
         question: "How much do your services cost?",
         answer:
-          "We offer flexible pricing with three main packages: Essential ($500/month for 20 hours), Professional ($900/month for 40 hours), and Enterprise ($1,600/month for 80 hours). Custom packages are available for unique requirements. All packages include dedicated support and regular progress updates.",
+          "We offer flexible pricing with three main packages: Starter (£800/month for 40 hours), Professional (£1,280/month for 80 hours), and Expert (£2,240/month for 160 hours). All packages include a one-time £1,000 placement fee. Custom packages are available for unique requirements. Pricing is available in GBP (£) and ZAR (R). All packages include dedicated support and regular progress updates.",
       },
       {
         question: "Can I customize a package to fit my needs?",
@@ -131,25 +130,23 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-primary-50/30 to-white">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-primary-900/95 via-accent-900/90 to-primary-800/95">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-600/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-accent-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-3xl" />
-
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
         <PageContainer>
           <div className="relative z-10 max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-primary-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-              <span className="text-xs font-medium text-primary-900 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-sm">
+              <span className="text-xs font-medium text-[#697184] uppercase tracking-[0.25em]">
                 Help Center
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-white">
-              Frequently Asked Questions
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-[#413F3D] leading-[1.1] tracking-tight">
+              Frequently Asked{" "}
+              <span className="block mt-2 font-serif italic text-[#697184]">
+                Questions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-[#413F3D]/70 font-light leading-relaxed">
               Find answers to common questions about our services, pricing, and
               how we work
             </p>
@@ -158,16 +155,16 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-20 md:py-32">
+      <section className="py-20 md:py-32 bg-white">
         <PageContainer>
           <div className="max-w-4xl mx-auto">
             {faqs.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-16 last:mb-0">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-primary-200">
-                    <HelpCircle className="w-5 h-5 text-accent-700" />
+                  <div className="w-10 h-10 rounded-xl bg-[#F2F1EF] flex items-center justify-center border border-[#697184]/20">
+                    <HelpCircle className="w-5 h-5 text-[#697184]" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-light text-primary-900">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-[#413F3D] tracking-tight">
                     {category.category}
                   </h2>
                 </div>
@@ -180,17 +177,17 @@ export default function FAQPage() {
                     return (
                       <div
                         key={index}
-                        className="bg-white border border-gray-200/60 rounded-xl overflow-hidden hover:border-accent-300/50 transition-all duration-300 hover:shadow-md"
+                        className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#697184]/30 transition-all duration-300 hover:shadow-md"
                       >
                         <button
                           onClick={() => toggleItem(categoryIndex, index)}
-                          className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-gray-50/50 transition-colors duration-200"
+                          className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-[#F2F1EF]/30 transition-colors duration-200"
                         >
-                          <h3 className="text-lg md:text-xl font-medium text-gray-900 pr-4">
+                          <h3 className="text-[17px] md:text-[19px] font-semibold text-[#413F3D] pr-4 tracking-tight">
                             {faq.question}
                           </h3>
                           <ChevronDown
-                            className={`w-5 h-5 flex-shrink-0 text-accent-600 transition-transform duration-300 ${
+                            className={`w-5 h-5 flex-shrink-0 text-[#697184] transition-transform duration-300 ${
                               isOpen ? "rotate-180" : ""
                             }`}
                           />
@@ -201,8 +198,8 @@ export default function FAQPage() {
                           }`}
                         >
                           <div className="px-6 pb-6 pt-2">
-                            <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-4" />
-                            <p className="text-gray-600 font-light leading-relaxed">
+                            <div className="h-px bg-gray-200 mb-4" />
+                            <p className="text-[15px] text-[#413F3D]/75 font-light leading-[1.7]">
                               {faq.answer}
                             </p>
                           </div>
@@ -218,43 +215,42 @@ export default function FAQPage() {
       </section>
 
       {/* Still Have Questions CTA */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-radial from-accent-200/50 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-200/40 to-transparent blur-3xl"></div>
-        </div>
-
+      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-[#F2F1EF]/40 via-white/80 to-[#B1A6A4]/10">
         <PageContainer>
           <div className="max-w-5xl mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 shadow-sm">
-                  <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">
-                    We're Here to Help
+                <div className="inline-flex items-center gap-2 bg-white border border-[#697184]/20 rounded-full px-4 py-2 shadow-sm">
+                  <span className="text-xs font-medium text-[#697184] uppercase tracking-wider">
+                    We&apos;re Here to Help
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 leading-tight">
-                  Still Have Questions?
+                <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-light text-[#413F3D] leading-[1.15] tracking-tight">
+                  Still Have{" "}
+                  <span className="font-serif italic text-[#697184]">
+                    Questions?
+                  </span>
                 </h2>
 
-                <p className="text-xl text-gray-600 font-light leading-relaxed">
-                  Can't find what you're looking for? Book a free discovery call
-                  and we'll answer all your questions personally.
+                <p className="text-lg md:text-xl text-[#413F3D]/70 font-light leading-[1.7]">
+                  Can&apos;t find what you&apos;re looking for? Book a free
+                  discovery call and we&apos;ll answer all your questions
+                  personally.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link
                     href="/contact"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-500 to-primary-500 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-[#697184] via-[#413F3D] to-[#697184] text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                   >
                     <span>Contact Us</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-gray-300 text-gray-900 font-medium hover:border-accent-400 hover:bg-accent-50/50 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-[#697184]/30 text-[#413F3D] font-medium hover:border-[#697184] hover:bg-[#F2F1EF]/50 transition-all duration-300"
                   >
                     View Services
                   </Link>
@@ -263,38 +259,38 @@ export default function FAQPage() {
 
               {/* Right: Quick Stats */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-4xl font-bold text-accent-600 mb-2">
+                <div className="bg-white border border-[#697184]/20 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-4xl font-bold text-[#697184] mb-2">
                     24h
                   </div>
-                  <div className="text-sm text-gray-700 font-medium">
+                  <div className="text-sm text-[#413F3D] font-medium">
                     Response Time
                   </div>
                 </div>
 
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-4xl font-bold text-primary-600 mb-2">
+                <div className="bg-gradient-to-br from-[#D8CFD0]/40 to-[#B1A6A4]/20 border border-[#D8CFD0]/30 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-4xl font-bold text-[#697184] mb-2">
                     Free
                   </div>
-                  <div className="text-sm text-gray-700 font-medium">
-                    Consultation
+                  <div className="text-sm text-[#413F3D] font-medium">
+                    Discovery Call
                   </div>
                 </div>
 
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-4xl font-bold text-primary-600 mb-2">
+                <div className="bg-white border border-[#697184]/20 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-4xl font-bold text-[#697184] mb-2">
                     98%
                   </div>
-                  <div className="text-sm text-gray-700 font-medium">
+                  <div className="text-sm text-[#413F3D] font-medium">
                     Satisfaction
                   </div>
                 </div>
 
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-4xl font-bold text-accent-600 mb-2">
+                <div className="bg-white border border-[#697184]/20 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-4xl font-bold text-[#697184] mb-2">
                     10+
                   </div>
-                  <div className="text-sm text-gray-700 font-medium">
+                  <div className="text-sm text-[#413F3D] font-medium">
                     Years Exp.
                   </div>
                 </div>

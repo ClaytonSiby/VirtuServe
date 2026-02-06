@@ -18,7 +18,7 @@ export default function About() {
           <p className="text-xl max-w-3xl mx-auto">
             Your professional story, background, experience, and what drives
             you. This helps build trust with international clients who want to
-            know who they're working with.
+            know who they&apos;re working with.
           </p>
         </div>
       </section>
@@ -41,13 +41,13 @@ export default function About() {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
               What started as a one-person operation has grown into a
               professional virtual assistant service that supports businesses
-              across multiple time zones and industries. We've worked with
+              across multiple time zones and industries. We&apos;ve worked with
               startups, established companies, solopreneurs, and everything in
               between.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              Our approach is simple: we treat your business like it's our own.
-              Every task, no matter how small, receives the attention and
+              Our approach is simple: we treat your business like it&apos;s our
+              own. Every task, no matter how small, receives the attention and
               professionalism it deserves. We believe in building long-term
               partnerships, not just completing one-off tasks.
             </p>
@@ -116,9 +116,9 @@ export default function About() {
                   Proactive Communication
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We don't wait for you to check in. We provide regular updates,
-                  flag potential issues early, and keep you informed every step
-                  of the way.
+                  We don&apos;t wait for you to check in. We provide regular
+                  updates, flag potential issues early, and keep you informed
+                  every step of the way.
                 </p>
               </div>
             </div>
@@ -207,10 +207,10 @@ export default function About() {
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-4xl font-bold mb-4">Let&apos;s Work Together</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Ready to experience professional virtual assistant services that
-            truly understand your needs? Let's start with a conversation.
+            truly understand your needs? Let&apos;s start with a conversation.
           </p>
           <Link
             href="/contact"

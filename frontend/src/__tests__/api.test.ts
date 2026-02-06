@@ -1,4 +1,3 @@
-import { sendMessage, healthCheck } from '@/lib/api';
 import axios from 'axios';
 
 jest.mock('axios');
@@ -21,12 +20,8 @@ describe('API Functions', () => {
         mockedAxios.create.mockReturnValue({
             post: jest.fn().mockResolvedValue(mockResponse),
             get: jest.fn(),
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } as any);
-
-        const request = {
-            message: 'Hello',
-            language: 'en',
-        };
 
         // This will fail in the actual test but shows the structure
         // You'll need to properly mock axios.create

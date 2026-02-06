@@ -1,462 +1,357 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Calendar,
   Mail,
   Globe,
-  Shield,
-  Zap,
   Search,
   CheckCircle,
   Sparkles,
   ArrowRight,
   TrendingUp,
   Users,
-  Clock,
   Star,
-  Target,
-  Award,
-  BarChart3,
-  Headphones,
+  Quote,
+  Clock,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { getImagePath } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-beige-50 via-white to-beige-200/20">
-      {/* Hero Section - Refined & Eye-Catching */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        {/* Elegant background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent-200/20 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary-200/15 to-transparent blur-3xl" />
-        </div>
+    <main className="min-h-screen">
+      {/* Hero Section - Premium & Modern */}
+      <section className="relative min-h-[70vh] overflow-hidden flex items-center pt-20 pb-12 bg-[#F2F1EF]">
+        {/* Plain hero background */}
+        <div className="absolute inset-0 bg-[#F2F1EF]" />
 
-        <div className="container mx-auto px-4 relative z-10 pt-12 md:pt-16">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 py-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-              {/* Left: Hero Content */}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left: Redesigned Premium Content */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -60 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-8 lg:pt-8"
+                transition={{
+                  duration: 1.2,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: 0.3,
+                }}
+                className="relative space-y-7 order-1"
               >
-                {/* Premium Badge */}
+                {/* Premium badge with enhanced design */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent-500/10 to-primary-500/10 border border-accent-300/30"
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-[#F2F1EF] to-[#D8CFD0]/50 backdrop-blur-xl border border-[#697184]/30 shadow-lg"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-accent-600" />
-                  <span className="text-xs font-medium text-primary-900 tracking-wider uppercase">
-                    Premium Virtual Services
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <Sparkles className="w-4 h-4 text-[#697184]" />
+                  </motion.div>
+                  <span className="text-xs font-semibold text-[#697184] uppercase tracking-[0.2em]">
+                    Elite Virtual Support
                   </span>
                 </motion.div>
 
-                {/* Headline - Balanced Typography */}
+                {/* Powerful headline */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                  className="space-y-4"
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="space-y-5"
                 >
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-                    <span className="bg-gradient-to-r from-primary-900 to-primary-700 bg-clip-text text-transparent">
-                      Elevate Your Business
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tighter leading-[0.95]">
+                    <span className="block mb-2">
+                      <span className="text-[#2C2A29]">Your Business,</span>
                     </span>
-                    <br />
-                    <span className="relative inline-block mt-2">
-                      <span className="bg-gradient-to-r from-accent-600 to-primary-600 bg-clip-text text-transparent">
-                        with Expert Support
+                    <span className="block relative">
+                      <span className="relative inline-block">
+                        <span className="text-[#4A5568]">Elevated</span>
+                        <motion.div
+                          initial={{ scaleX: 0 }}
+                          animate={{ scaleX: 1 }}
+                          transition={{
+                            duration: 1.5,
+                            delay: 1.2,
+                            ease: "easeOut",
+                          }}
+                          className="absolute -bottom-2 left-0 right-0 h-1.5 bg-gradient-to-r from-[#697184]/30 via-[#B1A6A4]/40 to-transparent rounded-full origin-left"
+                        />
                       </span>
-                      <motion.div
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{
-                          duration: 1,
-                          delay: 0.5,
-                          ease: "easeOut",
-                        }}
-                        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full origin-left"
-                      />
                     </span>
                   </h1>
+
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    className="text-xl md:text-2xl text-[#374151] font-light leading-relaxed max-w-xl"
+                  >
+                    Where sophisticated{" "}
+                    <span className="font-normal italic">
+                      virtual assistance
+                    </span>{" "}
+                    meets visionary ambition. Transform your operations with
+                    premium support tailored for excellence.
+                  </motion.p>
                 </motion.div>
 
-                {/* Description */}
-                <motion.p
+                {/* Modern CTA Buttons */}
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                  className="text-lg text-primary-700 max-w-xl leading-relaxed"
+                  transition={{ duration: 0.8, delay: 0.9 }}
+                  className="flex flex-col sm:flex-row gap-4"
                 >
-                  Premium virtual assistant services for entrepreneurs and
-                  companies ready to scale with sophistication.
-                </motion.p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Link href="/contact">
                     <motion.button
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.02, y: -3 }}
                       whileTap={{ scale: 0.98 }}
-                      className="group relative px-8 py-4 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-xl font-semibold shadow-xl shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
+                      className="group relative px-8 py-4 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white rounded-2xl font-bold shadow-2xl shadow-[#697184]/30 hover:shadow-[#697184]/50 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden"
                     >
-                      <span className="relative z-10 flex items-center gap-2">
-                        Get Started
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <span className="relative z-10 flex items-center gap-3">
+                        Begin Your Journey
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          }}
+                        >
+                          <ArrowRight className="w-5 h-5" />
+                        </motion.div>
                       </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-l from-[#697184] via-[#413F3D] to-[#697184]"
+                        initial={{ x: "100%" }}
+                        whileHover={{ x: 0 }}
+                        transition={{ duration: 0.4 }}
+                      />
                     </motion.button>
                   </Link>
                   <Link href="/services">
                     <motion.button
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.02, y: -3 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 bg-white/80 backdrop-blur-sm text-primary-900 rounded-xl font-semibold border-2 border-primary-300 hover:border-accent-500 hover:shadow-xl hover:shadow-accent-500/15 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="px-8 py-4 bg-[#F2F1EF] backdrop-blur-xl text-[#413F3D] rounded-2xl font-bold border-2 border-[#697184]/40 hover:border-[#697184] hover:shadow-2xl hover:shadow-[#697184]/20 transition-all duration-300"
                     >
-                      View Services
+                      Explore Services
                     </motion.button>
                   </Link>
-                </div>
+                </motion.div>
 
-                {/* Trust Indicators - Compact */}
-                <div className="flex flex-wrap items-center gap-6 pt-4">
-                  <div className="flex items-center gap-2">
-                    <div className="flex -space-x-2">
-                      {[1, 2, 3].map((i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{
-                            delay: 0.6 + i * 0.08,
-                            duration: 0.4,
-                            type: "spring",
-                          }}
-                          className="w-9 h-9 rounded-full bg-gradient-to-br from-accent-400 to-primary-400 border-2 border-white shadow-md"
-                        />
-                      ))}
-                    </div>
-                    <div>
-                      <div className="flex gap-0.5 mb-0.5">
+                {/* Redesigned Trust Indicators */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 1.1 }}
+                  className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2"
+                >
+                  {/* Client Rating */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", delay: 1.2 }}
+                    className="col-span-2 lg:col-span-2 p-4 bg-[#F2F1EF]/90 backdrop-blur-xl rounded-2xl border border-[#697184]/20 shadow-lg"
+                  >
+                    <div className="flex items-center gap-2.5 mb-1.5">
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3].map((i) => (
+                          <div
+                            key={i}
+                            className="w-7 h-7 rounded-full bg-gradient-to-br from-[#697184] via-[#B1A6A4] to-[#413F3D] border-2 border-white shadow-md flex items-center justify-center text-white text-[9px] font-bold"
+                          >
+                            {i}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex gap-0.5">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <Star
                             key={star}
-                            className="w-3 h-3 fill-accent-500 text-accent-500"
+                            className="w-3.5 h-3.5 fill-[#697184] text-[#697184]"
                           />
                         ))}
                       </div>
-                      <p className="text-xs font-semibold text-primary-800">
-                        500+ Clients
-                      </p>
                     </div>
-                  </div>
-                  <div className="h-8 w-px bg-primary-300" />
-                  <div>
-                    <p className="text-xl font-bold text-primary-900">98%</p>
-                    <p className="text-xs text-primary-600">Retention</p>
-                  </div>
-                </div>
+                    <p className="text-xs font-bold text-[#413F3D]">
+                      100+ Satisfied Clients
+                    </p>
+                  </motion.div>
+
+                  {/* Retention Rate */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", delay: 1.3 }}
+                    className="p-4 bg-gradient-to-br from-[#D8CFD0]/50 to-[#B1A6A4]/30 backdrop-blur-xl rounded-2xl border border-[#D8CFD0]/30 shadow-lg"
+                  >
+                    <p className="text-2xl font-bold text-[#413F3D] mb-0.5">
+                      98%
+                    </p>
+                    <p className="text-[10px] text-[#697184] font-semibold uppercase tracking-wide">
+                      Retention
+                    </p>
+                  </motion.div>
+
+                  {/* Support Hours */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", delay: 1.4 }}
+                    className="p-4 bg-gradient-to-br from-[#B1A6A4]/20 to-[#D8CFD0]/30 backdrop-blur-xl rounded-2xl border border-[#697184]/20 shadow-lg"
+                  >
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
+                        <div className="text-xs font-bold text-[#697184]">
+                          9-5
+                        </div>
+                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                          UK
+                        </div>
+                      </div>
+                      <div className="text-center p-1.5 bg-white/40 rounded-lg border border-[#697184]/10">
+                        <div className="text-xs font-bold text-[#697184]">
+                          8-5
+                        </div>
+                        <div className="text-[7px] font-medium text-[#697184]/60 uppercase">
+                          SA
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-[9px] text-[#697184] font-semibold uppercase tracking-wide text-center">
+                      Support
+                    </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
 
-              {/* Right: Feature Cards - Compact & Visual */}
+              {/* Right: Captivating Image with Left Curve */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 60 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="lg:sticky lg:top-24"
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                className="relative order-2"
               >
-                {/* Sophisticated Services Network Animation */}
-                <div className="relative bg-gradient-to-br from-white via-primary-50/30 to-accent-50/30 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-primary-200/40 overflow-hidden group">
-                  {/* Animated Background Effects */}
-                  <div className="absolute inset-0 opacity-30">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-radial from-accent-300/30 to-transparent blur-3xl" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-radial from-primary-300/30 to-transparent blur-3xl" />
-                  </div>
+                <div className="relative">
+                  {/* Multi-layered ambient glow */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.5 }}
+                    className="absolute -inset-12 bg-gradient-to-br from-[#697184]/20 via-[#B1A6A4]/15 to-[#f8f9fa]/10 blur-3xl"
+                  />
 
-                  <div className="relative z-10">
-                    <motion.h3
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.1 }}
-                      className="text-2xl md:text-3xl font-light text-primary-900 mb-2"
+                  {/* Floating decorative shapes */}
+                  {/* Image container with organic fluid shape */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 1.2,
+                      delay: 0.4,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="relative overflow-hidden"
+                    style={{
+                      borderRadius: "40% 60% 70% 30% / 50% 60% 40% 50%",
+                    }}
+                  >
+                    {/* Glass-morphic gradient border frame */}
+                    <div
+                      className="absolute -inset-[1px] bg-gradient-to-br from-[#697184]/40 via-[#B1A6A4]/30 to-transparent"
+                      style={{
+                        borderRadius: "40% 60% 70% 30% / 50% 60% 40% 50%",
+                      }}
+                    />
+
+                    <div
+                      className="relative bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-sm p-1"
+                      style={{
+                        borderRadius: "3rem 3rem 3rem 8rem",
+                      }}
                     >
-                      Professional Excellence
-                    </motion.h3>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      className="text-primary-600 text-sm md:text-base font-light leading-relaxed mb-8"
-                    >
-                      Seamlessly connected services tailored to your business
-                      needs
-                    </motion.p>
-
-                    {/* Redesigned Services Network */}
-                    <div className="relative h-[400px] md:h-[480px]">
-                      {/* Connection Lines using CSS */}
-                      <div className="absolute inset-0">
-                        {/* Line to Admin (Top) */}
-                        <motion.div
-                          initial={{ scaleY: 0, opacity: 0 }}
-                          animate={{ scaleY: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.4 }}
-                          className="absolute left-1/2 top-[12%] w-0.5 h-[38%] -translate-x-1/2 origin-bottom"
-                          style={{
-                            background: 'linear-gradient(to bottom, #697184, transparent)',
-                          }}
-                        />
-                        
-                        {/* Line to Support (Bottom) */}
-                        <motion.div
-                          initial={{ scaleY: 0, opacity: 0 }}
-                          animate={{ scaleY: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.5 }}
-                          className="absolute left-1/2 bottom-[12%] w-0.5 h-[38%] -translate-x-1/2 origin-top"
-                          style={{
-                            background: 'linear-gradient(to top, #697184, transparent)',
-                          }}
-                        />
-                        
-                        {/* Line to Marketing (Top Right) */}
-                        <motion.div
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.6 }}
-                          className="absolute top-[28%] right-[8%] w-[35%] h-0.5 origin-right"
-                          style={{
-                            background: 'linear-gradient(to left, #697184, transparent)',
-                            transform: 'rotate(-25deg)',
-                            transformOrigin: 'right center',
-                          }}
-                        />
-                        
-                        {/* Line to Analytics (Bottom Right) */}
-                        <motion.div
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.7 }}
-                          className="absolute bottom-[28%] right-[8%] w-[35%] h-0.5 origin-right"
-                          style={{
-                            background: 'linear-gradient(to left, #697184, transparent)',
-                            transform: 'rotate(25deg)',
-                            transformOrigin: 'right center',
-                          }}
-                        />
-                        
-                        {/* Line to Scheduling (Top Left) */}
-                        <motion.div
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.8 }}
-                          className="absolute top-[28%] left-[8%] w-[35%] h-0.5 origin-left"
-                          style={{
-                            background: 'linear-gradient(to right, #697184, transparent)',
-                            transform: 'rotate(25deg)',
-                            transformOrigin: 'left center',
-                          }}
-                        />
-                        
-                        {/* Line to Operations (Bottom Left) */}
-                        <motion.div
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.9 }}
-                          className="absolute bottom-[28%] left-[8%] w-[35%] h-0.5 origin-left"
-                          style={{
-                            background: 'linear-gradient(to right, #697184, transparent)',
-                            transform: 'rotate(-25deg)',
-                            transformOrigin: 'left center',
-                          }}
-                        />
-                      </div>
-
-                      {/* Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="absolute bottom-2 right-2 z-30 inline-flex items-center gap-2 bg-gradient-to-r from-accent-100 to-primary-100 border border-accent-200/60 rounded-full px-3 py-1.5 shadow-lg backdrop-blur-sm"
-                      >
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse" />
-                        <span className="text-[10px] font-semibold text-primary-900 uppercase tracking-wider">
-                          Integrated Services
-                        </span>
-                      </motion.div>
-
-                      {/* Center Hub */}
-                      <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{
-                          duration: 0.8,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 15,
+                      <div
+                        className="relative overflow-hidden"
+                        style={{
+                          borderRadius: "2.75rem 2.75rem 2.75rem 7.75rem",
                         }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                       >
-                        <div className="relative">
-                          <motion.div
-                            animate={{
-                              boxShadow: [
-                                "0 0 20px rgba(196, 170, 168, 0.4)",
-                                "0 0 40px rgba(196, 170, 168, 0.6)",
-                                "0 0 20px rgba(196, 170, 168, 0.4)",
-                              ],
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                            }}
-                            className="w-24 h-24 bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-3xl flex items-center justify-center shadow-2xl border-2 border-primary-200"
-                          >
-                            <motion.div
-                              animate={{ rotate: 360 }}
-                              transition={{
-                                duration: 20,
-                                repeat: Infinity,
-                                ease: "linear",
-                              }}
-                            >
-                              <Target className="w-12 h-12 text-accent-600" />
-                            </motion.div>
-                          </motion.div>
-                          <motion.div
-                            animate={{
-                              scale: [1, 1.3, 1],
-                              opacity: [0.5, 0, 0.5],
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                            }}
-                            className="absolute inset-0 border-2 border-accent-400/60 rounded-3xl"
-                          />
-                        </div>
-                      </motion.div>
+                        <Image
+                          src={getImagePath("/virtual_assistant.jpg")}
+                          alt="Premium Virtual Assistant"
+                          width={600}
+                          height={750}
+                          className="w-full aspect-[4/5] object-cover"
+                        />
 
-                      {/* Service Nodes */}
-                      {/* Admin - Top */}
-                      <motion.div
-                        initial={{ scale: 0, y: 20 }}
-                        animate={{ scale: 1, y: 0 }}
-                        transition={{ delay: 1, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute top-0 left-1/2 -translate-x-1/2 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center">
-                              <Mail className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Admin</p>
-                        </div>
-                      </motion.div>
+                        {/* Sophisticated gradient overlays for blending */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#f8f9fa]/40 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#B1A6A4]/10" />
+                        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#f8f9fa]/20" />
 
-                      {/* Marketing - Top Right */}
-                      <motion.div
-                        initial={{ scale: 0, x: -20 }}
-                        animate={{ scale: 1, x: 0 }}
-                        transition={{ delay: 1.1, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute top-[18%] right-0 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-beige-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-primary-200 group-hover:border-primary-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
-                              <TrendingUp className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Marketing</p>
-                        </div>
-                      </motion.div>
-
-                      {/* Analytics - Bottom Right */}
-                      <motion.div
-                        initial={{ scale: 0, x: -20 }}
-                        animate={{ scale: 1, x: 0 }}
-                        transition={{ delay: 1.2, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute bottom-[18%] right-0 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-beige-400/40 to-primary-300/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-beige-300 group-hover:border-beige-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-beige-400 to-beige-500 rounded-xl flex items-center justify-center">
-                              <BarChart3 className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Analytics</p>
-                        </div>
-                      </motion.div>
-
-                      {/* Support - Bottom */}
-                      <motion.div
-                        initial={{ scale: 0, y: -20 }}
-                        animate={{ scale: 1, y: 0 }}
-                        transition={{ delay: 1.3, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-primary-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-300 group-hover:border-accent-500 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-500 to-primary-500 rounded-xl flex items-center justify-center">
-                              <Headphones className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Support</p>
-                        </div>
-                      </motion.div>
-
-                      {/* Operations - Bottom Left */}
-                      <motion.div
-                        initial={{ scale: 0, x: 20 }}
-                        animate={{ scale: 1, x: 0 }}
-                        transition={{ delay: 1.4, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute bottom-[18%] left-0 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-400/40 to-accent-400/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-primary-300 group-hover:border-primary-500 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                              <Zap className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Operations</p>
-                        </div>
-                      </motion.div>
-
-                      {/* Scheduling - Top Left */}
-                      <motion.div
-                        initial={{ scale: 0, x: 20 }}
-                        animate={{ scale: 1, x: 0 }}
-                        transition={{ delay: 1.5, type: "spring" }}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="absolute top-[18%] left-0 z-10"
-                      >
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-300/40 to-primary-300/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                          <div className="relative bg-white rounded-2xl p-3 shadow-xl border-2 border-accent-200 group-hover:border-accent-400 transition-all">
-                            <div className="w-14 h-14 bg-gradient-to-br from-accent-400 to-primary-400 rounded-xl flex items-center justify-center">
-                              <Calendar className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                          <p className="text-primary-900 text-xs font-bold mt-2 text-center">Scheduling</p>
-                        </div>
-                      </motion.div>
+                        {/* Edge fade effect for seamless blending */}
+                        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#f8f9fa]/30 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f8f9fa]/50 to-transparent" />
+                      </div>
                     </div>
-                  </div>
+
+                    {/* Animated accent lines */}
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
+                      className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#f8f9fa] via-[#697184] to-[#f8f9fa] origin-center"
+                    />
+
+                    {/* Subtle shimmer effect */}
+                    <motion.div
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "200%" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        repeatDelay: 5,
+                        ease: "easeInOut",
+                      }}
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                    />
+                  </motion.div>
+
+                  {/* Scattered decorative dots for depth */}
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: [0.3, 0.6, 0.3], scale: 1 }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        delay: i * 0.5,
+                        ease: "easeInOut",
+                      }}
+                      className="absolute w-1.5 h-1.5 rounded-full bg-gradient-to-br from-[#697184] to-[#B1A6A4]"
+                      style={{
+                        top: `${15 + i * 12}%`,
+                        left: i % 2 === 0 ? "-4%" : "auto",
+                        right: i % 2 === 1 ? "-4%" : "auto",
+                      }}
+                    />
+                  ))}
                 </div>
               </motion.div>
             </div>
@@ -465,51 +360,65 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-white to-beige-50/50 relative overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="mb-16 text-center">
-              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-100/60 border border-primary-300/30 mb-6">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-                <span className="text-xs font-medium text-primary-800 tracking-wider uppercase">
+            <div className="mb-20 text-center">
+              <div className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-gradient-to-r from-slate-50/95 via-primary-50/90 to-slate-50/95 backdrop-blur-sm border border-slate-700/30 mb-8 shadow-lg hover:shadow-xl hover:border-[#697184]/30 transition-all duration-300">
+                <span className="text-xs font-semibold bg-gradient-to-r from-slate-900 to-primary-950 bg-clip-text text-transparent tracking-[0.25em] uppercase">
                   Service Breakdown
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-primary-900 mb-6 tracking-tight">
-                Explore Our Services
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-6 tracking-tight leading-tight">
+                Explore Our{" "}
+                <span className="bg-gradient-to-r from-slate-700 via-primary-800 to-slate-800 bg-clip-text text-transparent font-light">
+                  Services
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-primary-700 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto leading-relaxed mb-8">
                 Comprehensive solutions tailored to your needs
               </p>
+
+              {/* Elegant divider */}
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <div className="h-px w-24 bg-gradient-to-r from-transparent via-slate-700/40 to-slate-900/30"></div>
+                <div className="w-3 h-3 rounded-full bg-gradient-to-br from-slate-900 to-primary-950 shadow-lg shadow-slate-900/30"></div>
+                <div className="h-px w-24 bg-gradient-to-l from-transparent via-slate-700/40 to-slate-900/30"></div>
+              </div>
             </div>
 
             {/* Modern Service Cards Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Service Card 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#697184]/30 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Mail className="w-8 h-8 text-white" />
+                {/* Ambient glow effect */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D8CFD0]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#697184]/50">
+                    <Mail className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-4 tracking-tight">
+                    Administrative Support
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Email management, scheduling, data entry, and document
+                    organization
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Administrative Support
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Email management, scheduling, data entry, and document
-                  organization
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
 
               {/* Service Card 2 */}
@@ -518,24 +427,28 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#D8CFD0]/40 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#B1A6A4]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#697184]/50">
+                    <Users className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-4 tracking-tight">
+                    Customer Support
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Professional inquiry handling, CRM management, and client
+                    relations
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Customer Support
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Professional inquiry handling, CRM management, and client
-                  relations
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
 
               {/* Service Card 3 */}
@@ -544,23 +457,27 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#697184]/30 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-600 to-primary-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Globe className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D8CFD0]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#B1A6A4] to-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#B1A6A4]/50">
+                    <Globe className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-4 tracking-tight">
+                    Social Media Management
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Content scheduling, community engagement, and analytics
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Social Media Management
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Content scheduling, community engagement, and analytics
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
 
               {/* Service Card 4 */}
@@ -569,23 +486,27 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#B1A6A4]/40 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Search className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D8CFD0]/25 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#D8CFD0] to-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#D8CFD0]/50">
+                    <Search className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-4 tracking-tight">
+                    Research & Analysis
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Market research, competitor analysis, and data insights
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Research & Analysis
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Market research, competitor analysis, and data insights
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
 
               {/* Service Card 5 */}
@@ -594,23 +515,27 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#697184]/30 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-primary-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Sparkles className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D8CFD0]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#697184]/50">
+                    <Sparkles className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium text-[#413F3D] mb-4 tracking-tight">
+                    Content Creation
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Blog posts, newsletters, marketing copy, and presentations
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Content Creation
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Blog posts, newsletters, marketing copy, and presentations
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
 
               {/* Service Card 6 */}
@@ -619,23 +544,27 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="group bg-white/80 backdrop-blur-sm border border-primary-200 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:border-accent-300 transition-all duration-500"
+                className="group relative bg-white border border-[#697184]/20 rounded-[2rem] p-10 hover:shadow-xl hover:-translate-y-2 hover:border-[#697184]/30 transition-all duration-700 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <Calendar className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D8CFD0]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-[#697184] rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl border border-[#697184]/50">
+                    <Calendar className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-[#413F3D] mb-4 tracking-tight">
+                    Project Coordination
+                  </h3>
+                  <p className="text-[#413F3D]/70 font-light leading-relaxed mb-6">
+                    Task management, team coordination, and deadline tracking
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-2 text-[#413F3D] font-medium text-sm group-hover:gap-4 transition-all duration-300 hover:text-[#697184]"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
-                  Project Coordination
-                </h3>
-                <p className="text-primary-700 leading-relaxed mb-4">
-                  Task management, team coordination, and deadline tracking
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 text-accent-600 font-semibold text-sm group-hover:gap-3 transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
               </motion.div>
             </div>
 
@@ -645,23 +574,37 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-16 bg-gradient-to-br from-primary-50 via-beige-50 to-accent-50 rounded-3xl p-12 md:p-16 text-center border border-primary-200 relative overflow-hidden"
+              className="mt-20 relative bg-white rounded-[2.5rem] p-12 md:p-16 lg:p-20 text-center border border-[#697184]/20 shadow-2xl hover:shadow-xl hover:border-[#697184]/30 transition-all duration-700 overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-accent-200/30 to-transparent blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary-200/20 to-transparent blur-3xl" />
+              {/* Subtle decorative elements */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[#D8CFD0]/15 blur-3xl opacity-60" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#B1A6A4]/10 blur-3xl opacity-60" />
+
+              {/* Decorative corner accents */}
+              <div className="absolute top-8 right-8 w-24 h-24 border-t-2 border-r-2 border-[#697184]/15 rounded-tr-3xl"></div>
+              <div className="absolute bottom-8 left-8 w-24 h-24 border-b-2 border-l-2 border-[#697184]/15 rounded-bl-3xl"></div>
+
               <div className="relative z-10">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-primary-900 mb-4">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extralight text-[#413F3D] mb-6 tracking-tight leading-tight">
                   Need a Custom Solution?
                 </h3>
-                <p className="text-primary-700 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+                <p className="text-[#697184] text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
                   We tailor our services to match your specific business
                   requirements
                 </p>
+
+                {/* Elegant divider */}
+                <div className="flex items-center justify-center gap-3 mb-10">
+                  <div className="h-px w-16 bg-[#697184]/30"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#697184] shadow-sm"></div>
+                  <div className="h-px w-16 bg-[#697184]/30"></div>
+                </div>
+
                 <Link href="/contact">
                   <motion.button
-                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileHover={{ scale: 1.05, y: -4 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group px-8 py-4 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-xl font-normal text-lg shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
+                    className="group px-10 py-5 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(105,113,132,0.5)] transition-all duration-300 inline-flex items-center gap-3"
                   >
                     Get in Touch
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -673,228 +616,417 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Client Success Metrics */}
-      <section className="py-32 bg-gradient-to-b from-white via-beige-200/20 to-white relative overflow-hidden">
+      {/* Client Success Metrics - Redesigned */}
+      <section className="relative py-20 md:py-24 overflow-hidden bg-[#FAFAF9]">
+        {/* Elegant geometric background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-0 w-96 h-96 bg-accent-200/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-beige-200/30 rounded-full blur-3xl"></div>
+          {/* Subtle layered gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F2F1EF]/60 via-[#FAFAF9] to-[#D8CFD0]/30"></div>
+
+          {/* Elegant flowing organic shapes */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M150,50 Q250,80 350,50 T550,100 Q580,200 500,300 T400,500 Q300,550 200,480 T50,300 Q20,150 150,50 Z"
+                fill="url(#gradient-blob1)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob1"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#697184" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#B1A6A4" stopOpacity="0.25" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] opacity-20">
+            <svg viewBox="0 0 600 600" className="w-full h-full">
+              <path
+                d="M100,150 Q200,100 300,150 T500,200 Q550,300 480,400 T350,550 Q250,580 150,500 T50,350 Q30,200 100,150 Z"
+                fill="url(#gradient-blob2)"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient-blob2"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#D8CFD0" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#697184" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Minimal dot pattern overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(105, 113, 132, 0.08) 1px, transparent 1px)",
+              backgroundSize: "30px 30px",
+            }}
+          ></div>
+
+          {/* Subtle light rays */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-[#697184]/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-[1px] h-24 bg-gradient-to-b from-[#B1A6A4]/15 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-[1px] h-24 bg-gradient-to-b from-[#D8CFD0]/15 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
+          {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-100/60 border border-primary-300/30 mb-6">
-              <Users className="w-4 h-4 text-accent-600" />
-              <span className="text-xs font-medium text-primary-800 tracking-wider uppercase">
-                Client Testimonials
+            <div className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-[#697184]/20 mb-6 shadow-sm">
+              <span className="text-xs font-semibold text-[#413F3D] uppercase tracking-[0.25em]">
+                Success Stories
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-primary-900 tracking-tight">
-              Trusted by{" "}
-              <span className="bg-gradient-to-r from-accent-600 to-primary-600 bg-clip-text text-transparent">
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-6 text-[#413F3D] tracking-tight leading-[1.1]">
+              Trusted by
+              <span className="block mt-1 text-[#697184] font-light">
                 Industry Leaders
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-primary-700 max-w-2xl mx-auto leading-relaxed">
-              See how we've helped businesses achieve their goals
+            <p className="text-lg md:text-xl text-[#697184]/80 max-w-2xl mx-auto leading-relaxed font-light">
+              Real results from businesses that chose excellence
             </p>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
+          {/* Testimonials Grid - Compact & Elegant */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
             {/* Testimonial 1 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-4 h-4 fill-accent-500 text-accent-500"
-                  />
-                ))}
-              </div>
-              <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "VirtuServe transformed our workflow. Their attention to detail
-                and professionalism is unmatched. Highly recommend!"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center text-white font-semibold">
-                  SM
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#697184]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm border border-[#697184]/15 p-8 rounded-2xl hover:shadow-[0_20px_40px_-15px_rgba(65,63,61,0.12)] transition-all duration-500 hover:-translate-y-1 hover:border-[#697184]/25">
+                {/* Quote icon */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#F2F1EF]/60 flex items-center justify-center">
+                    <Quote
+                      className="w-6 h-6 text-[#697184]"
+                      strokeWidth={1.5}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-primary-900">
-                    Sarah Mitchell
-                  </p>
-                  <p className="text-xs text-primary-600">
-                    CEO, TechStart Inc.
-                  </p>
+
+                {/* Stars */}
+                <div className="flex items-center gap-1 mb-6">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star
+                      key={star}
+                      className="w-4 h-4 fill-[#D8CFD0] text-[#D8CFD0]"
+                    />
+                  ))}
+                </div>
+
+                {/* Testimonial text */}
+                <p className="text-[#413F3D]/80 leading-[1.7] mb-8 text-[15px] font-light">
+                  &quot;VirtuServe transformed our workflow. Their attention to
+                  detail and professionalism is unmatched. Highly
+                  recommend!&quot;
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#697184] to-[#413F3D] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
+                    DN
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#413F3D] text-[15px]">
+                      Debbie Neilson
+                    </p>
+                    <p className="text-xs text-[#697184]/70 font-medium">
+                      Northlands group of companies
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-4 h-4 fill-accent-500 text-accent-500"
-                  />
-                ))}
-              </div>
-              <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "Exceptional service! They handled everything seamlessly, giving
-                us more time to focus on growth. A game changer."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full flex items-center justify-center text-white font-semibold">
-                  JC
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#D8CFD0]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm border border-[#697184]/15 p-8 rounded-2xl hover:shadow-[0_20px_40px_-15px_rgba(65,63,61,0.12)] transition-all duration-500 hover:-translate-y-1 hover:border-[#697184]/25">
+                {/* Quote icon */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#D8CFD0]/40 flex items-center justify-center">
+                    <Quote
+                      className="w-6 h-6 text-[#697184]"
+                      strokeWidth={1.5}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-primary-900">James Chen</p>
-                  <p className="text-xs text-primary-600">
-                    Founder, Digital Wave
-                  </p>
+
+                {/* Stars */}
+                <div className="flex items-center gap-1 mb-6">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star
+                      key={star}
+                      className="w-4 h-4 fill-[#D8CFD0] text-[#D8CFD0]"
+                    />
+                  ))}
+                </div>
+
+                {/* Testimonial text */}
+                <p className="text-[#413F3D]/80 leading-[1.7] mb-8 text-[15px] font-light">
+                  &quot;Exceptional service! They handled everything seamlessly,
+                  giving us more time to focus on growth. A game changer.&quot;
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D8CFD0] to-[#B1A6A4] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
+                    RD
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#413F3D] text-[15px]">
+                      Robert de laroche
+                    </p>
+                    <p className="text-xs text-[#697184]/70 font-medium">
+                      de Laroche architecture
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 3 */}
-            <div className="group relative bg-white/80 backdrop-blur-sm border border-primary-200 p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent-300">
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-4 h-4 fill-accent-500 text-accent-500"
-                  />
-                ))}
-              </div>
-              <p className="text-primary-700 leading-relaxed mb-4 italic">
-                "Professional, reliable, and efficient. VirtuServe exceeded our
-                expectations in every way. Five stars!"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center text-white font-semibold">
-                  EP
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#B1A6A4]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm border border-[#697184]/15 p-8 rounded-2xl hover:shadow-[0_20px_40px_-15px_rgba(65,63,61,0.12)] transition-all duration-500 hover:-translate-y-1 hover:border-[#697184]/25">
+                {/* Quote icon */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#B1A6A4]/30 flex items-center justify-center">
+                    <Quote
+                      className="w-6 h-6 text-[#697184]"
+                      strokeWidth={1.5}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-primary-900">Emily Parker</p>
-                  <p className="text-xs text-primary-600">
-                    Director, Global Ventures
-                  </p>
+
+                {/* Stars */}
+                <div className="flex items-center gap-1 mb-6">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star
+                      key={star}
+                      className="w-4 h-4 fill-[#D8CFD0] text-[#D8CFD0]"
+                    />
+                  ))}
+                </div>
+
+                {/* Testimonial text */}
+                <p className="text-[#413F3D]/80 leading-[1.7] mb-8 text-[15px] font-light">
+                  &quot;Professional, reliable, and efficient. VirtuServe
+                  exceeded our expectations in every way. Five stars!&quot;
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-6 border-t border-[#697184]/10">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#B1A6A4] to-[#697184] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 shadow-md">
+                    OR
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#413F3D] text-[15px]">
+                      Olivier Reid
+                    </p>
+                    <p className="text-xs text-[#697184]/70 font-medium">
+                      Living redefined
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Stats Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
-              <p className="text-4xl font-bold text-accent-600 mb-2">500+</p>
-              <p className="text-sm text-primary-700 font-medium">
-                Happy Clients
-              </p>
+          {/* Stats Bar - Compact */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#697184]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative text-center p-6 bg-white/80 backdrop-blur-sm border border-[#697184]/15 rounded-xl hover:shadow-md hover:border-[#697184]/25 transition-all duration-500">
+                <Users
+                  className="w-7 h-7 text-[#697184] mx-auto mb-2"
+                  strokeWidth={1.5}
+                />
+                <p className="text-3xl font-extralight text-[#413F3D] mb-1">
+                  100+
+                </p>
+                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
+                  Happy Clients
+                </p>
+              </div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
-              <p className="text-4xl font-bold text-accent-600 mb-2">98%</p>
-              <p className="text-sm text-primary-700 font-medium">
-                Satisfaction Rate
-              </p>
+
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#697184]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative text-center p-6 bg-white/80 backdrop-blur-sm border border-[#697184]/15 rounded-xl hover:shadow-md hover:border-[#697184]/25 transition-all duration-500">
+                <TrendingUp
+                  className="w-7 h-7 text-[#697184] mx-auto mb-2"
+                  strokeWidth={1.5}
+                />
+                <p className="text-3xl font-extralight text-[#413F3D] mb-1">
+                  98%
+                </p>
+                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
+                  Satisfaction Rate
+                </p>
+              </div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
-              <p className="text-4xl font-bold text-accent-600 mb-2">24/7</p>
-              <p className="text-sm text-primary-700 font-medium">
-                Support Available
-              </p>
+
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#697184]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative text-center p-6 bg-white/80 backdrop-blur-sm border border-[#697184]/15 rounded-xl hover:shadow-md hover:border-[#697184]/25 transition-all duration-500">
+                <Clock
+                  className="w-7 h-7 text-[#697184] mx-auto mb-2"
+                  strokeWidth={1.5}
+                />
+                <div className="flex items-center justify-center gap-1.5 mb-1">
+                  <div className="text-center">
+                    <p className="text-2xl font-extralight text-[#413F3D] leading-tight">
+                      9–5
+                    </p>
+                    <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
+                      UK
+                    </p>
+                  </div>
+                  <div className="text-[#697184]/30 text-lg pb-2">|</div>
+                  <div className="text-center">
+                    <p className="text-2xl font-semibold text-[#413F3D] leading-tight">
+                      8–5
+                    </p>
+                    <p className="text-[8px] text-[#697184]/50 font-medium uppercase">
+                      SA
+                    </p>
+                  </div>
+                </div>
+                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
+                  Support Hours
+                </p>
+              </div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-primary-200">
-              <p className="text-4xl font-bold text-accent-600 mb-2">10+</p>
-              <p className="text-sm text-primary-700 font-medium">
-                Years Experience
-              </p>
+
+            <div className="group relative">
+              <div className="absolute inset-0 bg-[#697184]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative text-center p-6 bg-white/80 backdrop-blur-sm border border-[#697184]/15 rounded-xl hover:shadow-md hover:border-[#697184]/25 transition-all duration-500">
+                <Sparkles
+                  className="w-7 h-7 text-[#697184] mx-auto mb-2"
+                  strokeWidth={1.5}
+                />
+                <p className="text-3xl font-semibold text-[#413F3D] mb-1">
+                  10+
+                </p>
+                <p className="text-[10px] text-[#697184]/70 font-medium uppercase tracking-[0.12em]">
+                  Years Experience
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Redesigned */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        {/* Elegant Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-accent-50/30 to-beige-50"></div>
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent-300/30 to-transparent blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-primary-300/30 to-transparent blur-3xl"></div>
+      {/* Elegant Divider */}
+      <div className="relative py-16 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="relative flex items-center justify-center">
+            {/* Center ornament */}
+            <div className="relative flex items-center gap-3">
+              <div className="h-px w-16 md:w-32 bg-gradient-to-r from-transparent to-[#697184]/20"></div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#D8CFD0]"></div>
+                <div className="w-2 h-2 rounded-full bg-[#697184]/30"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#B1A6A4]"></div>
+              </div>
+              <div className="h-px w-16 md:w-32 bg-gradient-to-l from-transparent to-[#697184]/20"></div>
+            </div>
+          </div>
         </div>
+      </div>
 
+      {/* CTA Section - Elegant Wave Design */}
+      <section className="relative py-32 md:py-40 overflow-hidden bg-gray-50">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            {/* Main CTA Card */}
-            <div className="relative bg-gradient-to-br from-white via-white to-primary-50/30 rounded-3xl p-10 md:p-16 shadow-2xl border border-primary-200/60 overflow-hidden">
-              {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-radial from-accent-200/20 to-transparent blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-radial from-primary-200/20 to-transparent blur-2xl"></div>
-
+          <div className="max-w-5xl mx-auto">
+            {/* Premium Glass Card */}
+            <div className="relative bg-white/70 backdrop-blur-2xl rounded-[2.5rem] p-12 md:p-16 lg:p-20 shadow-[0_20px_70px_-15px_rgba(105,113,132,0.12)] border border-[#697184]/10 overflow-hidden">
               <div className="relative z-10">
                 {/* Badge */}
-                <div className="flex justify-center mb-8">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-100 to-primary-100 border border-accent-200/60 rounded-full px-5 py-2.5">
-                    <div className="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-semibold text-primary-900 uppercase tracking-wider">
-                      Ready to Get Started?
+                <div className="flex justify-center mb-10">
+                  <div className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/80 backdrop-blur-md border border-[#697184]/20 shadow-sm">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 bg-[#697184] rounded-full animate-pulse"></div>
+                      <div
+                        className="w-1.5 h-1.5 bg-[#697184] opacity-40 rounded-full animate-pulse"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
+                    <span className="text-[11px] font-bold text-[#413F3D] uppercase tracking-[0.25em]">
+                      Let&apos;s Work Together
                     </span>
                   </div>
                 </div>
 
                 {/* Heading */}
-                <div className="text-center mb-6">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-primary-900 leading-tight">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-[#413F3D] leading-[1.1] tracking-tight">
                     Transform Your Business
-                    <span className="block mt-2 bg-gradient-to-r from-accent-600 via-accent-500 to-primary-600 bg-clip-text text-transparent font-normal">
+                    <span className="block mt-2 font-normal">
                       Starting Today
                     </span>
                   </h2>
-                  <p className="text-lg md:text-xl text-primary-600 font-light leading-relaxed max-w-2xl mx-auto mt-6">
+                  <p className="text-lg md:text-xl text-[#413F3D]/70 font-light leading-relaxed max-w-2xl mx-auto">
                     Join forward-thinking companies that trust us to streamline
-                    their operations and accelerate growth
+                    their operations
                   </p>
                 </div>
 
                 {/* CTA Button */}
-                <div className="flex justify-center mb-12">
+                <div className="flex justify-center mb-16">
                   <Link
                     href="/contact"
-                    className="group relative inline-flex items-center gap-3 bg-gradient-to-br from-accent-500 to-primary-500 text-white px-10 py-5 rounded-xl font-normal text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/30 hover:-translate-y-1"
+                    className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_-15px_rgba(105,113,132,0.4)] hover:-translate-y-1"
                   >
-                    <span className="relative z-10">
-                      Book Free Consultation
+                    <span className="relative z-10 flex items-center gap-3">
+                      Book Discovery Call
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
-                    <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Link>
                 </div>
 
-                {/* Benefits Grid */}
+                {/* Benefits */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                      <CheckCircle className="w-6 h-6 text-accent-600" />
-                    </div>
-                    <span className="font-medium text-primary-900">
+                  <div className="flex items-center justify-center gap-3 text-[#413F3D]/80">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184] flex-shrink-0"
+                      strokeWidth={2}
+                    />
+                    <span className="text-sm font-medium">
                       No commitment required
                     </span>
                   </div>
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                      <CheckCircle className="w-6 h-6 text-accent-600" />
-                    </div>
-                    <span className="font-medium text-primary-900">
+                  <div className="flex items-center justify-center gap-3 text-[#413F3D]/80">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#697184] flex-shrink-0"
+                      strokeWidth={2}
+                    />
+                    <span className="text-sm font-medium">
                       Response within 24 hours
                     </span>
                   </div>
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white to-primary-50 border border-primary-200/60 rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                      <CheckCircle className="w-6 h-6 text-accent-600" />
-                    </div>
-                    <span className="font-medium text-primary-900">
-                      Free consultation
+                  <div className="flex items-center justify-center gap-3 text-[#413F3D]/80">
+                    <CheckCircle
+                      className="w-5 h-5 text-[#D8CFD0] flex-shrink-0"
+                      strokeWidth={2}
+                    />
+                    <span className="text-sm font-medium">
+                      Free discovery call
                     </span>
                   </div>
                 </div>

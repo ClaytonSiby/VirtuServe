@@ -23,8 +23,7 @@ VirtuServe is a professional marketing website for virtual assistant services fe
 ### Backend Features
 - **FastAPI**: Modern Python web framework
 - **Contact Forms**: With spam protection and email notifications
-- **Booking System**: API endpoints for discovery call scheduling
-- **Calendar Integration Ready**: Designed to integrate with Calendly, Cal.com, or Google Calendar
+- **Calendly Integration**: Seamless booking system for discovery calls integrated with Calendly
 - **Professional Email**: Support for custom domain email addresses
 
 ### What's Included
@@ -198,8 +197,8 @@ cp frontend/.env.example frontend/.env
 **Important Variables:**
 - `NEXT_PUBLIC_API_URL`: Backend API URL
 - `NEXT_PUBLIC_SITE_URL`: Your website URL (for SEO)
+- `NEXT_PUBLIC_CALENDLY_URL`: Your Calendly scheduling link (e.g., https://calendly.com/your-username/discovery-call)
 - Email service credentials (SendGrid, AWS SES, etc.)
-- Calendar API credentials (if using calendar integration)
 
 ## 🐳 Docker Commands
 
@@ -289,15 +288,44 @@ make build
 make prod
 ```
 
+### Calendly Integration Setup
+
+The application uses Calendly for scheduling discovery calls. To set it up:
+
+1. **Create a Calendly Account** (if you don't have one)
+   - Visit https://calendly.com and sign up
+   - Create an event type for your discovery calls (e.g., "30-Minute Discovery Call")
+
+2. **Get Your Calendly URL**
+   - In Calendly, go to your event type
+   - Copy the scheduling link (e.g., `https://calendly.com/your-username/discovery-call`)
+
+3. **Configure Environment Variable**
+   - Add to `frontend/.env`:
+     ```
+     NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/your-username/discovery-call
+     ```
+
+4. **Customize Your Calendly Settings**
+   - Set your availability hours
+   - Configure time zones
+   - Add custom questions
+   - Set up email notifications
+   - Customize booking confirmation messages
+
+The Calendly widget is embedded on the contact page and matches your site's branding with primary color (#1e40af).
+
 ### Deployment Checklist
 - [ ] Configure custom domain
 - [ ] Set up professional email addresses
 - [ ] Configure SSL/HTTPS certificates
 - [ ] Set up email service (SendGrid, AWS SES)
-- [ ] Integrate calendar system (Calendly, Cal.com, Google Calendar)
+- [ ] Set up Calendly account and configure discovery call event type
+- [ ] Add NEXT_PUBLIC_CALENDLY_URL to frontend environment variables
 - [ ] Set up analytics (Google Analytics, Plausible)
 - [ ] Configure environment variables
 - [ ] Test contact form submissions
+- [ ] Test Calendly booking widget
 - [ ] Test booking system
 - [ ] Verify SEO meta tags
 - [ ] Submit sitemap to search engines

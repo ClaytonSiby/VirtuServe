@@ -1,0 +1,76 @@
+/* Diagonal wave animations */
+@keyframes diagonalWave1 {
+  0%,
+  100% {
+    transform: translateX(-2%) translateY(-2%) rotate(0.5deg);
+  }
+  50% {
+    transform: translateX(2%) translateY(2%) rotate(-0.5deg);
+  }
+}
+
+@keyframes diagonalWave2 {
+  0%,
+  100% {
+    transform: translateX(2%) translateY(2%) rotate(-0.5deg);
+  }
+  50% {
+    transform: translateX(-2%) translateY(-2%) rotate(0.5deg);
+  }
+}
+
+@keyframes diagonalWave3 {
+  0%,
+  100% {
+    transform: translateX(-1.5%) translateY(1.5%) rotate(0.3deg);
+  }
+  50% {
+    transform: translateX(1.5%) translateY(-1.5%) rotate(-0.3deg);
+  }
+}
+
+/* Accent line animations */
+@keyframes accentLine1 {
+  0%,
+  100% {
+    transform: translateY(-50%) scaleX(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50%) scaleX(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes accentLine2 {
+  0%,
+  100% {
+    transform: translateY(-50%) scaleX(1.05);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-50%) scaleX(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Apply animations */
+.diagonalWave1 {
+  animation: diagonalWave1 20s ease-in-out infinite;
+}
+
+.diagonalWave2 {
+  animation: diagonalWave2 18s ease-in-out infinite;
+}
+
+.diagonalWave3 {
+  animation: diagonalWave3 22s ease-in-out infinite;
+}
+
+.accentLine1 {
+  animation: accentLine1 15s ease-in-out infinite;
+}
+
+.accentLine2 {
+  animation: accentLine2 17s ease-in-out infinite;
+}
