@@ -9,20 +9,21 @@ class AssistantService:
     """
 
     def __init__(self):
-        # Initialize AI client here
+        # TODO: Initialize AI client (OpenAI or Anthropic)
+        # Load VirtuServe business context and configuration
         pass
 
     async def process_message(
         self, message: str, conversation_id: Optional[str] = None, language: str = "en"
     ) -> dict:
         """
-        Process user message and generate assistant response
+        Process user message and generate VirtuServe assistant response
         """
-        # Placeholder implementation
-        # In production, call AI API here
+        # TODO: Call AI API with VirtuServe context
+        # Include information about VirtuServe services, pricing, and capabilities
 
         response = {
-            "message": f"Processed: {message}",
+            "message": f"VirtuServe received: {message}",
             "conversation_id": conversation_id or "new-id",
             "language": language,
         }
@@ -33,7 +34,7 @@ class AssistantService:
         self, conversation_id: str
     ) -> Optional[Conversation]:
         """
-        Retrieve conversation history from database
+        Retrieve VirtuServe conversation history from database
         """
-        # Placeholder implementation
+        # TODO: Implement database query for conversation retrieval
         return None

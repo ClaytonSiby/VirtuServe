@@ -289,33 +289,24 @@ This project uses a **multi-environment deployment strategy**:
   - URL: https://claytonsiby.github.io/VirtuServe
   - Automatically deploys on push via GitHub Actions
 
-### Quick Deploy to Production
+### Deploy to Production (Heroku)
 
-**Using the deployment script:**
+**Automatic deployment:**
+- Push to `main` branch triggers automatic deployment via GitHub Actions
+
+**Manual deployment:**
 
 ```bash
 # Ensure you're on main branch
 git checkout main
 git pull origin main
 
-# If you have changes in develop, merge them first
-git merge develop
-
-# Deploy to Heroku (frontend + backend)
-./deploy-production.sh
-```
-
-**Manual deployment:**
-
-```bash
 # Deploy backend
 git subtree push --prefix backend heroku-backend main
 
 # Deploy frontend
 git subtree push --prefix frontend heroku-frontend main
 ```
-
-> 📖 **For detailed deployment instructions**, see [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ### Build Production Images (Docker)
 ```bash

@@ -21,9 +21,6 @@ export default function CalendlyPreloader() {
       const script = document.createElement("script");
       script.src = "https://assets.calendly.com/assets/external/widget.js";
       script.async = true;
-      script.onload = () => {
-        console.log("Calendly widget preloaded successfully");
-      };
       document.body.appendChild(script);
 
       return () => {

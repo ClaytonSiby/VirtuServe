@@ -184,10 +184,11 @@ health:
 	@curl -f http://localhost:8000/api/health 2>/dev/null && echo "✅ Backend is healthy" || echo "❌ Backend is not responding"
 	@curl -f http://localhost:3000 2>/dev/null && echo "✅ Frontend is healthy" || echo "❌ Frontend is not responding"
 
-# Database (placeholder for future use)
+# Database initialization
+# TODO: Add database initialization when storage is implemented
 db-init:
 	@echo "📊 Database initialization..."
-	@echo "ℹ️  No database configured yet"
+	@echo "ℹ️  Database configuration pending - VirtuServe currently uses stateless API"
 
 # Development helpers
 dev-backend:

@@ -33,12 +33,11 @@ class ContactResponse(BaseModel):
 
 async def send_email_notification(contact_data: dict):
     """
-    Background task to send email notifications
-    In production, integrate with SendGrid, AWS SES, or similar
+    Background task to send email notifications for VirtuServe contact inquiries
+    TODO: Integrate with email service (SendGrid, AWS SES, or Resend)
     """
-    # Placeholder for email sending logic
-    print(f"Sending email notification for: {contact_data['email']}")
-    pass
+    # Email notification for new contact inquiry
+    print(f"VirtuServe: New contact inquiry from: {contact_data['email']}")
 
 
 @router.post("/contact", response_model=ContactResponse)
@@ -64,7 +63,8 @@ async def submit_contact_form(
             timestamp=datetime.now(),
         )
     except Exception:
-        raise HTTPException(status_code=500, detail="Failed to submit contact form")
+        raise HTTPException(
+            status_code=500, detail="Failed to submit contact form")
 
 
 @router.post("/booking", response_model=ContactResponse)
@@ -89,20 +89,22 @@ async def submit_booking(request: BookingRequest, background_tasks: BackgroundTa
             timestamp=datetime.now(),
         )
     except Exception:
-        raise HTTPException(status_code=500, detail="Failed to book discovery call")
+        raise HTTPException(
+            status_code=500, detail="Failed to book discovery call")
 
 
 @router.get("/availability")
 async def get_availability():
     """
-    Get available booking slots
-    In production, sync with calendar API (Google Calendar, Calendly, etc.)
+    Get available discovery call booking slots
+    TODO: Integrate with Calendly API or Google Calendar API
     """
-    # Placeholder implementation
     return {
         "available_slots": [
-            {"date": "2026-01-20", "times": ["09:00", "10:00", "14:00", "15:00"]},
-            {"date": "2026-01-21", "times": ["09:00", "11:00", "13:00", "16:00"]},
+            {"date": "2026-01-20",
+                "times": ["09:00", "10:00", "14:00", "15:00"]},
+            {"date": "2026-01-21",
+                "times": ["09:00", "11:00", "13:00", "16:00"]},
         ],
         "timezone": "UTC",
     }

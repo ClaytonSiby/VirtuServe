@@ -282,7 +282,7 @@ export default function Contact() {
                             onChange={handleChange}
                             required
                             className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-400/50 focus:border-accent-400 bg-white text-gray-900 transition-all hover:border-gray-400 font-light text-base"
-                            placeholder="john@company.com"
+                            placeholder="your.email@example.com"
                           />
                         </div>
                       </div>
@@ -305,7 +305,7 @@ export default function Contact() {
                             value={formData.company}
                             onChange={handleChange}
                             className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent-400/50 focus:border-accent-400 bg-white text-gray-900 transition-all hover:border-gray-400 font-light text-base"
-                            placeholder="Your Company"
+                            placeholder="Your Business Name"
                           />
                         </div>
                       </div>
