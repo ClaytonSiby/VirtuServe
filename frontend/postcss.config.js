@@ -3,7 +3,7 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {
       flexbox: "no-2009",
-      grid: "autoplace",
+      grid: false,
     },
   },
 };

@@ -38,19 +38,19 @@ export default function Navigation() {
           <div className="container mx-auto px-4">
             <div className="flex items-center h-20">
               {/* Logo - Client Selected Design */}
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" className="flex items-end gap-1 group">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="relative"
+                  className="relative mb-0.5"
                 >
                   <svg
-                    width="56"
-                    height="56"
+                    width="42"
+                    height="42"
                     viewBox="0 0 60 50"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="drop-shadow-lg"
+                    className="drop-shadow-md"
                   >
                     {/* V icon with color palette */}
                     <path
@@ -65,12 +65,23 @@ export default function Navigation() {
                     />
                   </svg>
                 </motion.div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-medium bg-gradient-to-r from-[#697184] via-[#413F3D] to-[#697184] bg-clip-text text-transparent tracking-tight">
-                    VirtuServe
+                <div className="flex flex-col pb-0.5">
+                  <span
+                    className="text-[32px] leading-none"
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontWeight: 400,
+                      color: "#413F3D",
+                      letterSpacing: "-0.05em",
+                    }}
+                  >
+                    irtuServe
                   </span>
-                  <span className="text-[11px] font-normal text-[#B1A6A4] tracking-[0.3em] uppercase -mt-0.5">
-                    Excellence Delivered
+                  <span
+                    className="text-[8px] font-light text-[#697184] tracking-[0.4em] uppercase mt-0.5 opacity-80"
+                    style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                  >
+                    EXCELLENCE DELIVERED
                   </span>
                 </div>
               </Link>

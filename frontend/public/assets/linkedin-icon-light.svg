@@ -1,0 +1,49 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconLightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFAF9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F2F1EF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8E6E3;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="iconDots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="1.5" height="1.5" fill="#697184" opacity="0.08"/>
+    </pattern>
+    
+    <radialGradient id="iconGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#F2F1EF;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#iconLightBg)"/>
+  <rect width="1024" height="1024" fill="url(#iconDots)"/>
+  
+  <!-- Angular decorative elements -->
+  <g opacity="0.12">
+    <path d="M300 280 L420 260 L380 380 Z" fill="none" stroke="#697184" stroke-width="1"/>
+    <path d="M640 280 L620 380 L740 360 Z" fill="none" stroke="#413F3D" stroke-width="0.8"/>
+    <rect x="480" y="480" width="70" height="70" fill="none" stroke="#697184" stroke-width="1" transform="rotate(45 515 515)"/>
+    <line x1="200" y1="200" x2="350" y2="220" stroke="#697184" stroke-width="0.8" stroke-dasharray="8,4"/>
+    <line x1="674" y1="200" x2="824" y2="220" stroke="#413F3D" stroke-width="0.8" stroke-dasharray="8,4"/>
+  </g>
+  
+  <!-- Glow behind icon -->
+  <ellipse cx="512" cy="420" rx="220" ry="200" fill="url(#iconGlow)"/>
+  
+  <!-- V mark - centered and scaled -->
+  <g transform="translate(512, 512)">
+    <g transform="translate(-180, -200) scale(6)">
+      <path d="M0 0 L20 0 L30 50 Z" fill="#697184"/>
+      <path d="M40 0 L60 0 L30 50 Z" fill="#413F3D"/>
+    </g>
+  </g>
+  
+  <!-- Refined triangular accent dots at bottom -->
+  <g opacity="0.4">
+    <path d="M480 818 L486 822 L482 828 Z" fill="#D8CFD0"/>
+    <path d="M510 816 L516 820 L512 826 Z" fill="#697184"/>
+    <path d="M540 818 L546 822 L542 828 Z" fill="#D8CFD0"/>
+  </g>
+</svg>

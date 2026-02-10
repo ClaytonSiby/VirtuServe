@@ -29,12 +29,13 @@ async def chat(request: ConversationRequest):
     """
     Process a chat message and return a response from the virtual assistant
     """
-    # This is a placeholder implementation
-    # In production, integrate with AI services like OpenAI, Anthropic, etc.
+    # TODO: Integrate with AI service (OpenAI GPT or Anthropic Claude)
+    # Configure with VirtuServe business context and service offerings
 
     response_text = (
-        f"Thank you for your message: '{request.message}'. "
-        "This is a placeholder response from VirtuServe assistant."
+        f"Thank you for reaching out to VirtuServe! "
+        f"I received your message: '{request.message}'. "
+        "How can I assist you with your virtual assistant needs today?"
     )
 
     return ConversationResponse(
@@ -47,7 +48,7 @@ async def chat(request: ConversationRequest):
 @router.get("/conversations/{conversation_id}")
 async def get_conversation(conversation_id: str):
     """
-    Retrieve conversation history
+    Retrieve conversation history for a specific conversation
     """
-    # Placeholder implementation
+    # TODO: Implement database query to retrieve conversation history
     return {"conversation_id": conversation_id, "messages": [], "status": "active"}

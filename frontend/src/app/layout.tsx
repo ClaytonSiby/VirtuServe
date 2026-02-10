@@ -120,44 +120,29 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${playfair.variable} ${inter.variable}`}
     >
-      <head>
-        {/* Structured Data for SEO */}
+      <body suppressHydrationWarning>
+        {/* Structured Data for SEO - moved to body to avoid hydration issues */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
+          suppressHydrationWarning
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema),
           }}
+          suppressHydrationWarning
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(serviceSchema),
           }}
+          suppressHydrationWarning
         />
-        {/* Preconnect to external domains for better performance */}
-        <link rel="preconnect" href="https://calendly.com" />
-        <link rel="dns-prefetch" href="https://calendly.com" />
-        <link rel="preconnect" href="https://assets.calendly.com" />
-        <link rel="dns-prefetch" href="https://assets.calendly.com" />
-        {/* Preload Calendly widget script */}
-        <link
-          rel="preload"
-          href="https://assets.calendly.com/assets/external/widget.js"
-          as="script"
-        />
-        <link
-          rel="preload"
-          href="https://assets.calendly.com/assets/external/widget.css"
-          as="style"
-        />
-      </head>
-      <body suppressHydrationWarning>
         <CalendlyPreloader />
         <Navigation />
         {children}

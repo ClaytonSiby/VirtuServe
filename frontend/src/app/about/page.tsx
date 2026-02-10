@@ -105,18 +105,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story - Modern Elegant Layout */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50/50 to-white overflow-hidden">
-        <PageContainer>
-          <div className="relative z-10 max-w-7xl mx-auto">
-            {/* Asymmetric Grid Layout */}
-            {/* Meet Our Team - Unified Section */}
-            <section className="relative py-20 md:py-28 overflow-hidden bg-white">
-              {/* Background geometric shapes removed */}
-            </section>
-          </div>
-        </PageContainer>
-
+      {/* Meet Our Team Section */}
+      <section className="relative py-16 md:py-20 bg-gradient-to-b from-gray-50/50 to-white overflow-hidden">
         <PageContainer>
           {/* Elegant header */}
           <div className="relative z-10 text-center mb-16">
