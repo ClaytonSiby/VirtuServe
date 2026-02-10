@@ -1,0 +1,59 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconDarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C2E33;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3A3D42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#413F3D;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="iconShimmer" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect x="3" y="3" width="2" height="2" fill="#F2F1EF" opacity="0.05"/>
+    </pattern>
+    
+    <radialGradient id="iconLuminous" cx="50%" cy="45%">
+      <stop offset="0%" style="stop-color:#697184;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#697184;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#iconDarkBg)"/>
+  <rect width="1024" height="1024" fill="url(#iconShimmer)"/>
+  
+  <!-- Ambient glow -->
+  <ellipse cx="512" cy="400" rx="280" ry="250" fill="url(#iconLuminous)"/>
+  
+  <!-- Angular decorative elements -->
+  <g opacity="0.15">
+    <path d="M280 270 L400 250 L360 370 Z" fill="none" stroke="#D8CFD0" stroke-width="0.8"/>
+    <path d="M660 270 L640 370 L760 350 Z" fill="none" stroke="#F2F1EF" stroke-width="0.8"/>
+    <rect x="480" y="480" width="60" height="60" fill="none" stroke="#697184" stroke-width="0.8" transform="rotate(45 510 510)"/>
+    <line x1="220" y1="220" x2="360" y2="240" stroke="#D8CFD0" stroke-width="0.6" stroke-dasharray="6,3"/>
+    <line x1="664" y1="220" x2="804" y2="240" stroke="#F2F1EF" stroke-width="0.6" stroke-dasharray="6,3"/>
+  </g>
+  
+  <!-- V mark with glow effect -->
+  <g transform="translate(512, 512)">
+    <!-- Glow layer -->
+    <g opacity="0.4" transform="translate(-180, -200) scale(6)">
+      <path d="M0 0 L20 0 L30 50 Z" fill="#697184" filter="blur(4px)"/>
+      <path d="M40 0 L60 0 L30 50 Z" fill="#D8CFD0" filter="blur(4px)"/>
+    </g>
+    <!-- Sharp icon on top -->
+    <g transform="translate(-180, -200) scale(6)">
+      <path d="M0 0 L20 0 L30 50 Z" fill="#E8E7E5"/>
+      <path d="M40 0 L60 0 L30 50 Z" fill="#F2F1EF"/>
+    </g>
+  </g>
+  
+  <!-- Angular connected accent at bottom -->
+  <g opacity="0.5">
+    <path d="M470 818 L476 822 L472 828 Z" fill="#F2F1EF"/>
+    <path d="M500 812 L506 816 L502 822 Z" fill="#D8CFD0"/>
+    <path d="M520 824 L526 828 L522 834 Z" fill="#697184"/>
+    <path d="M550 818 L556 822 L552 828 Z" fill="#F2F1EF"/>
+    <line x1="473" y1="822" x2="503" y2="816" stroke="#D8CFD0" stroke-width="0.4" opacity="0.6"/>
+    <line x1="503" y1="816" x2="523" y2="828" stroke="#D8CFD0" stroke-width="0.4" opacity="0.6"/>
+    <line x1="523" y1="828" x2="553" y2="822" stroke="#D8CFD0" stroke-width="0.4" opacity="0.6"/>
+  </g>
+</svg>

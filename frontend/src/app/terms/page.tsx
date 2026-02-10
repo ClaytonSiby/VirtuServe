@@ -47,10 +47,10 @@ export default function Terms() {
                   <FileText className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-3 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-3 tracking-tight">
                     Agreement to Terms
                   </h2>
-                  <p className="text-[15px] text-gray-700 leading-[1.7] font-light">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed">
                     By accessing or using VirtuServe&apos;s virtual assistant
                     services, you agree to be bound by these Terms of Service.
                     If you disagree with any part of these terms, you may not
@@ -63,10 +63,10 @@ export default function Terms() {
 
             {/* Services Description */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Services Description
               </h2>
-              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+              <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                 <p>
                   VirtuServe provides professional virtual assistant services
                   including but not limited to:
@@ -102,10 +102,10 @@ export default function Terms() {
 
             {/* User Responsibilities */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 User Responsibilities
               </h2>
-              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+              <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                 <p>When using our services, you agree to:</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
@@ -155,12 +155,12 @@ export default function Terms() {
 
             {/* Payment Terms */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Payment Terms
               </h2>
-              <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+              <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                 <p>
-                  <strong className="text-primary-900 font-semibold">
+                  <strong className="text-[#413F3D] font-normal">
                     Billing:
                   </strong>{" "}
                   Services are billed according to the package or hourly rate
@@ -168,18 +168,18 @@ export default function Terms() {
                   issued monthly or as otherwise specified.
                 </p>
                 <p>
-                  <strong className="text-primary-900">Payment Methods:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">Payment Methods:</strong>{" "}
                   We accept various payment methods including credit cards, bank
                   transfers, and other methods as mutually agreed upon.
                 </p>
                 <p>
-                  <strong className="text-primary-900">Late Payments:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">Late Payments:</strong>{" "}
                   Payments are due within the timeframe specified on the
                   invoice. Late payments may result in suspension of services
                   and may incur additional fees.
                 </p>
                 <p>
-                  <strong className="text-primary-900">Refunds:</strong> Refund
+                  <strong className="text-[#413F3D] font-normal">Refunds:</strong> Refund
                   policies are outlined in your individual service agreement.
                   Generally, payments for completed work are non-refundable.
                 </p>
@@ -188,14 +188,14 @@ export default function Terms() {
 
             {/* Confidentiality */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Confidentiality
               </h2>
-              <p className="text-[15px] text-gray-700 font-light leading-[1.7] mb-4">
+              <p className="text-base text-[#413F3D]/70 leading-relaxed mb-4">
                 We understand the sensitive nature of the information you may
                 share with us. VirtuServe commits to:
               </p>
-              <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
+              <ul className="space-y-2 text-base text-[#413F3D]/70 leading-relaxed">
                 <li className="flex items-start gap-2">
                   <span className="text-accent-600 mt-1">•</span>
                   <span>
@@ -231,18 +231,18 @@ export default function Terms() {
 
             {/* Service Modifications and Termination */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Service Modifications and Termination
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                 <p>
-                  <strong className="text-primary-900">Modifications:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">Modifications:</strong>{" "}
                   We reserve the right to modify, suspend, or discontinue any
                   aspect of our services at any time. We will provide reasonable
                   notice of significant changes.
                 </p>
                 <p>
-                  <strong className="text-primary-900">
+                  <strong className="text-[#413F3D] font-normal">
                     Termination by Client:
                   </strong>{" "}
                   You may terminate services according to the notice period
@@ -250,7 +250,7 @@ export default function Terms() {
                   notice.
                 </p>
                 <p>
-                  <strong className="text-primary-900">
+                  <strong className="text-[#413F3D] font-normal">
                     Termination by VirtuServe:
                   </strong>{" "}
                   We reserve the right to terminate services with notice if
@@ -266,10 +266,10 @@ export default function Terms() {
                   <AlertCircle className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-light text-primary-900 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-3 tracking-tight">
                     Limitation of Liability
                   </h2>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed">
                     VirtuServe shall not be liable for any indirect, incidental,
                     special, consequential, or punitive damages resulting from
                     your use of or inability to use the service. Our total
@@ -282,10 +282,10 @@ export default function Terms() {
 
             {/* Changes to Terms */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-4">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Changes to Terms
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-base text-[#413F3D]/70 leading-relaxed">
                 We reserve the right to modify these terms at any time. We will
                 notify users of any material changes via email or through our
                 service. Continued use of services after changes constitutes
@@ -300,16 +300,16 @@ export default function Terms() {
                   <Mail className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-light text-primary-900 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-3 tracking-tight">
                     Questions About These Terms?
                   </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed mb-4">
                     If you have any questions about these Terms of Service,
                     please contact us:
                   </p>
-                  <div className="space-y-2 text-gray-700">
+                  <div className="space-y-2 text-base text-[#413F3D]/70">
                     <p>
-                      <strong>Email:</strong>{" "}
+                      <strong className="text-[#413F3D] font-normal">Email:</strong>{" "}
                       <a
                         href="mailto:legal@virtuserve.com"
                         className="text-accent-600 hover:text-accent-700 transition-colors"
@@ -318,7 +318,7 @@ export default function Terms() {
                       </a>
                     </p>
                     <p>
-                      <strong>Phone:</strong> +27 82 899 7062
+                      <strong className="text-[#413F3D] font-normal">Phone:</strong> +27 82 899 7062
                     </p>
                   </div>
                 </div>

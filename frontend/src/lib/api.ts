@@ -52,7 +52,7 @@ export interface ContactResponse {
 }
 
 export async function submitContactForm(request: ContactRequest): Promise<ContactResponse> {
-    const response = await api.post<ContactResponse>('/contact/contact', request);
+    const response = await api.post<ContactResponse>('/contact', request);
     return response.data;
 }
 

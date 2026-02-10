@@ -47,10 +47,10 @@ export default function Privacy() {
                   <Shield className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-3 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-3 tracking-tight">
                     Introduction
                   </h2>
-                  <p className="text-[15px] text-gray-700 leading-[1.7] font-light">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed font-normal">
                     At VirtuServe, we are committed to protecting your privacy
                     and ensuring the security of your personal information. This
                     Privacy Policy explains how we collect, use, disclose, and
@@ -68,15 +68,15 @@ export default function Privacy() {
                   <Database className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                     Information We Collect
                   </h2>
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-[17px] font-semibold text-primary-900 mb-3 tracking-tight">
+                      <h3 className="text-xl font-normal text-[#413F3D] mb-3">
                         Personal Information
                       </h3>
-                      <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
+                      <ul className="space-y-2 text-base text-[#413F3D]/70 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-accent-600 mt-1">•</span>
                           <span>
@@ -98,10 +98,10 @@ export default function Privacy() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-[17px] font-semibold text-primary-900 mb-3 tracking-tight">
+                      <h3 className="text-xl font-normal text-[#413F3D] mb-3">
                         Service Data
                       </h3>
-                      <ul className="space-y-2 text-[15px] text-gray-700 font-light leading-[1.7]">
+                      <ul className="space-y-2 text-base text-[#413F3D]/70 leading-relaxed">
                         <li className="flex items-start gap-2">
                           <span className="text-accent-600 mt-1">•</span>
                           <span>
@@ -134,10 +134,10 @@ export default function Privacy() {
                   <Eye className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-semibold text-primary-900 mb-6 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                     How We Use Your Information
                   </h2>
-                  <div className="space-y-4 text-[15px] text-gray-700 font-light leading-[1.7]">
+                  <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                     <p>We use the information we collect to:</p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -193,16 +193,16 @@ export default function Privacy() {
                   <Lock className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-light text-primary-900 mb-6">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                     Data Security
                   </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed mb-4">
                     We implement industry-standard security measures to protect
                     your personal information from unauthorized access,
                     disclosure, alteration, or destruction. These measures
                     include:
                   </p>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-base text-[#413F3D]/70 leading-relaxed">
                     <li className="flex items-start gap-2">
                       <span className="text-accent-600 mt-1">•</span>
                       <span>Encryption of data in transit and at rest</span>
@@ -234,11 +234,11 @@ export default function Privacy() {
 
             {/* Your Rights */}
             <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
-              <h2 className="text-2xl font-light text-primary-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Your Rights
               </h2>
-              <div className="space-y-4 text-gray-700">
-                <p className="leading-relaxed">You have the right to:</p>
+              <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
+                <p>You have the right to:</p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-accent-600 mt-1">•</span>
@@ -275,14 +275,14 @@ export default function Privacy() {
                   <Mail className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-light text-primary-900 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-3 tracking-tight">
                     Contact Us
                   </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-base text-[#413F3D]/70 leading-relaxed mb-4">
                     If you have any questions about this Privacy Policy or how
                     we handle your personal information, please contact us:
                   </p>
-                  <div className="space-y-2 text-gray-700">
+                  <div className="space-y-2 text-base text-[#413F3D]/70">
                     <p>
                       <strong>Email:</strong>{" "}
                       <a

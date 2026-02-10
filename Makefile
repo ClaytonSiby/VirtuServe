@@ -32,10 +32,10 @@ help:
 
 # Virtual Environment
 venv:
-	@echo "🐍 Creating Python virtual environment..."
-	cd backend && python3 -m venv venv
+	@echo "🐍 Creating Python 3.13 virtual environment..."
+	cd backend && python3.13 -m venv venv
 	@echo "✅ Virtual environment created at backend/venv"
-	@echo "To activate, run: source backend/venv/bin/activate"
+	@echo "To activate, run: cd backend && source venv/bin/activate"
 
 # Installation
 install: install-backend install-frontend
@@ -43,7 +43,11 @@ install: install-backend install-frontend
 
 install-backend:
 	@echo "📦 Installing backend dependencies..."
-	cd backend && pip install -r requirements.txt
+	@if [ ! -d "backend/venv" ]; then \
+		echo "⚠️  Virtual environment not found. Creating one..."; \
+		cd backend && python3.13 -m venv venv; \
+	fi
+	cd backend && ./venv/bin/pip install --upgrade pip && ./venv/bin/pip install -r requirements.txt
 
 install-frontend:
 	@echo "📦 Installing frontend dependencies..."
