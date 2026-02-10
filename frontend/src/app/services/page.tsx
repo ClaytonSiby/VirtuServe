@@ -3,7 +3,8 @@
 import {
   CheckCircle,
   Clock,
-  DollarSign,
+  PoundSterling,
+  Banknote,
   Headphones,
   TrendingUp,
   FileText,
@@ -138,7 +139,7 @@ export default function Services() {
       ],
     },
     {
-      icon: DollarSign,
+      icon: currency === "ZAR" ? Banknote : PoundSterling,
       title: "Basic Bookkeeping",
       description:
         "Keep your finances organized with basic bookkeeping support",
