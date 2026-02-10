@@ -286,10 +286,10 @@ export default function Privacy() {
                     <p>
                       <strong>Email:</strong>{" "}
                       <a
-                        href="mailto:privacy@virtuserve.com"
+                        href="mailto:info@virtuserveva.com"
                         className="text-accent-600 hover:text-accent-700 transition-colors"
                       >
-                        privacy@virtuserve.com
+                        info@virtuserveva.com
                       </a>
                     </p>
                     <p>

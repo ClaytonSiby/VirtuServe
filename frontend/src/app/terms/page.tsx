@@ -322,10 +322,10 @@ export default function Terms() {
                         Email:
                       </strong>{" "}
                       <a
-                        href="mailto:legal@virtuserve.com"
+                        href="mailto:info@virtuserveva.com"
                         className="text-accent-600 hover:text-accent-700 transition-colors"
                       >
-                        legal@virtuserve.com
+                        info@virtuserveva.com
                       </a>
                     </p>
                     <p>
