@@ -17,33 +17,44 @@ export default function Footer() {
         <div className="py-16 md:py-20 border-b border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-5 space-y-6">
-              <Link href="/" className="inline-flex items-center gap-3 group">
+              <Link href="/" className="inline-flex items-end gap-1.5 group">
                 <svg
-                  width="60"
-                  height="60"
+                  width="48"
+                  height="48"
                   viewBox="0 0 60 50"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="transition-transform group-hover:scale-110 duration-300 drop-shadow-2xl"
+                  className="transition-transform group-hover:scale-105 duration-300 drop-shadow-xl mb-1"
                 >
                   {/* V icon with color palette */}
                   <path
                     d="M0 0 L20 0 L30 50 Z"
-                    fill="#B1A6A4"
-                    className="opacity-90 group-hover:opacity-100 transition-opacity"
+                    fill="#697184"
+                    className="opacity-95 group-hover:opacity-100 transition-opacity"
                   />
                   <path
                     d="M40 0 L60 0 L30 50 Z"
-                    fill="#f8f9fa"
-                    className="opacity-90 group-hover:opacity-100 transition-opacity"
+                    fill="#F2F1EF"
+                    className="opacity-95 group-hover:opacity-100 transition-opacity"
                   />
                 </svg>
-                <div className="flex flex-col">
-                  <span className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                    VirtuServe
+                <div className="flex flex-col pb-1">
+                  <span
+                    className="text-[36px] md:text-[40px] leading-none"
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontWeight: 400,
+                      color: "#F2F1EF",
+                      letterSpacing: "-0.05em",
+                    }}
+                  >
+                    irtuServe
                   </span>
-                  <span className="text-[10px] font-bold text-[#D8CFD0] tracking-[0.25em] uppercase mt-0.5">
-                    Excellence Delivered
+                  <span
+                    className="text-[9px] font-light text-[#B1A6A4] tracking-[0.4em] uppercase mt-1 opacity-90"
+                    style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                  >
+                    EXCELLENCE DELIVERED
                   </span>
                 </div>
               </Link>

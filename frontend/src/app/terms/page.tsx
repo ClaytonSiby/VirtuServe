@@ -13,9 +13,9 @@ export default function Terms() {
   const lastUpdated = "January 18, 2026";
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-primary-50/50">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#F8F7F5] via-[#F4F3F1] to-[#F2F1EF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#D8CFD0]/30 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
             <Scale className="w-4 h-4 text-[#697184]" />
@@ -41,9 +41,9 @@ export default function Terms() {
         <PageContainer>
           <div className="max-w-4xl mx-auto">
             {/* Agreement to Terms */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <FileText className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
@@ -62,7 +62,7 @@ export default function Terms() {
             </div>
 
             {/* Services Description */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Services Description
               </h2>
@@ -101,7 +101,7 @@ export default function Terms() {
             </div>
 
             {/* User Responsibilities */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 User Responsibilities
               </h2>
@@ -154,7 +154,7 @@ export default function Terms() {
             </div>
 
             {/* Payment Terms */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Payment Terms
               </h2>
@@ -168,26 +168,33 @@ export default function Terms() {
                   issued monthly or as otherwise specified.
                 </p>
                 <p>
-                  <strong className="text-[#413F3D] font-normal">Payment Methods:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">
+                    Payment Methods:
+                  </strong>{" "}
                   We accept various payment methods including credit cards, bank
                   transfers, and other methods as mutually agreed upon.
                 </p>
                 <p>
-                  <strong className="text-[#413F3D] font-normal">Late Payments:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">
+                    Late Payments:
+                  </strong>{" "}
                   Payments are due within the timeframe specified on the
                   invoice. Late payments may result in suspension of services
                   and may incur additional fees.
                 </p>
                 <p>
-                  <strong className="text-[#413F3D] font-normal">Refunds:</strong> Refund
-                  policies are outlined in your individual service agreement.
-                  Generally, payments for completed work are non-refundable.
+                  <strong className="text-[#413F3D] font-normal">
+                    Refunds:
+                  </strong>{" "}
+                  Refund policies are outlined in your individual service
+                  agreement. Generally, payments for completed work are
+                  non-refundable.
                 </p>
               </div>
             </div>
 
             {/* Confidentiality */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Confidentiality
               </h2>
@@ -230,13 +237,15 @@ export default function Terms() {
             </div>
 
             {/* Service Modifications and Termination */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Service Modifications and Termination
               </h2>
               <div className="space-y-4 text-base text-[#413F3D]/70 leading-relaxed">
                 <p>
-                  <strong className="text-[#413F3D] font-normal">Modifications:</strong>{" "}
+                  <strong className="text-[#413F3D] font-normal">
+                    Modifications:
+                  </strong>{" "}
                   We reserve the right to modify, suspend, or discontinue any
                   aspect of our services at any time. We will provide reasonable
                   notice of significant changes.
@@ -260,9 +269,9 @@ export default function Terms() {
             </div>
 
             {/* Limitation of Liability */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <AlertCircle className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
@@ -281,7 +290,7 @@ export default function Terms() {
             </div>
 
             {/* Changes to Terms */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Changes to Terms
               </h2>
@@ -294,9 +303,9 @@ export default function Terms() {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-gradient-to-br from-accent-50 to-primary-50 border border-accent-200/60 rounded-3xl p-8 md:p-10">
+            <div className="bg-accent-50 border border-accent-200/60 rounded-3xl p-8 md:p-10">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Mail className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
@@ -309,7 +318,9 @@ export default function Terms() {
                   </p>
                   <div className="space-y-2 text-base text-[#413F3D]/70">
                     <p>
-                      <strong className="text-[#413F3D] font-normal">Email:</strong>{" "}
+                      <strong className="text-[#413F3D] font-normal">
+                        Email:
+                      </strong>{" "}
                       <a
                         href="mailto:legal@virtuserve.com"
                         className="text-accent-600 hover:text-accent-700 transition-colors"
@@ -318,7 +329,10 @@ export default function Terms() {
                       </a>
                     </p>
                     <p>
-                      <strong className="text-[#413F3D] font-normal">Phone:</strong> +27 82 899 7062
+                      <strong className="text-[#413F3D] font-normal">
+                        Phone:
+                      </strong>{" "}
+                      +27 82 899 7062
                     </p>
                   </div>
                 </div>

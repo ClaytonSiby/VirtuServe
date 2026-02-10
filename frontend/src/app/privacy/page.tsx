@@ -13,9 +13,9 @@ export default function Privacy() {
   const lastUpdated = "January 18, 2026";
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-primary-50 via-white to-primary-50/50">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white/90 via-[#F2F1EF]/50 to-[#D8CFD0]/8">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#F8F7F5] via-[#F4F3F1] to-[#F2F1EF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-[#D8CFD0]/30 backdrop-blur-md border border-[#697184]/20 rounded-full px-5 py-2.5 mb-6 shadow-lg">
             <Shield className="w-4 h-4 text-[#697184]" />
@@ -41,9 +41,9 @@ export default function Privacy() {
         <PageContainer>
           <div className="max-w-4xl mx-auto">
             {/* Introduction */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Shield className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
@@ -62,9 +62,9 @@ export default function Privacy() {
             </div>
 
             {/* Information We Collect */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Database className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
@@ -128,9 +128,9 @@ export default function Privacy() {
             </div>
 
             {/* How We Use Your Information */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Eye className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
@@ -187,9 +187,9 @@ export default function Privacy() {
             </div>
 
             {/* Data Security */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Lock className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
@@ -233,7 +233,7 @@ export default function Privacy() {
             </div>
 
             {/* Your Rights */}
-            <div className="bg-gradient-to-br from-white to-primary-50/30 border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
+            <div className="bg-white border border-primary-200/60 rounded-3xl p-8 md:p-10 mb-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-light text-[#413F3D] mb-6 tracking-tight">
                 Your Rights
               </h2>
@@ -269,9 +269,9 @@ export default function Privacy() {
             </div>
 
             {/* Contact Us */}
-            <div className="bg-gradient-to-br from-accent-50 to-primary-50 border border-accent-200/60 rounded-3xl p-8 md:p-10">
+            <div className="bg-accent-50 border border-accent-200/60 rounded-3xl p-8 md:p-10">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-100 to-primary-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center border border-accent-200 flex-shrink-0">
                   <Mail className="w-6 h-6 text-accent-600" />
                 </div>
                 <div>
