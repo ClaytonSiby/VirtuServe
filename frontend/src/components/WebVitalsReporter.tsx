@@ -1,8 +1,12 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useReportWebVitals } from 'next/web-vitals';
-import { trackWebVitals, initPerformanceObserver, trackPageLoad } from '@/lib/web-vitals';
+import { useEffect } from "react";
+import { useReportWebVitals } from "next/web-vitals";
+import {
+  trackWebVitals,
+  initPerformanceObserver,
+  trackPageLoad,
+} from "@/lib/web-vitals";
 
 /**
  * Web Vitals Reporter Component

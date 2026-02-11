@@ -106,7 +106,9 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code
 ```
 
-> 📚 **SEO & Google Search Console Setup:** See [SEO_QUICK_START.md](./docs/SEO_QUICK_START.md) for comprehensive Google Search Console, Analytics, and Tag Manager setup instructions.
+> 📚 **SEO Setup:** See [SEO_QUICK_START.md](./docs/SEO_QUICK_START.md) for Google Services setup.
+> 
+> 🚀 **Production Config:** See [PRODUCTION_ENV_SETUP.md](./docs/PRODUCTION_ENV_SETUP.md) for Heroku and GitHub Pages environment variable setup.
 
 ## 🌐 Access
 

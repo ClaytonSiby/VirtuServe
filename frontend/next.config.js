@@ -15,6 +15,12 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL:
       process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
     NEXT_PUBLIC_CALENDLY_URL: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
+    // Google Services
+    NEXT_PUBLIC_GA_MEASUREMENT_ID:
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
+    NEXT_PUBLIC_GTM_ID: process.env.NEXT_PUBLIC_GTM_ID || "",
+    NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION:
+      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   },
   // Performance optimizations (production only)
   ...(process.env.NODE_ENV === "production" && {
