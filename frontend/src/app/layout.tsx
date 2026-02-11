@@ -4,6 +4,11 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CalendlyPreloader from "@/components/CalendlyPreloader";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleTagManager, {
+  GoogleTagManagerNoScript,
+} from "@/components/GoogleTagManager";
+import WebVitalsReporter from "@/components/WebVitalsReporter";
 import {
   organizationSchema,
   websiteSchema,
@@ -97,7 +102,14 @@ export const metadata: Metadata = {
     canonical: "https://virtuserveva.com",
   },
   verification: {
-    google: "your-google-verification-code",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    // Add other verification codes as needed
+    // yandex: "your-yandex-code",
+    // bing: "your-bing-code",
+  },
+  other: {
+    "google-site-verification":
+      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   },
 };
 
@@ -120,7 +132,23 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${playfair.variable} ${inter.variable}`}
     >
+      <head>
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
+        {/* Google Analytics */}
+        <GoogleAnalytics
+          measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""}
+        />
+      </head>
       <body suppressHydrationWarning>
+        {/* Google Tag Manager (noscript) */}
+        <GoogleTagManagerNoScript
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
+        />
+
+        {/* Web Vitals Reporter */}
+        <WebVitalsReporter />
+
         {/* Structured Data for SEO - moved to body to avoid hydration issues */}
         <script
           type="application/ld+json"
