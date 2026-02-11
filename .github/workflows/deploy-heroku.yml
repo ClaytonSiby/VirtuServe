@@ -1,53 +1,51 @@
 name: Deploy to Heroku Production
 
 on:
-    push:
-        branches:
-            - main
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0 # Required for git subtree
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for git subtree
 
-            - name: Setup Heroku authentication
-              env:
-                  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-              run: |
-                  cat > ~/.netrc <<EOF
-                  machine api.heroku.com
-                    login ${{ secrets.HEROKU_EMAIL }}
-                    password $HEROKU_API_KEY
-                  machine git.heroku.com
-                    login ${{ secrets.HEROKU_EMAIL }}
-                    password $HEROKU_API_KEY
-                  EOF
-                  chmod 600 ~/.netrc
+      - name: Setup Heroku authentication
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          cat > ~/.netrc <<EOF
+          machine api.heroku.com
+            login ${{ secrets.HEROKU_EMAIL }}
+            password $HEROKU_API_KEY
+          machine git.heroku.com
+            login ${{ secrets.HEROKU_EMAIL }}
+            password $HEROKU_API_KEY
+          EOF
+          chmod 600 ~/.netrc
 
-            - name: Add Heroku remotes
-              run: |
-                  git remote add heroku-backend https://git.heroku.com/virtuserve-api.git || true
-                  git remote add heroku-frontend https://git.heroku.com/virtuserve-web.git || true
+      - name: Add Heroku remotes
+        run: |
+          git remote add heroku-backend https://git.heroku.com/virtuserve-api.git || true
+          git remote add heroku-frontend https://git.heroku.com/virtuserve-web.git || true
 
-            - name: Deploy backend to Heroku
-              run: |
-                  echo "🚀 Deploying backend..."
-                  git subtree push --prefix backend heroku-backend main || \
-                  git push heroku-backend `git subtree split --prefix backend main`:refs/heads/main --force
+      - name: Deploy backend to Heroku
+        run: |
+          echo "🚀 Deploying backend..."
+          git push heroku-backend main --force
 
-            - name: Deploy frontend to Heroku
-              run: |
-                  echo "🎨 Deploying frontend..."
-                  git subtree push --prefix frontend heroku-frontend main || \
-                  git push heroku-frontend `git subtree split --prefix frontend main`:refs/heads/main --force
+      - name: Deploy frontend to Heroku
+        run: |
+          echo "🎨 Deploying frontend..."
+          git push heroku-frontend main --force
 
-            - name: Deployment successful
-              run: |
-                  echo "✅ Deployment to production successful!"
-                  echo "Backend: https://virtuserve-api-8d1e0b1a84d7.herokuapp.com"
-                  echo "Frontend: https://virtuserveva.com"
+      - name: Deployment successful
+        run: |
+          echo "✅ Deployment to production successful!"
+          echo "Backend: https://virtuserve-api-8d1e0b1a84d7.herokuapp.com"
+          echo "Frontend: https://virtuserveva.com"
