@@ -140,8 +140,8 @@ export default function AboutPage() {
                         alt="Sheridan de Laroche - Founder & Lead VA"
                         width={420}
                         height={560}
+                        loading="lazy"
                         className="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                        priority
                       />
                       {/* Elegant gradient overlay from bottom */}
                       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#413F3D]/60 via-[#413F3D]/20 to-transparent" />
@@ -429,6 +429,7 @@ export default function AboutPage() {
                         alt="Ashley Janse van Vuuren - Virtual Assistant"
                         width={420}
                         height={560}
+                        loading="lazy"
                         className="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-700"
                       />
                       {/* Elegant gradient overlay from bottom */}
