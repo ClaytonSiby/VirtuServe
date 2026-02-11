@@ -8,10 +8,12 @@ A modern, full-stack web application for professional virtual assistant services
 
 - **Modern Stack**: Next.js 14, FastAPI, TypeScript, Tailwind CSS
 - **Responsive Design**: Mobile-first, accessible across all devices
-- **SEO Optimized**: Meta tags, structured data, sitemap, robots.txt
+- **SEO Optimized**: Meta tags, structured data, sitemap, robots.txt, Google Analytics, Tag Manager
 - **Contact & Booking**: Forms with validation, Calendly integration
 - **Production-Ready**: Docker, CI/CD pipelines, comprehensive tests
 - **API Documentation**: Auto-generated Swagger UI and ReDoc
+- **Performance Monitoring**: Core Web Vitals tracking, custom performance metrics
+- **Analytics Integration**: Google Analytics 4, Google Tag Manager, Search Console ready
 
 ## 📋 Prerequisites
 
@@ -97,7 +99,14 @@ CORS_ORIGINS=http://localhost:3000,https://yourdomain.com
 NEXT_PUBLIC_API_URL=http://localhost:8000
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/your-username/discovery-call
+
+# Google Services (for production)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code
 ```
+
+> 📚 **SEO & Google Search Console Setup:** See [SEO_QUICK_START.md](./docs/SEO_QUICK_START.md) for comprehensive Google Search Console, Analytics, and Tag Manager setup instructions.
 
 ## 🌐 Access
 
