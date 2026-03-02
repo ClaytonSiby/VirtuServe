@@ -273,31 +273,36 @@ export default function LogoExportPage() {
         exportContainer.appendChild(logoDiv);
       }
 
-      // Capture and export
+      // Capture and export with high quality
+      // Use higher scale for smaller sizes to ensure crisp output
+      const exportScale = targetSize <= 512 ? 4 : targetSize <= 1024 ? 3 : 2;
+
       const canvas = await html2canvas(exportContainer, {
         backgroundColor:
           format === "png" ? null : theme === "light" ? "#FFFFFF" : "#413F3D",
-        scale: 2,
+        scale: exportScale,
         width: logoType === "icon" ? targetSize : targetSize * 2.5,
         height:
           logoType === "icon"
             ? Math.floor(targetSize * 0.833)
             : Math.floor(targetSize * 0.6),
+        logging: false,
+        useCORS: true,
       });
 
       // Clean up temp container
       document.body.removeChild(exportContainer);
 
       if (format === "pdf") {
-        // Export as PDF
-        const imgData = canvas.toDataURL("image/png");
+        // Export as high-quality PDF
+        const imgData = canvas.toDataURL("image/png", 1.0);
         const pdfWidth = logoType === "icon" ? targetSize : targetSize * 2.5;
         const pdfHeight =
           logoType === "icon"
             ? Math.floor(targetSize * 0.833)
             : Math.floor(targetSize * 0.6);
 
-        // Convert pixels to mm for PDF (assuming 96 DPI)
+        // Convert pixels to mm for PDF (base 96 DPI, actual DPI is higher due to canvas scale)
         const widthMM = pdfWidth * 0.264583;
         const heightMM = pdfHeight * 0.264583;
 
@@ -305,21 +310,27 @@ export default function LogoExportPage() {
           orientation: widthMM > heightMM ? "landscape" : "portrait",
           unit: "mm",
           format: [widthMM, heightMM],
+          compress: true,
         });
 
         pdf.addImage(imgData, "PNG", 0, 0, widthMM, heightMM);
         pdf.save(`virtuserve-${logoType}-${theme}-${size}px.pdf`);
       } else {
-        // Export as PNG or JPEG
-        canvas.toBlob((blob) => {
-          if (!blob) return;
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement("a");
-          link.download = `virtuserve-${logoType}-${theme}-${size}px.${format}`;
-          link.href = url;
-          link.click();
-          URL.revokeObjectURL(url);
-        }, `image/${format}`);
+        // Export as PNG or JPEG with maximum quality
+        const quality = format === "jpeg" ? 0.98 : 1.0;
+        canvas.toBlob(
+          (blob) => {
+            if (!blob) return;
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.download = `virtuserve-${logoType}-${theme}-${size}px.${format}`;
+            link.href = url;
+            link.click();
+            URL.revokeObjectURL(url);
+          },
+          `image/${format}`,
+          quality
+        );
       }
     } catch (error) {
       console.error("Export failed:", error);
