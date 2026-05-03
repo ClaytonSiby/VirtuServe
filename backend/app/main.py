@@ -21,6 +21,7 @@ app.add_middleware(
         "https://www.virtuserveva.com",
         "https://virtuserve-web.herokuapp.com",
         "https://virtuserve-api.herokuapp.com",
+        "https://virtuserve-web.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
